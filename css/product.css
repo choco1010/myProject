@@ -1,0 +1,352 @@
+@import url(reset.css);
+/* -----------------------------main----------------------------- */
+.main{
+    position: relative;
+}
+/* ----------- blockInner ----------- */
+
+.breadcrumbNav{
+    position: absolute;
+    top: 100px;
+    left: 460px;
+    color: #AA8B66;
+}
+
+.breadcrumbLink{
+    color: #AA8B66;
+    text-decoration: underline;
+}
+
+.breadcrumbLink:hover{
+    cursor: pointer;
+}
+
+/* ----------- start ----------- */
+.wrapper{
+    width: 80%;
+    margin: 60px auto;
+    display: grid; 
+    grid-template-columns: 1fr 4fr; 
+    gap: 20px;
+}
+
+/* ----------- aside ----------- */
+
+.mainSidebar{
+    margin-right: 40px;
+    
+}
+.sidebarMenu{
+    text-align: center;
+}
+
+.menuTitle{
+    outline: 1px solid #AA8B66;
+    background-color: #FAF0E4;
+    padding: 20px;
+    color: #AA8B66;
+    font-size: 20px;
+}
+
+.menuItem{
+    outline: 1px solid #AA8B66;
+    padding: 20px;
+    color: #AA8B66;
+    font-size: 18px;
+} 
+
+.menuItem:hover{
+    background-color: #FAF0E4;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#weddingCategory{
+    outline: 1px solid #AA8B66;
+    padding: 20px;
+    color: #AA8B66;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.subMenu{
+    display: none;
+    margin-top: 20px;
+}
+
+.subItem{
+    padding: 15px 10px;
+}
+
+.subItem a{
+    color: #AA8B66;
+}
+.subItem:hover{
+    background-color: #FAF0E4;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* -----------------------------ProductInfo----------------------------- */
+
+.mainImageContainer{
+    display: flex; 
+}
+
+/* ----------- flowerAside ----------- */
+.productThumbnails{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.thumbnailItem{
+    margin-bottom: 5px;
+}
+
+.thumbnailItem img{
+    max-width: 100px;
+    max-height: auto;
+}
+
+.thumbnailItem:hover{
+    cursor: pointer;
+}
+/* ----------- flowerCard ----------- */
+
+.flowerCard img{
+    max-width: 400px;
+    margin-right: 20px;
+}
+
+/* -----------------------------flowerInfo----------------------------- */
+.flowerInfo{
+    margin-left: 10px;
+}
+.flowerTitle{
+    font-size: 28px;
+    color: #AA8B66;
+    margin-bottom: 20px;
+}
+
+.flowerPrice{
+    font-size: 24px;
+    color: #F6B99D;
+    margin: 20px auto 40px auto;
+}
+
+.itemSpecs{
+    font-size: 16px;
+    color: #AA8B66;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* ----------- quantity & sub ----------- */
+.quantityControl{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.quantityBtn{
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border: none;
+}
+
+.quantityBtn .fa-solid {
+    color: #AA8B66;
+}
+
+.quantityInput{
+    border: none;
+    width: 5%;
+    height: auto;
+    text-align: center;
+    font-size: 16px;
+    color: #AA8B66;
+    margin: 0 5px;
+}
+
+.subTotal{
+    margin-left: 10px;
+    color: #AA8B66;
+}
+/*----------- shoppingCart & buy -----------*/
+.cartActions{
+    display: flex;
+    margin-right: 80px;
+}
+
+.addToCartButton{
+    border: 1px solid #AA8B66;
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    color: #AA8B66;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.addToCartButton .fa-solid{
+    padding-right: 5px;
+    color: #AA8B66;
+}
+
+/*----------- shoppingCart:hover-----------*/
+
+.addToCartButton:hover{
+    background-color: #AA8B66;
+    color: #fff;
+    font-weight: bold;
+}
+
+.addToCartButton:hover .fa-solid{
+    background-color: #AA8B66;
+    color: #fff;
+}
+
+.buyNowButton{
+    width:100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #B88571;
+    background-color: #FAF0E4;
+    color: #AA8B66;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buyNowButton .fa-solid{
+    padding-right: 10px;
+    color: #AA8B66;
+}
+/*----------- buynow:hover-----------*/
+.buyNowButton:hover{
+    background-color: #AA8B66;
+    color: #fff;
+}
+
+.buyNowButton:hover .fa-solid{
+    background-color: #AA8B66;
+    color: #fff;
+}
+
+/*----------- attentionItems -----------*/
+.productNotes{
+    margin-top: 40px;
+    color: #AA8B66;
+}
+
+.bottomLine{
+    border-bottom: 1px solid #AA8B66;
+    margin-bottom: 20px;
+}
+
+.textOutline{
+    width: 100px;
+    border: 1px solid #AA8B66;
+    border-bottom: 1px solid rgba(170, 139, 102, 0);
+}
+
+.textOutline h4{
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.attentionInfo{
+    margin-bottom: 80px;
+}
+
+.attentionInfo li{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/*----------- similarProduct -----------*/
+
+.similarProduct h4{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.scrollImg{
+    display: flex;
+}
+
+.scrollImg li{
+    margin-right: 10px;
+}
+
+.scrollImg img{
+    max-width: 100%; 
+}
+
+/*----------- circleBtn -----------*/
+
+.circleBtn{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.circleBtn li{
+    width: 10px;
+    height: 10px;
+    background-color: #AA8B66;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+
+/* -----------------------------recentlyView----------------------------- */
+
+.recentlyView{
+    position: fixed;
+    right: 0;
+    top: 154px;
+    /* position: relative; */
+}
+
+.recentlyView button{
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #FAF0E4;
+    background-color: #FAF0E4;
+    color: #AA8B66;
+}
+
+.recentlyView button:hover{
+    background-color: #f1d4b7;
+    color: #fff;
+}
+
+.historyList{
+    display: none;
+    position: absolute;
+    top: 67px;
+    right: 10px;
+}
+
+.historyList img{
+    width: 100px;
+}
+
+.recentlyView:hover .historyList{
+    display: block;
+}

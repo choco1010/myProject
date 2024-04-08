@@ -1,0 +1,80 @@
+@import url(reset.css);
+
+.backgroundPic1{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+.backgroundPic2{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+/* -----------------------------main----------------------------- */
+.questionWrapper{
+    outline: 1px solid #AA8B66;
+    width: 40%;
+    min-height: 600px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    color: #AA8B66;
+}
+
+.questionTitle{
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 28px;
+    text-align: center;
+
+}
+
+.questionList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #AA8B66;
+}
+
+.question{
+    display: flex;
+    flex-grow: 1;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.question .fa-q{
+    margin-right: 10px;
+}
+
+.questionItem{
+    flex-grow: 0;
+    margin-left: auto;
+}
+
+/* -------------------- ansBlock -------------------- */
+
+.ansBlock{
+    background-color: #FAF0E4;
+    margin-bottom: 20px;
+}
+
+.ans{
+    padding: 10px 0 10px 5px;
+}
+
+.ansItem{
+    margin-left: 20px;
+}
+
+.ansItem h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: #f1d4b7;
+    display: inline;
+}
+.ansItem p{
+    padding: 10px;
+    font-size: 16px;
+}
+

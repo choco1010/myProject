@@ -1,0 +1,107 @@
+@import url(reset.css);
+
+.backgroundPic1{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+.backgroundPic2{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+/* -----------------------------main----------------------------- */
+.signWrapper{
+    outline: 1px solid #B88571;
+    width: 40%;
+    min-height: 600px;
+    margin: 60px auto;
+    padding: 40px 30px;
+}
+
+.signTitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #B88571;
+    margin-bottom: 80px;
+}
+
+.signForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.signForm label{
+    margin-right: 5px;
+    color: #B88571;
+    font-size: 24px;
+}
+
+.signList{
+    color: #B88571;
+}
+
+.signItem{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.signItem input{
+    border: none;
+    border-bottom: 1px solid #B88571;
+    width: 300px;
+    font-size: 24px;
+}
+
+.signItem:nth-child(9){
+    margin-bottom: 40px;
+}
+
+/* -------------------  ----------------------- */
+.separator{
+    /* outline: 1px solid black; */
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.separator::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid #B88571;
+}
+
+/* ------------------- registerBtn ----------------------- */
+.submitBtn{
+    width: 100%;
+}
+
+.submitBtn a{
+    display: block;
+    max-width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background-color: #B88571;
+    color: #fff;
+    border: 1px solid #B88571;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.submitBtn a:hover{
+    background-color:#d5a58d;
+    font-weight: bold;
+}

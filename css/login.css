@@ -1,0 +1,131 @@
+@import url(reset.css);
+
+.backgroundPic1{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+.backgroundPic2{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+/* -----------------------------main----------------------------- */
+
+.loginWrapper{
+    outline: 1px solid #AA8B66;
+    width: 40%;
+    min-height: 600px;
+    margin: 60px auto;
+    padding: 40px 30px;
+}
+
+.loginTitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #B88571;
+    margin-bottom: 80px;
+}
+
+.loginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.loginForm label{
+    margin-right: 5px;
+    color: #B88571;
+    font-size: 24px;
+}
+
+/* 輸入框 */
+
+.userLogin{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.userLogin input{
+    border: none;
+    border-bottom: 1px solid #B88571;
+    width: 300px;
+    font-size: 24px;
+}
+/* ------------------- forgetPassword ----------------------- */
+.forgetPd{
+    margin: 20px 0 40px 0;
+}
+
+.forgetPd a{
+    color: #B88571;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ------------------- login ----------------------- */
+
+.loginBtn{
+    width: 100%;
+}
+
+.loginBtn a{
+    display: block;
+    max-width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background-color: #B88571;
+    color: #fff;
+    border: 1px solid #B88571;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.loginBtn a:hover{
+    background-color: #d5a58d;
+    font-weight: bold;
+}
+/* -------------------  ----------------------- */
+.separator{
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.separator::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid #B88571;
+}
+/* ------------------- registerBtn ----------------------- */
+.registerBtn{
+    width: 100%;
+}
+
+.registerBtn a{
+    display: block;
+    max-width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background-color: #B88571;
+    color: #fff;
+    border: 1px solid #B88571;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.registerBtn a:hover{
+    background-color: #d5a58d;
+    font-weight: bold;
+}

@@ -1,0 +1,178 @@
+/* --------------- 共同header和footer --------------- */
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    background-color: #FAF0E4;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+
+.topNav{
+    display: flex;
+}
+/* ------------------- LOGO ------------------- */
+header h1{
+    margin-left: 10px;
+    top: 0;
+    line-height: 70px;
+    background-image: url(../img/LOGO.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 126px;
+    text-indent: -9999px;
+}
+
+/* ------------------- text nav ------------------- */
+
+.textMenu{
+    /* outline: 1px solid black; */
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navList{
+    display: flex;
+    letter-spacing: 3px;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.navItem{
+    width: 30%;
+    display: block;
+    color: #F3A07E;
+    line-height: 70px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navItem a{
+    display: block;
+    color: #F3A07E;
+    line-height: 70px;
+    text-decoration: none;
+    text-align: center;
+}    
+
+.navItem:hover{
+    background-color: #f1d4b7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navItem a:hover{
+    background-color: #f1d4b7;
+    font-weight: bold;
+}
+/* 花藝商品的子單 */
+.productTypes{
+    display: none;
+    background-color: #FAF0E4;
+    position: absolute;
+    z-index: 2;
+    width: 25%;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.productTypes li{
+    font-weight: normal;
+}
+
+.productTypes li:hover{
+    background-color: #f1d4b7;
+    font-weight: bold;
+}
+
+.navItem:hover > .productTypes{
+    display: block;
+}
+/* 婚禮系列的子單 */
+
+.weddingItem{
+    position: relative;
+}
+
+.weddingDrop{
+    position: absolute;
+    top:0;
+    left: -127px;
+    background-color: #FAF0E4;
+    width: 100%;
+    display: none;
+}
+
+.weddingDrop li{
+    font-weight: normal;
+}
+
+.weddingDrop li:hover{
+    font-weight: bold;
+}
+
+.weddingItem:hover >.weddingDrop{
+    display: block;
+}
+
+/* ------------------- icon nav ------------------- */
+
+.iconMenu{
+    display: flex;
+    margin-right: 10px;
+}
+
+.iconMenu .fa-solid{
+    color: #F3A07E;
+    font-size: 18px;
+}
+
+.iconMenu ul{
+    display: flex;
+}
+
+.iconMenu li{
+    margin-left: 10px;
+}
+
+.iconMenu li a{
+    display: block;
+    padding: 0 20px;
+}
+
+
+/* ----------------------------- footer ----------------------------- */
+
+footer{
+    display: flex;
+    background-color: #EECFBB;
+    height: 70px;
+    justify-content: center;
+}
+
+.copyRight{
+    margin: 0 auto;
+    font-size: 16px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    padding-left: 166px;
+}
+
+.socialLink{
+    width: 146px;
+    margin-right: 20px;
+    line-height: 70px;
+}
+
+.socialLink a{
+    padding: 10px;
+}
+
+.fa-brands{
+    font-size: 20px;
+    color: white;
+}

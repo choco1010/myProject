@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sunrise</title>
+        <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
+        <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css">  
+        <link rel="stylesheet" href="css/signsusess.css">
+        <link rel="stylesheet" href="css/shared.css">
+    </head>
+    <body>
+
+        <header>  
+<!-------------------------------- topMenu ----------------------------------->
+            <div class="topNav">
+                <a href="./index.html">
+                    <h1>Sunrise</h1>
+                </a>
+
+                <nav class="textMenu">
+                    <ul class="navList">
+                        <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                        <li class="navItem">
+                            <a href="#">花藝商品</a>
+                            <ul class="productTypes">
+                                <li>盆花</li>
+                                <li>花束</li>
+                                <li>乾燥花</li>
+                                <li class="weddingItem">
+                                    婚禮系列
+                                    <ul class="weddingDrop">
+                                        <li>
+                                            <a href="./catalog.html">捧花</a>
+                                        </li>
+                                        <li>腕花</li>
+                                        <li>頭冠花</li>
+                                    </ul>
+                                </li>
+                                <li>高架花籃</li>
+                            </ul>
+                        </li>
+                        <li class="navItem"><a href="faq.html">常見問題</a></li>
+                        <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="iconMenu">
+                    <ul>
+                        <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                    </ul>
+                </nav>
+            </div>
+    </header>
+                
+<!-------------------------------- main ----------------------------------->  
+        <main>
+            <div class="signSuccess">
+                <h1>註冊成功！</h1>
+                <p>歡迎您加入Sunrise</p>
+
+                <button id="returnIndex">繼續購物</button>
+        </main>
+
+
+<!---------------------------------- footer -------------------------------->
+
+        <footer>
+            <div class="copyRight">
+                <p>
+                    Copyright© 本網站為緯育TibaMe【第91期】前端工程師
+                    專業技術養成班學員作品,僅供學習、展示
+                    之用途。
+                </p>
+            </div>
+            <div class="socialLink">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-line"></i></a>
+            </div>
+        </footer>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                const returnHomeButton = document.getElementById('returnIndex');
+
+                returnHomeButton.addEventListener('click', function() {
+                    window.location.href = 'index.html'; 
+                });
+            });
+        </script>
+    </body>
+</html>

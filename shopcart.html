@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise</title>
+    <link rel="stylesheet" href="css/shopcart.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css">  
+</head>
+<body>
+    <header>  
+<!-------------------------------- topMenu ----------------------------------->
+        <div class="topNav">
+            <a href="./index.html">
+                <h1>Sunrise</h1>
+            </a>
+
+            <nav class="textMenu">
+                <ul class="navList">
+                    <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                    <li class="navItem">
+                        <a href="#">花藝商品</a>
+                        <ul class="productTypes">
+                            <li>盆花</li>
+                            <li>花束</li>
+                            <li>乾燥花</li>
+                            <li class="weddingItem">
+                                婚禮系列
+                                <ul class="weddingDrop">
+                                    <li>
+                                        <a href="./catalog.html">捧花</a>
+                                    </li>
+                                    <li>腕花</li>
+                                    <li>頭冠花</li>
+                                </ul>
+                            </li>
+                            <li>高架花籃</li>
+                        </ul>
+                    </li>
+                    <li class="navItem"><a href="faq.html">常見問題</a></li>
+                    <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
+                </ul>
+            </nav>
+
+            <nav class="iconMenu">
+                <ul>
+                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!---------------------------------- main ------------------------------------->
+    <main>
+
+        <div class="spacer"></div>
+<!-- ------------------------ loginBox ---------------------- -->
+        <div class="loginBox">
+            <a href="login.html" class="loginPrompt">
+                <p>已經是會員？</p>
+                <p>按此登入</p>
+                <p>快速完成結帳</p>
+            </a>
+        </div>
+
+<!-- ------------------------ cartwrapper ---------------------- -->
+        <section class="cartWrapper">
+            <ul class="cartItemHeaders">
+                <li>商品名稱</li>
+                <li>價格</li>
+                <li>數量</li>
+                <li>小計</li>
+                <li><!--刪除icon用--></li>
+            </ul>
+
+            <ul class="productList">
+                <li>
+                    <a href="product.html" class="productLink">
+                        <img src="./img/product8.jpg" alt="新娘捧花-多彩夏季">
+                        <p>新娘捧花 多彩夏季</p>
+                    </a>
+                </li>
+                <li>
+                    單價   NT$2,500
+                </li>
+                <li>
+                    <button class="quantityBtn">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <input type="text" class="quantityInput" value="2">
+
+                    <button class="quantityBtn">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </li>
+                <li>
+                    NT$5,000
+                </li>
+                <li>
+                    <a href="#" aria-label="刪除商品">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tip">
+                <p>此筆訂單會產生</p>
+                <p>20</p>
+                <p>點紅利點數</p>
+            </div>
+        </section>
+<!-- ------------------------ priceItem ---------------------- -->
+
+        <ul class="priceList">
+            <li class="priceDetail">
+                <span>小計</span>
+                <span>NT$5,000</span>
+            </li>
+            <li class="priceDetail">
+                <span>優惠折扣</span>
+                <span>-NT$120</span>
+            </li>
+            <!-- -------------------------- -->
+            <li class="separator"></li>
+            <li class="priceDetail">
+                <span>訂單總計</span>
+                <span class="total">NT$4,980</span>
+            </li>
+        </ul>
+
+        <div class="cartBtn">
+            <a href="catalog.html" class="continueShop">繼續選購</a>
+            <a href="payment.html" class="toBuy">下一步-計算運費</a>
+        </div>
+   
+ <!-- ------------------------ recentlyView ---------------------- -->  
+
+        <div class="recentlyView">
+            <button>最近 <br> 瀏覽</button>
+            <ul class="historyList">
+                <li class="historyItem">
+                    <a href="product.html">
+                        <img src="./img/product8.jpg" alt="新娘捧花-繽紛花園">
+                    </a>
+                </li>
+                <li class="historyItem">
+                    <a href="#">
+                        <img src="./img/product7.jpg" alt="新娘捧花-繽紛花園">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+ <!---------------------------------- footer -------------------------------->
+
+     <footer>
+        <div class="copyRight">
+            <p>
+                Copyright© 本網站為緯育TibaMe【第91期】前端工程師
+                專業技術養成班學員作品,僅供學習、展示
+                之用途。
+            </p>
+        </div>
+        <div class="socialLink">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

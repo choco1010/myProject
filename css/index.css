@@ -1,0 +1,331 @@
+@import url(reset.css);
+
+/* -----------------------------main----------------------------- */
+
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* ------------------- Search ------------------- */
+.searchSection{
+    margin-bottom: 40px;
+}
+
+.searchLabel{
+    color: #AA8B66;
+    font-size: 30px;
+}
+
+.searchLabel::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/flowericon.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+
+#cusSearch{
+    outline: none;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.searchBtn:hover{
+    cursor:pointer;
+}
+
+.searchBtn .fa-magnifying-glass{
+    color: #AA8B66;
+    font-size: 20px;
+}
+
+
+/* ----------------------------- wedding Product  ----------------------------- */
+
+
+.weddingCards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.cardItem{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardItem a{
+    text-decoration: none;
+    color: #AA8B66;
+    
+}
+
+.cardItem img{
+    display: inline-block;
+    width: auto;
+    height: 225px;
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease;
+}
+
+.cardItem h3{
+    margin-bottom: 5px;
+    color: #AA8B66;
+    font-size: 20px;
+}
+.cardItem p{
+    font-size: 16px;
+    color: #AA8B66;
+}
+/* --------- put shoppingCart --------- */
+.cartButtonText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+    background-color: #FAF0E4;
+    width: 215px;
+    text-align: center;
+    padding: 5px; 
+    font-size: 10px;
+}
+
+.cartButtonText h4{
+    display: block;
+    font-size: 18px;
+}
+
+.cardItem:hover .cartButtonText{
+    display: block;
+    transform: translateY(113px); 
+    z-index: 1;
+}
+
+.cardItem:hover img {
+    opacity: 0.7;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+/* -----------------------------openbless Product ----------------------------- */
+
+.openingBlessingCards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.openingBlessingCards li a{
+    text-decoration: none;
+    color: #AA8B66;
+    font-size: 20px;
+}
+
+.openingBlessingCards li img{
+    display: inline-block;
+    width: auto;
+    height: 225px;
+    margin-bottom: 10px;
+}
+
+.openingBlessingCards li h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.openingBlessingCards li p{
+    font-size: 16px;
+}
+
+.openingBlessingCards li:hover img {
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+/* ----------------------------- dailylife Product ----------------------------- */
+
+.dailyLifeProducts{
+    margin-bottom: 20px;
+}
+
+.dailyLifeSection ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+}
+
+.dailyLifeSection li{
+    margin-bottom: 20px;
+}
+
+.dailyLifeSection h3{
+    font-size: 20px;
+}
+
+.dailyLifeSection li a{
+    text-decoration: none;
+    color: #AA8B66;
+    font-size: 20px;
+}
+
+.dailyLifeSection li img{
+    width: 90%;
+    height: 300px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.dailyLifeSection li img:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+/* ------------------- allTitle ------------------- */
+
+.productTitle{
+    border-bottom: 1px solid #AA8B66;
+    margin: 40px 0;
+}
+
+h2{
+    text-align: left;
+    color: #AA8B66;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/flowericon.png);
+    margin-right: 10px;
+}
+
+/* ----------------------------- customer Service ----------------------------- */
+
+.customService{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.pictureBackground{
+    padding: 40px;
+    height: auto;
+}
+
+.pictureBackground::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0 ;
+    background-image: url(../img/index-footer.jpg);
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.consultationForm{
+    background-color: rgba(250, 240, 228, .7);
+    padding: 50px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: left;
+    line-height: 1.1;
+    border-radius: 10px;
+}
+
+.infoTitle{
+    font-size: 30px; 
+    margin-bottom: 20px;
+    color: #AA8B66;
+}
+
+.informationContent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.informationContent li{
+    border-left: 2px solid #AA8B66;
+    display: list-item;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: #AA8B66;
+
+}
+.informationContent li h3{
+    font-size: 20px;
+    padding: 15px;
+}
+
+.informationContent li p{
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 5px 15px 5px 15px;
+
+}
+
+.callout{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px 30px;
+    border: 1px solid #AA8B66;
+    color: #AA8B66;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.callout:hover{
+    transform: scale(1.1);
+    background-color: #AA8B66;
+    color: #fff;
+}
+
+/* -------------- reurnTop -------------- */
+
+#btnScrollToTop {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #FAF0E4;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    display: none;
+  }
+
+
+#btnScrollToTop:hover {
+    background-color: #f1d4b7;  
+}
+
+#btnScrollToTop:hover .fa-caret-up{
+    background-color: #f1d4b7;
+    color: #fff
+}
+
+

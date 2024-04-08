@@ -1,0 +1,269 @@
+@import url(reset.css);
+/* -----------------------------main----------------------------- */
+
+.blockNav{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ------------------- breadcrumbNav ------------------- */
+
+.breadcrumbNav{
+    background-color: #FAF0E4;
+    text-align: right;
+    padding: 5px 20px;
+    margin-bottom: 40px;
+    color: #AA8B66;
+}
+
+.breadcrumbLink{
+    color: #AA8B66;
+}
+
+/* ------------------- searchSection ------------------- */
+
+.searchSection{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.searchLabel{
+    color: #AA8B66;
+    font-size: 30px;
+}
+
+.searchLabel::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/flowericon.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+
+#cusSearch{
+    outline: none;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.searchBtn:hover{
+    cursor: pointer;
+}
+
+.fa-magnifying-glass{
+    color: #AA8B66;
+    font-size: 24px;
+}
+
+/* -------------------------customerPage----------------------------- */
+
+.productTitle{
+    background-color: #FAF0E4;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.productTitle h2{
+    font-size: 28px;
+    color: #aa8b66;
+    line-height: 1.6;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ----------- aside ----------- */
+
+.mainSidebar{
+    height: 520px;
+    flex-grow: 0;
+    width: 25%;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.menuTitle{
+    outline: 1px solid #AA8B66;
+    background-color: #FAF0E4;
+    padding: 20px;
+    color: #AA8B66;
+    font-size: 20px;
+}
+
+.menuItem{
+    outline: 1px solid #AA8B66;
+    padding: 20px;
+    color: #AA8B66;
+    font-size: 18px;
+} 
+
+.menuItem:hover{
+    background-color: #FAF0E4;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#weddingCategory{
+    outline: 1px solid #AA8B66;
+    padding: 20px;
+    color: #AA8B66;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.subMenu{
+    display: none;
+    margin-top: 20px;
+}
+
+.subItem{
+    padding: 15px 10px;
+}
+
+.subItem a{
+    color: #AA8B66;
+}
+.subItem:hover{
+    background-color: #FAF0E4;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ------------------ Select & Product -------------- */
+
+.customerPage{
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.rightSelect{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.rightSelect h4{
+    /* outline: 1px solid black; */
+    margin-left: 50px;
+    color:#AA8B66;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.orderBy{
+    border-color: #AA8B66;;
+    padding: 5px;
+    color:#AA8B66;
+}
+
+.orderBy:hover{
+    cursor: pointer;
+}
+
+/* -------------------------------- */
+
+.wedCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.cardItem{
+    margin-bottom: 20px;
+    position: relative;
+    /* margin: 0 auto; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardItem a{
+    text-decoration: none;
+    color:#AA8B66;
+}
+
+.cardItem img{
+    display: inline-block;
+    width: auto;
+    height: 225px;
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease;
+}
+
+.cardItem h3{
+    margin-bottom: 10px;
+    color: #AA8B66;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cardItem p{
+    font-size: 16px;
+    text-align: center;
+    color: #AA8B66;
+}
+
+.cartText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+    background-color: #FAF0E4;
+    width: 215px;
+    text-align: center;
+    padding: 5px; 
+    font-size: 10px;
+}
+
+.cartText h4{
+    display: block;
+    font-size: 18px;
+}
+
+.cardItem:hover .cartText{
+    display: block;
+    transform: translateY(113px); 
+    z-index: 1;
+}
+
+.cardItem:hover img {
+    opacity: 0.7;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+/* ----------------nextpageBtn---------------- */
+
+.pagination{
+    width: 10%;
+    display: flex;
+    margin-left: 880px;
+}
+
+.pageBtn{
+    border: none;
+    color: #AA8B66;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #FAF0E4;
+}
+
+.pageBtn:hover{
+    background-color: #B88571;
+    color: white;
+    cursor: pointer;
+}
+

@@ -1,0 +1,279 @@
+@import url(reset.css);
+/* -----------------------------main----------------------------- */
+
+
+.spacer{
+    margin-bottom: 100px;;
+}
+/* --------------- loginBox --------------- */
+.loginBox{
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FAF0E4;
+    padding: 20px 40px;
+}
+
+.loginPrompt{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.loginPrompt p{
+    display: inline-block;
+    color: #AA8B66;
+}
+
+.loginPrompt p:nth-child(2){
+   color: #F3A07E;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+/* --------------- cartWrapper --------------- */
+.cartWrapper{
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: #FAF0E4;
+    color: #AA8B66;
+    font-size: 20px;
+}
+
+.cartItemHeaders{
+    background-color: #FAF0E4;
+    display: flex;
+    padding: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.cartItemHeaders ul{
+    display: flex;
+    justify-content: center;
+    
+}
+.cartItemHeaders li{
+    flex: 1;
+    text-align: center;
+}
+
+.cartItemHeaders li:nth-child(1){
+    flex: 2;
+}
+
+/* --------------- productList --------------- */
+.productList{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.productList li{
+    flex: 1;
+    text-align: center; 
+}
+
+.productList li:nth-child(1){
+    flex: 2;
+    display: flex;
+}
+
+.productList li:nth-child(3){
+    display: flex;
+    justify-content: center;
+
+}
+
+.productLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #AA8B66;
+}
+
+.productLink img{
+    max-width: 30%;
+    padding-right: 10px;
+}
+
+/* ----------- quantity & sub ----------- */
+
+.quantitySub{
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.quantity{
+    outline: 1px silid #AA8B66;
+}
+
+.quantityBtn{
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #AA8B66;
+    padding: 5px;
+}
+
+.quantityInput{
+    border: 1px solid #AA8B66;
+    border-left: none;
+    border-right: none;
+    width: 10%;
+    text-align: center;
+    color: #AA8B66;
+    font-size: 16px;
+}
+
+.quantityBtn .fa-solid {
+    font-size: 16px;
+    color: #AA8B66;
+}
+
+.productList .fa-trash-can{
+    color: #AA8B66;
+    font-size: 24px;
+}
+/* --------------------------------------- */
+.tip{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tip p{
+    padding: 5px;
+}
+
+.tip p:nth-child(2){
+    color: #F3A07E;
+    font-weight: bold;
+}
+
+/* --------------- priceItem --------------- */
+.priceList{
+    background-color: #FAF0E4;
+    width: 20%;
+    margin: 60px auto;
+    padding: 40px;
+    color: #AA8B66;
+    font-size: 18px;
+}
+
+.priceDetail{
+    display: flex;
+    justify-content: space-between;
+    /* padding-right: 2rem; */
+    margin: 10px 0;
+}
+
+.priceDetail:last-child{
+    font-weight: bold;
+}
+
+.total{
+    color: #F3A07E;
+    font-size: 24px;
+}
+.separator{
+    width: 100%;
+    height: 1px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.separator::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid #AA8B66;
+}
+
+/* --------------- cartButton --------------- */
+.cartBtn{
+    /* outline: 1px solid black; */
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartBtn a{
+   width: 100%;
+   padding: 10px;
+   margin: 0 10px 40px 2px;
+   font-size: 18px;
+   text-decoration: none;
+   text-align: center;
+}
+
+.continueShop{
+    border: 1px solid #B88571;
+    background-color: #fff;
+    color: #B88571;
+}
+
+.continueShop:hover{
+    background-color: #B88571;
+    color: white;
+}
+
+.toBuy{
+    border: 1px solid #B88571;
+    background-color: #FAF0E4;
+    color: #B88571;
+    font-weight: bold;
+}
+
+.toBuy:hover{
+    background-color: #B88571;
+    color: white;
+    opacity: 1;
+}
+
+/* --------------- recentlyView --------------- */
+
+.recentlyView{
+    position: fixed;
+    right: 0;
+    top: 154px;
+}
+
+.recentlyView button{
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #FAF0E4;
+    background-color: #FAF0E4;
+    color: #AA8B66;
+}
+
+.recentlyView button:hover{
+    background-color: #f1d4b7;
+    color: #fff;
+}
+
+.historyList{
+    display: none;
+    position: absolute;
+    top: 67px;
+    right: 10px;
+}
+
+.historyList img{
+    width: 100px;
+}
+
+.recentlyView:hover .historyList{
+    display: block;
+}

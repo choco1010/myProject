@@ -1,0 +1,205 @@
+@import url(reset.css);
+
+/* -----------------------------main----------------------------- */
+
+main{
+    color: #B88571;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+input{
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    border: 1px solid #AA8B66;
+}
+
+/* -------------------取貨方式--------------- */
+
+.pickupWrapper{
+    /* outline: 1px solid black; */
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 10px;
+}
+
+.pickupMethod{
+    border-bottom: 1px solid #AA8B66;
+    padding-bottom: 5px;
+}
+
+.pickupBtn{
+    margin-bottom: 5px;
+}
+/* -------------------到貨日期--------------- */
+
+.arrivalDate{
+    margin-top: 20px;
+    border-bottom: 1px solid #AA8B66;
+}
+
+/* -------------------行事曆--------------- */
+
+.calendar{
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.calendarTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.monthYear{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.arrow{
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.weekdays{
+    display: flex;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.weekdays span{
+    flex: 1;
+    text-align: center;
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.day{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.day:hover{
+    background-color: #FAF0E4;
+}
+
+.disabled, .past-day{
+    color: #999;
+}
+
+.highlight{
+    background-color: #add8e6;
+    font-weight: bold;
+}
+
+/* -------------------購買人資料--------------- */
+
+.customerInfo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-bottom: 1px solid #AA8B66;
+}
+
+.addSelect{
+    display: flex;
+}
+
+select{
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #AA8B66;
+}
+
+/* -------------------商品收件人--------------- */
+.recipientInfo{
+    /* border-top: 1px solid #AA8B66; */
+    /* outline: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-bottom: 1px solid #AA8B66;
+}
+
+/* -------------------付款方式--------------- */
+.paymentMethod{
+    margin-top: 20px;
+    border-bottom: 3px solid #AA8B66;
+}
+
+/* -------------------發票資料--------------- */
+
+.invoiceData{
+    margin-top: 20px;
+}
+
+.notes{
+    border: 1px solid #B88571;
+    background-color: #FAF0E4;
+    padding: 10px 10px 10px 250px;
+    margin-bottom: 20px;
+}
+
+.notes p{
+    margin: 5px 0;
+}
+
+.invoiceBtn{
+    margin-bottom: 10px;
+}
+
+/* -------------------送出--------------- */
+.finalBtn{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.finalBtn a{ 
+    text-decoration: none;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.backBtn{
+    border: 1px solid #B88571;
+    padding: 5px 20px;
+    flex: 1;
+    color: #B88571;
+}
+
+.backBtn:hover{
+    background-color: #B88571;
+    color: #fff;
+}
+
+.submitBtn{
+    border: 1px solid #B88571;
+    padding: 5px 20px;
+    flex: 1;
+    background-color: #FAF0E4;
+    color: #B88571;
+    font-weight: bold;
+}
+
+.submitBtn:hover{
+    background-color: #B88571;
+    color: #fff;
+}

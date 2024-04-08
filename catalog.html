@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css">
+    <link rel="stylesheet" href="css/swiper.css">  
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <script src="./js/jquery-3.7.1.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+</head>
+<body>
+   
+    <header>  
+<!-------------------------------- topMenu ----------------------------------->
+        <div class="topNav">
+            <a href="./index.html">
+                <h1>Sunrise</h1>
+            </a>
+
+            <nav class="textMenu">
+                <ul class="navList">
+                    <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                    <li class="navItem">
+                        <a href="#">花藝商品</a>
+                        <ul class="productTypes">
+                            <li>盆花</li>
+                            <li>花束</li>
+                            <li>乾燥花</li>
+                            <li class="weddingItem">
+                                婚禮系列
+                                <ul class="weddingDrop">
+                                    <li>
+                                        <a href="./catalog.html">捧花</a>
+                                    </li>
+                                    <li>腕花</li>
+                                    <li>頭冠花</li>
+                                </ul>
+                            </li>
+                            <li>高架花籃</li>
+                        </ul>
+                    </li>
+                    <li class="navItem"><a href="faq.html">常見問題</a></li>
+                    <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
+                </ul>
+            </nav>
+
+            <nav class="iconMenu">
+                <ul>
+                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                </ul>
+            </nav>
+        </div>
+    </header>
+        
+ <!-------------------------------- main ----------------------------------->
+    
+    <main>
+        <!-- 幻燈片... -->
+        <section class="swiper mySwiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <img src="./img/catalog-banner.jpg" alt="新娘捧花">
+                    <h1 class="bannerTitle">獨特而精緻的新娘捧花，為您的浪漫時刻增添幸福色彩！</h1>
+                </li>
+                <li class="swiper-slide">
+                    <img src="./img/index-banner1.jpg" alt="母親節優惠">
+                    <h1 class="bannerTitle">母親節特別優惠：精選康乃馨花束，溫暖您心。</h1>
+                    <a href="#">點擊購買</a>
+                </li>
+                <li class="swiper-slide">
+                    <img src="./img/index-banner2.jpg" alt="情人節活動">
+                    <h1 class="bannerTitle">情人節玫瑰，愛意盛放！點擊選購最浪漫的禮物。</h1>
+                    <a href="#">點擊購買</a>
+                </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+
+        <!-- 下方指引 -->
+
+        <div class="blockNav">
+            <!-- breadcrumbNav -->
+            <nav class="breadcrumbNav">
+                <a href="index.html" class="breadcrumbLink">首頁</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <a href="#" class="breadcrumbLink">花藝商品</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <a href="#" class="breadcrumbLink">婚禮系列</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span class="currentBreadcrumb">捧花</span>
+            </nav>
+            <!-- searchSection -->
+            <section class="searchSection">
+                <form action="#">
+                    <label for="cusSearch" class="searchLabel">請在這裡尋找您心儀的花朵吧:</label>
+                    <input type="search" id="cusSearch" name="cusSearch" placeholder="輸入花名或品種，開始您的花店之旅吧">
+                    
+                    <label for="submitBtn" class="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input type="submit" id="submitBtn" style="display: none">
+                </form>
+            </section>
+        </div>       
+            
+<!----------------------- costumer page ------------------------->
+        <div class="productTitle">
+            <h2>捧花</h2>
+        </div>
+
+        <div class="wrapper">
+            <aside class="mainSidebar">
+                <ul class="sidebarMenu">
+                    <li class="menuTitle">花藝商品</li>
+                    <li class="menuItem">盆花</li>
+                    <li class="menuItem">花束</li>
+                    <li class="menuItem">乾燥花</li>
+                    <li id="weddingCategory">婚禮系列
+                        <ul class="subMenu">
+                            <li class="subItem"><a href="./catalog.html">捧花</a></li>
+                            <li class="subItem">腕花</li>
+                            <li class="subItem">頭冠花</li>
+                        </ul>
+                    </li>
+                    <li class="menuItem">高架花籃</li>
+                </ul>
+            </aside>
+
+            <div class="customerPage">
+                <span class="rightSelect">
+                    <h4>顯示第1至第8個商品,共有24個商品(分4頁顯示)</h4>
+                
+                    <form class="ordering" method="get"> 
+                        <select name="orderBy" class="orderBy" aria-label="商品排序">
+                            <option value="menuOrder" selected="selected">預設排序</option>
+                            <option value="popularity">依熱銷度</option>
+                            <option value="date">依最新項目排序</option>
+                            <option value="price">依價格排序-低至高</option>
+                            <option value="priceDesc">依價格排序-高至低</option>
+                        </select>
+                        <input type="hidden" name="paged" value="1">
+                    </form>
+                </span>
+            
+            <!-- 商品頁 -->
+                <section class="weddingrProduct">
+                    <ul class="wedCard">
+                        <li class="cardItem">
+                            <div>
+                                <a href="#" class="cartText"><h4>加入購物車</h4></a>
+                            </div>
+                            <div>
+                            <a href="./product.html">
+                                <img src="./img/product8.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                            </div>
+                        </li>
+    
+                        <li class="cardItem">
+                            <a href="#">
+                                <img src="./img/product2.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                        </li>
+    
+                        <li class="cardItem">
+                            <a href="#">
+                                <img src="./img/product3.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                        </li>
+    
+                        <li class="cardItem">
+                            <a href="#">
+                                <img src="./img/product4.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                        </li>
+    
+                        <li class="cardItem">
+                            <a href="#">
+                                <img src="./img/product5.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                        </li>
+    
+                        <li class="cardItem">
+                            <a href="#">
+                                <img src="./img/product6.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                        </li>
+    
+                        <li class="cardItem">
+                            <a href="#">
+                                <img src="./img/product7.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                        </li>
+    
+                        <li class="cardItem">
+                            <a href="#">
+                                <img src="./img/product1.jpg" alt="新娘捧花-繽紛花園">
+                                <h3>新娘捧花-繽紛花園</h3>
+                                <p>NT 2,500</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+  
+        </div>
+        <div class="pagination">
+            <button class="pageBtn">1</button>
+            <button class="pageBtn">2</button>
+            <button class="pageBtn">3</button>
+            <button class="pageBtn">4</button>
+        </div>
+            
+           
+            
+    </main>
+
+
+<!---------------------------------- footer -------------------------------->
+
+     <footer>
+        <div class="copyRight">
+            <p>
+                Copyright© 本網站為緯育TibaMe【第91期】前端工程師
+                專業技術養成班學員作品,僅供學習、展示
+                之用途。
+            </p>
+        </div>
+        <div class="socialLink">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let weddingCategory = document.getElementById("weddingCategory");
+            let subMenu = weddingCategory.querySelector(".subMenu");
+        
+            weddingCategory.addEventListener("click", function(event) {
+                event.preventDefault();
+                subMenu.style.display = (subMenu.style.display === 'none' || subMenu.style.display === '') ? 'block' : 'none';
+            });
+        
+            let subItems = document.querySelectorAll(".subItem");
+            subItems.forEach(function(item) {
+                item.addEventListener("click", function(event) {
+                    if (item.textContent.trim() === "捧花") {
+                        event.stopPropagation();
+                        return;
+                    }
+                    event.preventDefault();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

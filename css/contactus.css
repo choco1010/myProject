@@ -1,0 +1,144 @@
+@import url(reset.css);
+
+.contactWrapper{
+    width: 80%;
+    min-height: 600px;
+    margin: 65px auto;
+    padding: 5px 30px;
+    color: #AA8B66;
+    display: flex;
+    align-items: center;
+}
+/* ---------- contactBlock ---------- */
+
+.contactImg img{
+    max-width: 95%;
+    height: auto;
+}
+
+.contactBlock{
+    width: 100%;
+}
+
+.questionTitle{
+    border-bottom: 1px solid #AA8B66;
+    margin: 20px 0;
+}
+
+h2{
+    text-align: left;
+    color: #AA8B66;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/flowericon.png);
+    margin-right: 10px;
+}
+
+/* ---------- writeBlock ---------- */
+
+/* radio樣式變更 */
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    line-height: 20px; 
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px; 
+    height: 20px;
+    background: #fff;
+    border: 1px solid #AA8B66;
+    box-sizing: border-box;
+}
+
+input[type="radio"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    font-size: 16px;
+    color: #AA8B66;
+}
+
+.chooseBtn{
+    margin-right: 5px;
+}
+
+.writeList{
+    font-size: 16px;
+}
+
+.writeItem{
+    margin-bottom: 10px;
+}
+
+/* input框樣式變更 */
+input[type="text"] {
+    border: none; 
+    border-bottom: 1px solid #AA8B66; 
+    outline: none; 
+    padding: 5px 30px 5px 0; 
+}
+
+input[type="text"]:focus {
+    border-bottom: 1px solid #EECFBB; 
+}
+
+.writeItem:nth-child(3){
+    display: flex;
+}
+
+.writeItem:nth-child(4){
+    display: flex;
+}
+
+.writeItem:nth-child(5) p{
+    margin-bottom: 5px;
+}
+
+.writeItem:last-child{
+    color: #F3A07E;
+}
+
+.writeItem textarea{
+    border: 1px solid #AA8B66;
+    color: #AA8B66;
+}
+
+.writeItem textarea:focus {
+    border-color: #EECFBB;
+    outline: none;
+}
+
+.submitBtn a{
+    width: 40%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: #AA8B66;
+    padding: 5px 10px;
+}
+
+.submitBtn a:hover{
+    background-color: #EECFBB;
+    color: #AA8B66;
+}

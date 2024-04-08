@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise</title>
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/calendar.js"></script>
+</head>
+<body>
+    <header>  
+<!-------------------------------- topMenu ----------------------------------->
+        <div class="topNav">
+            <a href="./index.html">
+                <h1>Sunrise</h1>
+            </a>
+
+            <nav class="textMenu">
+                <ul class="navList">
+                    <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                    <li class="navItem">
+                        <a href="#">花藝商品</a>
+                        <ul class="productTypes">
+                            <li>盆花</li>
+                            <li>花束</li>
+                            <li>乾燥花</li>
+                            <li class="weddingItem">
+                                婚禮系列
+                                <ul class="weddingDrop">
+                                    <li>
+                                        <a href="./catalog.html">捧花</a>
+                                    </li>
+                                    <li>腕花</li>
+                                    <li>頭冠花</li>
+                                </ul>
+                            </li>
+                            <li>高架花籃</li>
+                        </ul>
+                    </li>
+                    <li class="navItem"><a href="faq.html">常見問題</a></li>
+                    <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
+                </ul>
+            </nav>
+
+            <nav class="iconMenu">
+                <ul>
+                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                </ul>
+            </nav>
+        </div>
+    </header>
+        
+<!-------------------------------- main -----------------------------------> 
+    <main class="pickupWrapper">
+
+<!-- -------------------取貨方式---------------  -->
+
+        <section class="pickupMethod">
+            <h3>取貨方式</h3>
+            <div class="pickupBtn">
+                <input type="radio" name="pickup" id="delivery" value="delivery">
+                <label for="delivery">宅配 $120</label>
+            </div>
+            <div class="pickupBtn">
+                <input type="radio" name="pickup" id="instore" value="instore">
+                <label for="instore">門市取貨</label>
+            </div>
+        </section>
+
+<!-- -------------------到貨日期--------------- -->
+
+        <section class="arrivalDate">
+            <h3>請選擇希望到貨日期</h3>
+            <div class="calendar">
+                <div class="calendarTop">
+                    <span class="arrow prev-month">&lt;</span>
+                    <h2 class="monthYear"></h2>
+                    <span class="arrow next-month">&gt;</span>
+                </div>
+                <div class="weekdays"></div>
+                <div class="days"></div>
+            </div>
+        </section>
+
+<!-- -------------------購買人資料--------------- -->
+
+        <section class="customerInfo">
+            <h3>購買人資料</h3>
+            <input type="text" placeholder="請填寫購買姓名,以免無法取貨">
+            <input type="text" placeholder="手機號碼">
+            <input type="text" placeholder="電子郵件">
+            <div class="addSelect">
+                <select name="countyRecipient" id="countyRecipientSelect">縣市
+                    <option value="">請選擇縣市</option>
+                    <option value="taipei">台北市</option>
+                    <option value="newtaipei">新北市</option>
+                </select>
+                <select name="districtRecipient" id="districtRecipientSelect">鄉鎮市區
+                    <option value="">請選擇鄉鎮市區</option>
+                </select>
+            </div>
+            <input type="text" placeholder="里(村)/路(街)/號/樓(室)(必填)">
+            <label class="checkboxContainer">
+                <input type="checkbox"> 收件地址與購買人地址相同
+            </label>
+        </section>
+
+<!-- -------------------商品收件人--------------- -->
+
+        <section class="recipientInfo">
+            <h3>商品收件人</h3>
+            <input type="text" placeholder="請填寫收件人姓名,以免無法取貨">
+            <input type="text" placeholder="手機號碼">
+            <div class="addSelect">
+                <select name="countyRecipient" id="countyRecipientSelect">縣市
+                    <option value="">請選擇縣市</option>
+                    <option value="taipei">台北市</option>
+                    <option value="newtaipei">新北市</option>
+                </select>
+                <select name="districtRecipient" id="districtRecipientSelect">鄉鎮市區
+                    <option value="">請選擇鄉鎮市區</option>
+                </select>
+            </div>
+            <input type="text" placeholder="里(村)/路(街)/號/樓(室)(必填)">
+        </section>
+
+<!-- -------------------付款方式---------------  -->
+        <section class="paymentMethod">
+            <h3>付款方式</h3>
+            <div>
+                <input type="radio" name="paymentOption" id="bankTransfer" value="bankTransfer">
+                <label for="bankTransfer">轉帳付款 / ATM (請於24小時內完成匯款)</label>
+            </div>
+            <div>
+                <input type="radio" name="paymentOption" id="creditCard" value="creditCard">
+                <label for="creditCard">信用卡 (VISA、MASTERCARD、JCB)</label>
+            </div>
+        </section>
+
+<!-- -------------------發票資料---------------  -->
+
+        <section class="invoiceData">
+            <h3>發票資料</h3>
+            <div class="notes">
+                <p>請確認電子信箱及公司抬頭統編是否填寫正確</p>
+                <p>商品完成配送及取貨後，發票將以電子郵件寄到訂購人信箱。</p>
+            </div>
+
+            <div class="invoiceBtn">
+                <input type="radio" name="invoice" id="TwoPart" value="TwoPart">
+                <label for="TwoPart">二聯式電子發票</label>
+            </div>
+            <div class="invoiceBtn">
+                <input type="radio" name="invoice" id="ThreePart" value="ThreePart">
+                <label for="ThreePart">三聯式電子發票</label>
+            </div>
+        </section>
+
+<!-- -------------------送出---------------  -->
+
+        <div class="finalBtn">
+            <a href="shopcart.html" class="backBtn">返回上一頁</a>
+            <a href="payment-success.html" class="submitBtn">資料確認無誤送出</a>
+        </div>
+
+
+    </main>
+    <!-------------------------------- footer ----------------------------------->
+    <footer>
+        <div class="copyRight">
+            <p>
+                Copyright© 本網站為緯育TibaMe【第91期】前端工程師
+                專業技術養成班學員作品,僅供學習、展示
+                之用途。
+            </p>
+        </div>
+        <div class="socialLink">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

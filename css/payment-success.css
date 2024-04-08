@@ -1,0 +1,52 @@
+@import url(reset.css);
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* -----------------------------main----------------------------- */
+
+.paymentSuccess {
+    background-color: #FAF0E4; 
+    color: #AA8B66; 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    text-align: center; 
+    max-width: 550px; 
+    margin: 200px auto; 
+}
+
+.paymentSuccess h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.paymentSuccess h4{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+#returnIndex {
+    background-color: #AA8B66; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+#returnIndex:hover {
+    background-color: #f1d4b7;
+    color: #AA8B66;
+    font-weight: bold;
+}

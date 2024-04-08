@@ -1,0 +1,196 @@
+@import url(reset.css);
+
+/* --------------------------- main --------------------------- */
+
+.aboutUs{
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* ---- swiper --- */
+.swiper{
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #FAF0E4;
+}
+.swiper-slide{
+    position: relative;
+}
+
+.sliderImg {
+    width: 100%; 
+    max-height: 500px; 
+    flex-shrink: 0;
+}
+
+.swiper-slide h4{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    font: 18px;
+    background-color: #FAF0E4;
+    padding: 10px 20px;
+    color: #B88571;
+}
+
+/* ------------ background ----------- */
+.circleBg01{
+    background-color: rgba(250, 240, 228, .5);
+    width: 360px;
+    height: 360px;
+    border-radius: 180px;
+    position: absolute;
+    left: -440px;
+    top: 700px;
+    order:1;
+}
+
+.circleBg02{
+    background-color: rgba(250, 240, 228, .5);
+    width: 360px;
+    height: 360px;
+    border-radius: 180px;
+    position: absolute;
+    right: -440px;
+    top: 340px;
+}
+
+.circleBg03{
+    background-color: rgba(250, 240, 228, .5);
+    width: 360px;
+    height: 360px;
+    border-radius: 180px;
+    position: absolute;
+    top: 950px;
+    left: 550px;
+}
+/* --------------------------- info --------------------------- */
+.shortInfo{
+    margin: 20px auto;
+    padding: 20px 0;
+    line-height: 2;
+    color: #AA8B66;
+    font-size: 18px;
+    order: 0;
+}
+
+/* ------------ storeInfo ----------- */
+
+.floristTitle{
+    border-bottom: 1px solid #AA8B66;
+    margin: 40px 0;
+    
+}
+h2{
+    text-align: left;
+    color: #AA8B66;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/flowericon.png);
+    margin-right: 10px;
+}
+
+/* ------------ about florist ----------- */
+.florist{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.photo img{
+    width: 324px;
+    height: 406px;
+    border-radius: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+.floristExp{
+    border: 2px solid #f1d4b7;
+    border-radius: 20px;
+    padding: 50px 0 50px 100px;
+    color: #AA8B66;
+    flex-grow: 1;
+    margin: 70px 20px 0 -50px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+.floristExp h1{
+    font-size: 30px; 
+}
+
+.floristExp p{
+    font-size: 16px;
+}
+
+.floristExp p:nth-child(3){
+    margin-bottom: 20px;
+}
+
+.search{
+    margin-top: 40px;
+}
+
+.search h3{
+    font-size: 20px;
+    margin-bottom: 40px;
+    color:#AA8B66;
+    position: relative;
+    z-index: 2;
+}
+
+.exploreFlowersButton{
+    width: 366px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.exploreFlowersButton a{
+    display: block;
+    background-color: #AA8B66;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.exploreFlowersButton a:hover{
+    opacity: 1;
+    background-color: #f1d4b7 ;
+    color: #AA8B66;
+    font-weight: bold;
+}
+/* --------------------------- location --------------------------- */
+.location{
+    margin-bottom: 20px;
+}
+
+.storeTitle{
+        border-bottom: 1px solid #AA8B66;
+        margin: 40px 0;
+}
+
+.address{
+    display: flex;
+    align-items: center;
+    /* margin: 0 auto; */
+}
+
+.address p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #AA8B66;
+    margin: 0 auto;
+}

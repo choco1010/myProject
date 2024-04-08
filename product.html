@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise</title>
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
+    <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css">  
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <script src="./js/jquery-3.7.1.min.js"></script> 
+</head>
+<body>
+    <header>  
+<!-------------------------------- topMenu ----------------------------------->
+        <div class="topNav">
+            <a href="./index.html">
+                <h1>Sunrise</h1>
+            </a>
+
+            <nav class="textMenu">
+                <ul class="navList">
+                    <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                    <li class="navItem">
+                        <a href="#">花藝商品</a>
+                        <ul class="productTypes">
+                            <li>盆花</li>
+                            <li>花束</li>
+                            <li>乾燥花</li>
+                            <li class="weddingItem">
+                                婚禮系列
+                                <ul class="weddingDrop">
+                                    <li>
+                                        <a href="./catalog.html">捧花</a>
+                                    </li>
+                                    <li>腕花</li>
+                                    <li>頭冠花</li>
+                                </ul>
+                            </li>
+                            <li>高架花籃</li>
+                        </ul>
+                    </li>
+                    <li class="navItem"><a href="faq.html">常見問題</a></li>
+                    <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
+                </ul>
+            </nav>
+
+            <nav class="iconMenu">
+                <ul>
+                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-------------------------------- main ----------------------------------->    
+    <main>
+        
+        <!-- breadcrumbNav -->
+        <nav class="breadcrumbNav">
+            <a href="index.html" class="breadcrumbLink">首頁</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <a class="breadcrumbLink">花藝商品</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <a class="breadcrumbLink">婚禮系列</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="catalog.html" class="breadcrumbLink">捧花</a>
+        </nav>
+
+        
+        <!-- 左邊選單 -->
+        <div class="wrapper">
+            <aside class="mainSidebar">
+                <ul class="sidebarMenu">
+                    <li class="menuTitle">花藝商品</li>
+                    <li class="menuItem">盆花</li>
+                    <li class="menuItem">花束</li>
+                    <li class="menuItem">乾燥花</li>
+                    <li id="weddingCategory">婚禮系列
+                        <ul class="subMenu">
+                            <li class="subItem"><a href="./catalog.html">捧花</a></li>
+                            <li class="subItem">腕花</li>
+                            <li class="subItem">頭冠花</li>
+                        </ul>
+                    </li>
+                    <li class="menuItem">高架花籃</li>
+                </ul>
+            </aside>
+        <!-- 商品 -->
+            <section class="productInfo">
+
+                <div class="mainImageContainer">
+                    <!-- 左側商品三張小圖 -->
+                    <div class="productThumbnails">
+                        <ul class="thumbnailList">
+                            <li class="thumbnailItem">
+                                <img src="./img/product8.jpg" alt="">
+                            </li>
+                            <li class="thumbnailItem">
+                                <img src="./img/product8-1.jpg" alt="">
+                            </li>
+                            <li class="thumbnailItem">
+                                <img src="./img/product8-2.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 商品大圖 -->
+                    <figure class="flowerCard">
+                        <img src="./img/product8.jpg" alt="新娘捧花-多彩夏季">
+                    </figure>
+
+                    <div class="flowerInfo">
+
+                        <h2 class="flowerTitle">新娘捧花 多彩夏季</h2>
+                        <p class="flowerPrice">NT$ 2,500</p>
+
+                        <article class="itemSpecs">
+                            <p>商品尺寸與規格單一品項非一對</p>
+                            <p>高度： 約170cm up</p>
+                            <p>可客制調整花材、包裝,請聯絡我們</p>
+                        </article>
+
+<!-- ------------------------- quantity & sub --------------------------- -->
+                        <div class="quantityControl">
+
+                            <button class="quantityBtn" aria-label="減少數量">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+
+                            <input type="text" class="quantityInput" value="2">
+
+                            <button class="quantityBtn" aria-label="增加數量">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                            <span class="subTotal">小計 NT $5,000</span>
+                        </div>
+
+ <!-- ------------------------ shoppingCart & buy ---------------------- -->                       
+                        
+                        <div class="cartActions">
+                                <a href="#" class="addToCartButton">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    加入購物車
+                                </a>
+                                <a href="shopcart.html" class="buyNowButton">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    直接購買
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+ 
+ <!-- ------------------------ attentionItems ---------------------- -->   
+                <div class="productNotes">
+                    <div class="bottomLine">
+                        <div class="textOutline">
+                            <h4>注意事項</h4>
+                        </div>
+                    </div>
+                    <ul class="attentionInfo">
+                        <li>商品皆為手工製作，尺寸及花況可能略有誤差，以實際商品為主，煩請見諒。</li>
+                        <li>若遇花材缺貨，將會以其他等值的花材或顏色設計調整。</li>
+                        <li>商品實際顏色可能因電腦、手機螢幕顯示略有落差。</li>
+                    </ul>
+<!-- ----------- similarProduct ----------- -->
+                    <div class="similarProduct">
+                        <h4>相關商品</h4>
+                        <ul class="scrollImg">
+                            <li>
+                                <a href="#">
+                                    <img src="./img/product1.jpg" alt="新娘捧花-夕陽柔情">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/product2.jpg" alt="新娘捧花-粉色花漾">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/product3.jpg" alt="新娘捧花-綠意盎然">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/product4.jpg" alt="新娘捧花-夢幻藍調">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/product5.jpg" alt="新娘捧花-紅雪花籃">
+                                </a>
+                            </li>
+                        </ul>
+    <!-- ----------- circleBtn ----------- -->
+                        <ul class="circleBtn">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- ------------------------ recentlyView ---------------------- -->  
+
+        <div class="recentlyView">
+            <button>最近 <br> 瀏覽</button>
+            <ul class="historyList">
+                <li class="historyItem">
+                    <a href="product.html">
+                        <img src="./img/product8.jpg" alt="新娘捧花-繽紛花園">
+                    </a>
+                </li>
+                <li class="historyItem">
+                    <a href="#">
+                        <img src="./img/product7.jpg" alt="新娘捧花-繽紛花園">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+    <!---------------------------------- footer -------------------------------->
+
+    <footer>
+        <div class="copyRight">
+            <p>
+                Copyright© 本網站為緯育TibaMe【第91期】前端工程師
+                專業技術養成班學員作品,僅供學習、展示
+                之用途。
+            </p>
+        </div>
+        <div class="socialLink">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let weddingCategory = document.getElementById("weddingCategory");
+            let subMenu = weddingCategory.querySelector(".subMenu");
+        
+            weddingCategory.addEventListener("click", function(event) {
+                event.preventDefault();
+                subMenu.style.display = (subMenu.style.display === 'none' || subMenu.style.display === '') ? 'block' : 'none';
+            });
+        
+            let subItems = document.querySelectorAll(".subItem");
+            subItems.forEach(function(item) {
+                item.addEventListener("click", function(event) {
+                    if (item.textContent.trim() === "捧花") {
+                        event.stopPropagation();
+                        return;
+                    }
+                    event.preventDefault();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
