@@ -1,5 +1,7 @@
 @import url(reset.css);
-
+body{
+    max-width: 1440px;
+}
 .backgroundPic1{
     position: absolute;
     top: 60px;

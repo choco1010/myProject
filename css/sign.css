@@ -1,4 +1,7 @@
 @import url(reset.css);
+body{
+    max-width: 1440px;
+}
 
 .backgroundPic1{
     position: absolute;
@@ -10,6 +13,7 @@
     bottom: 0px;
     right: 0px;
 }
+
 /* -----------------------------main----------------------------- */
 .signWrapper{
     outline: 1px solid #B88571;

@@ -2,8 +2,9 @@
 
 /* -----------------------------main----------------------------- */
 
-main{
+.pickupWrapper{
     color: #B88571;
+    max-width: 1440px;
 }
 
 h3{
@@ -43,6 +44,15 @@ input{
     border-bottom: 1px solid #AA8B66;
 }
 
+.arrivalNotes{
+    display: flex;
+    align-items: baseline;
+}
+
+.arrivalNotes h4{
+    padding-left: 10px;
+    color: #F3A07E;
+}
 /* -------------------行事曆--------------- */
 
 .calendar{
@@ -118,6 +128,8 @@ input{
 
 .addSelect{
     display: flex;
+    position: relative;
+    width: 200px; 
 }
 
 select{
@@ -126,10 +138,33 @@ select{
     border: 1px solid #AA8B66;
 }
 
+.addSelect-select::before {
+    content: '請選擇縣市'; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #808080; 
+    pointer-events: none; 
+}
+
+#countyRecipientSelect {
+    width: 200px;
+    padding: 5px; 
+    border: 1px solid #AA8B66; 
+    background-color: #fff; 
+    color: #808080;
+}
+
+#districtRecipientSelect{
+    width: 200px;
+    padding: 5px; 
+    border: 1px solid #AA8B66; 
+    background-color: #fff; 
+    color: #808080;
+}
+
 /* -------------------商品收件人--------------- */
 .recipientInfo{
-    /* border-top: 1px solid #AA8B66; */
-    /* outline: 1px solid black; */
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -151,7 +186,7 @@ select{
 .notes{
     border: 1px solid #B88571;
     background-color: #FAF0E4;
-    padding: 10px 10px 10px 250px;
+    padding: 10px 10px 10px 150px;
     margin-bottom: 20px;
 }
 

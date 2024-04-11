@@ -1,5 +1,8 @@
 @import url(reset.css);
 /* -----------------------------main----------------------------- */
+main{
+    max-width: 1440px;
+}
 
 .blockNav{
     width: 100%;
@@ -65,7 +68,7 @@
 
 .productTitle{
     background-color: #FAF0E4;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 40px;
     text-align: center;
@@ -78,7 +81,7 @@
 }
 
 .wrapper{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
@@ -88,10 +91,10 @@
 
 .mainSidebar{
     height: 520px;
-    flex-grow: 0;
-    width: 25%;
-    margin-right: 20px;
-    text-align: center;
+    /* flex-grow: 1; */
+    width: 15%;
+    margin-right: 40px;
+    text-align: left;
 }
 
 .menuTitle{
@@ -154,8 +157,6 @@
     margin-bottom: 30px;
 }
 .rightSelect h4{
-    /* outline: 1px solid black; */
-    margin-left: 50px;
     color:#AA8B66;
     font-size: 18px;
     line-height: 1.6;
@@ -173,21 +174,92 @@
 
 /* -------------------------------- */
 
-.wedCard{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 50px;
+.wedCard{ 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 }
 
 .cardItem{
     margin-bottom: 20px;
     position: relative;
-    /* margin: 0 auto; */
-    overflow: hidden;
     cursor: pointer;
 }
 
+.cardItem:hover img{
+    opacity: .7;
+    z-index: -1;
+    border-radius: 20px;
+    outline: 2px solid #EECFBB;
+}
+
+/* ----------------  滑下來是按鈕 ---------------- */
+
+.ItemIcon{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    top: 105px;
+    left: 80px;
+    padding: 5px;
+    display: none;
+}
+.ItemList{
+    display: flex;
+}
+
+.searchbg{
+    outline: 1px solid #EECFBB;
+    background-color: #fff;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.ion--search {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23000' d='M456.69 421.39L362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3M97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    color: #EECFBB;
+    cursor: pointer;
+}
+
+.cartbg{
+    outline: 1px solid #EECFBB;
+    background-color: #EECFBB;
+    padding: 5px;
+}
+
+.ion--cart {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='176' cy='416' r='32' fill='%23000'/%3E%3Ccircle cx='400' cy='416' r='32' fill='%23000'/%3E%3Cpath fill='%23000' d='M456.8 120.78a23.92 23.92 0 0 0-18.56-8.78H133.89l-6.13-34.78A16 16 0 0 0 112 64H48a16 16 0 0 0 0 32h50.58l45.66 258.78A16 16 0 0 0 160 368h256a16 16 0 0 0 0-32H173.42l-5.64-32h241.66A24.07 24.07 0 0 0 433 284.71l28.8-144a24 24 0 0 0-5-19.93'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cardItem:hover .ItemIcon{
+    display: block;
+    z-index: 1;
+}
+
+
+/* -------------------------------- */
 .cardItem a{
     text-decoration: none;
     color:#AA8B66;
@@ -196,9 +268,17 @@
 .cardItem img{
     display: inline-block;
     width: auto;
-    height: 225px;
+    height: 250px;
     margin-bottom: 10px;
     transition: opacity 0.5s ease;
+}
+
+.cardItem a p{
+    color: #F3A07E;
+}
+
+.textIcon{
+    display: flex;
 }
 
 .cardItem h3{
@@ -214,42 +294,13 @@
     color: #AA8B66;
 }
 
-.cartText{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
-    transition: transform 0.5s;
-    background-color: #FAF0E4;
-    width: 215px;
-    text-align: center;
-    padding: 5px; 
-    font-size: 10px;
-}
-
-.cartText h4{
-    display: block;
-    font-size: 18px;
-}
-
-.cardItem:hover .cartText{
-    display: block;
-    transform: translateY(113px); 
-    z-index: 1;
-}
-
-.cardItem:hover img {
-    opacity: 0.7;
-    z-index: 0;
-    border-radius: 20px;
-}
-
 /* ----------------nextpageBtn---------------- */
 
 .pagination{
+    /* outline: 1px solid black; */
     width: 10%;
     display: flex;
-    margin-left: 880px;
+    margin-left: 290px;
 }
 
 .pageBtn{
@@ -259,6 +310,7 @@
     margin: 0 auto;
     margin-bottom: 20px;
     background-color: #FAF0E4;
+    border-radius: 10px;
 }
 
 .pageBtn:hover{

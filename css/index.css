@@ -1,11 +1,15 @@
 @import url(reset.css);
 
+main{
+    /* margin: 0 auto; */
+    max-width: 1440px;
+}
 /* -----------------------------main----------------------------- */
 
 .wrapper{
-    width: 60%;
-    margin: 0 auto;
-    padding-top: 20px;
+    /* outline: 1px solid black; */
+    margin: 20px auto;
+    padding: 20px auto;
     text-align: center;
 }
 
@@ -51,6 +55,7 @@
 
 
 .weddingCards{
+    padding: 0 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -120,6 +125,7 @@
 /* -----------------------------openbless Product ----------------------------- */
 
 .openingBlessingCards{
+    padding: 0 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -154,38 +160,36 @@
 
 /* ----------------------------- dailylife Product ----------------------------- */
 
-.dailyLifeProducts{
+.dailyLifeList{
+    padding: 0 150px;
     margin-bottom: 20px;
-}
-
-.dailyLifeSection ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px; 
 }
 
-.dailyLifeSection li{
+.dailyItem{
     margin-bottom: 20px;
 }
 
-.dailyLifeSection h3{
+.dailyItem h3{
     font-size: 20px;
 }
 
-.dailyLifeSection li a{
+.dailyItem a{
     text-decoration: none;
     color: #AA8B66;
     font-size: 20px;
 }
 
-.dailyLifeSection li img{
+.dailyItem img{
     width: 90%;
     height: 300px;
     margin-top: 10px;
     transition: transform 0.3s ease;
 }
 
-.dailyLifeSection li img:hover {
+.dailyItem img:hover {
     transform: scale(1.1);
     border-radius: 20px;
 }
@@ -193,8 +197,10 @@
 /* ------------------- allTitle ------------------- */
 
 .productTitle{
+    width: 900px;
+    padding-right: 200px;
     border-bottom: 1px solid #AA8B66;
-    margin: 40px 0;
+    margin: 40px auto;
 }
 
 h2{
@@ -216,32 +222,25 @@ h2::before{
 /* ----------------------------- customer Service ----------------------------- */
 
 .customService{
-    position: relative;
+    padding: 0 150px;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
 .pictureBackground{
     padding: 40px;
+    max-width: 85%;
     height: auto;
-}
-
-.pictureBackground::before{
-    content: '';
-    position:absolute;
-    top: 0;
-    left: 0 ;
     background-image: url(../img/index-footer.jpg);
-    opacity: 0.7;
-    width: 100%;
-    height: 100%;
+    opacity: 1;
     background-size: cover;
     background-position: center;
     z-index: -1;
+    margin: 0 auto;
 }
 
 .consultationForm{
-    background-color: rgba(250, 240, 228, .7);
+    background-color: rgba(250, 240, 228, .9);
     padding: 50px;
     width: 90%;
     margin: 0 auto;

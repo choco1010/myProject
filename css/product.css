@@ -1,6 +1,7 @@
 @import url(reset.css);
 /* -----------------------------main----------------------------- */
 .main{
+    width: 1440px;
     position: relative;
 }
 /* ----------- blockInner ----------- */
@@ -8,7 +9,7 @@
 .breadcrumbNav{
     position: absolute;
     top: 100px;
-    left: 460px;
+    left: 390px;
     color: #AA8B66;
 }
 
@@ -37,7 +38,7 @@
     
 }
 .sidebarMenu{
-    text-align: center;
+    text-align: left;
 }
 
 .menuTitle{
@@ -120,19 +121,17 @@
 }
 
 /* -----------------------------flowerInfo----------------------------- */
-.flowerInfo{
-    margin-left: 10px;
-}
+
 .flowerTitle{
-    font-size: 28px;
+    font-size: 32px;
     color: #AA8B66;
     margin-bottom: 20px;
 }
 
 .flowerPrice{
-    font-size: 24px;
+    font-size: 28px;
     color: #F6B99D;
-    margin: 20px auto 40px auto;
+    margin: 30px auto 15px auto;
 }
 
 .itemSpecs{
@@ -142,11 +141,14 @@
     margin-bottom: 20px;
 }
 
+.itemSpecs p{
+    
+    margin-bottom: 15px;
+}
+
 /* ----------- quantity & sub ----------- */
 .quantityControl{
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 16px;
 }
 
@@ -172,8 +174,9 @@
 }
 
 .subTotal{
-    margin-left: 10px;
+    margin-bottom: 40px;
     color: #AA8B66;
+    margin-left: 20px;
 }
 /*----------- shoppingCart & buy -----------*/
 .cartActions{

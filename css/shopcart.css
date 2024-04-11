@@ -1,13 +1,15 @@
 @import url(reset.css);
 /* -----------------------------main----------------------------- */
-
+main{
+    max-width: 1440px;
+}
 
 .spacer{
     margin-bottom: 100px;;
 }
 /* --------------- loginBox --------------- */
 .loginBox{
-    width: 20%;
+    width: 30%;
     height: auto;
     margin: 0 auto;
     text-align: center;
@@ -51,20 +53,22 @@
     font-size: 24px;
     font-weight: bold;
 }
-.cartItemHeaders ul{
-    display: flex;
-    justify-content: center;
-    
-}
-.cartItemHeaders li{
-    flex: 1;
-    text-align: center;
-}
 
 .cartItemHeaders li:nth-child(1){
-    flex: 2;
+    margin-left: 160px;
 }
 
+.cartItemHeaders li:nth-child(2){
+    margin-left: 130px;
+}
+
+.cartItemHeaders li:nth-child(3){
+    margin-left: 180px;
+}
+
+.cartItemHeaders li:nth-child(4){
+    margin-left: 120px;
+}
 /* --------------- productList --------------- */
 .productList{
     display: flex;

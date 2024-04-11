@@ -4,12 +4,14 @@
 
 .aboutUs{
     position: relative;
-    width: 60%;
+    max-width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /* ---- swiper --- */
 .swiper{
+    max-width: 70%;
     margin-top: 40px;
     padding: 30px;
     background-color: #FAF0E4;
@@ -19,9 +21,9 @@
 }
 
 .sliderImg {
-    width: 100%; 
-    max-height: 500px; 
-    flex-shrink: 0;
+    width: calc(600px * (16/9));
+    height: 600px;
+    object-fit: cover; 
 }
 
 .swiper-slide h4{
@@ -37,13 +39,13 @@
 /* ------------ background ----------- */
 .circleBg01{
     background-color: rgba(250, 240, 228, .5);
-    width: 360px;
-    height: 360px;
-    border-radius: 180px;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
     position: absolute;
-    left: -440px;
-    top: 700px;
-    order:1;
+    left: -30px;
+    top: 790px;
+    z-index: -1;
 }
 
 .circleBg02{
@@ -52,8 +54,9 @@
     height: 360px;
     border-radius: 180px;
     position: absolute;
-    right: -440px;
-    top: 340px;
+    right: -190px;
+    top: 660px;
+ 
 }
 
 .circleBg03{
@@ -62,12 +65,13 @@
     height: 360px;
     border-radius: 180px;
     position: absolute;
-    top: 950px;
-    left: 550px;
+    bottom: 410px;
+    right: 410px;
+    z-index: -1;
 }
 /* --------------------------- info --------------------------- */
 .shortInfo{
-    margin: 20px auto;
+    margin: 20px auto 20px 190px;
     padding: 20px 0;
     line-height: 2;
     color: #AA8B66;
@@ -79,7 +83,8 @@
 
 .floristTitle{
     border-bottom: 1px solid #AA8B66;
-    margin: 40px 0;
+    width: 75%;
+    margin: 40px auto 40px 180px;
     
 }
 h2{
@@ -100,9 +105,10 @@ h2::before{
 
 /* ------------ about florist ----------- */
 .florist{
+    width: 75%;
     display: flex;
     align-items: flex-start;
-    padding-left: 20px;
+    padding-left: 190px;
     line-height: 1.6;
 }
 
@@ -117,10 +123,10 @@ h2::before{
 .floristExp{
     border: 2px solid #f1d4b7;
     border-radius: 20px;
-    padding: 50px 0 50px 100px;
+    padding: 50px 0 50px 90px;
     color: #AA8B66;
     flex-grow: 1;
-    margin: 70px 20px 0 -50px;
+    margin: 60px 20px 0 -60px;
     line-height: 1.8;
     position: relative;
     z-index: 1;
@@ -139,6 +145,7 @@ h2::before{
 }
 
 .search{
+    padding-left: 190px;
     margin-top: 40px;
 }
 
@@ -174,18 +181,18 @@ h2::before{
 }
 /* --------------------------- location --------------------------- */
 .location{
-    margin-bottom: 20px;
+    padding: 0 190px;
+    margin: 0 auto 20px auto;
 }
 
 .storeTitle{
-        border-bottom: 1px solid #AA8B66;
-        margin: 40px 0;
+    border-bottom: 1px solid #AA8B66;
+    margin: 40px 0;
 }
 
 .address{
     display: flex;
     align-items: center;
-    /* margin: 0 auto; */
 }
 
 .address p{

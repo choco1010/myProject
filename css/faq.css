@@ -1,5 +1,12 @@
 @import url(reset.css);
 
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    min-height: 100vh;
+}
+
 .backgroundPic1{
     position: absolute;
     top: 60px;
@@ -13,7 +20,7 @@
 /* -----------------------------main----------------------------- */
 .questionWrapper{
     outline: 1px solid #AA8B66;
-    width: 40%;
+    width: 60%;
     min-height: 600px;
     margin: 60px auto;
     padding: 40px 30px;
@@ -61,6 +68,7 @@
 
 .ans{
     padding: 10px 0 10px 5px;
+    margin-bottom: 10px;
 }
 
 .ansItem{
@@ -71,7 +79,9 @@
     font-size: 20px;
     margin-bottom: 10px;
     background-color: #f1d4b7;
-    display: inline;
+    display: inline-block;
+    color: #F3A07E;
+    
 }
 .ansItem p{
     padding: 10px;

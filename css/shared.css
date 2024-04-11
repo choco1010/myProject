@@ -5,7 +5,7 @@ body{
 
 header{
     background-color: #FAF0E4;
-    width: 100%;
+    max-width: 1440px;
     height: 70px;
     line-height: 70px;
 }
@@ -15,7 +15,7 @@ header{
 }
 /* ------------------- LOGO ------------------- */
 header h1{
-    margin-left: 10px;
+    margin-left: 20px;
     top: 0;
     line-height: 70px;
     background-image: url(../img/LOGO.png);
@@ -29,7 +29,7 @@ header h1{
 
 .textMenu{
     /* outline: 1px solid black; */
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
     position: relative;
 }
@@ -42,7 +42,7 @@ header h1{
 }
 
 .navItem{
-    width: 30%;
+    width: 50%;
     display: block;
     color: #F3A07E;
     line-height: 70px;
@@ -64,10 +64,6 @@ header h1{
     cursor: pointer;
 }
 
-.navItem a:hover{
-    background-color: #f1d4b7;
-    font-weight: bold;
-}
 /* 花藝商品的子單 */
 .productTypes{
     display: none;
@@ -89,32 +85,6 @@ header h1{
 }
 
 .navItem:hover > .productTypes{
-    display: block;
-}
-/* 婚禮系列的子單 */
-
-.weddingItem{
-    position: relative;
-}
-
-.weddingDrop{
-    position: absolute;
-    top:0;
-    left: -127px;
-    background-color: #FAF0E4;
-    width: 100%;
-    display: none;
-}
-
-.weddingDrop li{
-    font-weight: normal;
-}
-
-.weddingDrop li:hover{
-    font-weight: bold;
-}
-
-.weddingItem:hover >.weddingDrop{
     display: block;
 }
 
@@ -140,7 +110,7 @@ header h1{
 
 .iconMenu li a{
     display: block;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 
@@ -149,6 +119,7 @@ header h1{
 footer{
     display: flex;
     background-color: #EECFBB;
+    max-width: 1440px;
     height: 70px;
     justify-content: center;
 }
