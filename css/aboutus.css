@@ -5,8 +5,9 @@
 .aboutUs{
     position: relative;
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* ---- swiper --- */
@@ -50,11 +51,11 @@
 
 .circleBg02{
     background-color: rgba(250, 240, 228, .5);
-    width: 360px;
-    height: 360px;
-    border-radius: 180px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
     position: absolute;
-    right: -190px;
+    right: 0px;
     top: 660px;
  
 }
@@ -145,11 +146,12 @@ h2::before{
 }
 
 .search{
-    padding-left: 190px;
+    
     margin-top: 40px;
 }
 
 .search h3{
+    padding-left: 190px;
     font-size: 20px;
     margin-bottom: 40px;
     color:#AA8B66;

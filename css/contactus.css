@@ -1,26 +1,46 @@
 @import url(reset.css);
 
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow-x: hidden;
+}
+
 .contactWrapper{
-    width: 80%;
+    outline: 1px solid #AA8B66;
+    max-width: 1440px; 
     min-height: 600px;
-    margin: 65px auto;
-    padding: 5px 30px;
+    margin: 70px auto;
+    padding: 5px 0;
     color: #AA8B66;
     display: flex;
-    align-items: center;
+    align-items: center; 
+    justify-items: center; 
 }
 /* ---------- contactBlock ---------- */
 
+.contactImg{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
 .contactImg img{
-    max-width: 95%;
+    width: 70%;
     height: auto;
 }
 
 .contactBlock{
-    width: 100%;
+    width: 50%;
 }
 
 .questionTitle{
+    width: 50%;
     border-bottom: 1px solid #AA8B66;
     margin: 20px 0;
 }
@@ -92,14 +112,14 @@ input[type="radio"]:checked + label::after {
 
 /* input框樣式變更 */
 input[type="text"] {
-    border: none; 
-    border-bottom: 1px solid #AA8B66; 
+    border: 1px solid #AA8B66; 
+    /* border-bottom: 1px solid #AA8B66;  */
     outline: none; 
     padding: 5px 30px 5px 0; 
 }
 
 input[type="text"]:focus {
-    border-bottom: 1px solid #EECFBB; 
+    border: 1px solid #EECFBB; 
 }
 
 .writeItem:nth-child(3){

@@ -3,20 +3,18 @@
 body {
     display: flex;
     flex-direction: column;
+    /* 圖片寬度不夠 */
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+main{
     max-width: 1440px;
-    min-height: 100vh;
+    background-color: rgba(255, 255, 255, .5);
+    margin: 0 auto;
 }
 
-.backgroundPic1{
-    position: absolute;
-    top: 60px;
-    left: 0px;
-}
-.backgroundPic2{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
 /* -----------------------------main----------------------------- */
 .questionWrapper{
     outline: 1px solid #AA8B66;

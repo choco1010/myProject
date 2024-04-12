@@ -1,10 +1,10 @@
 @import url(reset.css);
+
+
 /* -----------------------------main----------------------------- */
-main{
-    max-width: 1440px;
-}
 
 .blockNav{
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -181,9 +181,14 @@ main{
 }
 
 .cardItem{
+    margin: 0 auto;
     margin-bottom: 20px;
     position: relative;
     cursor: pointer;
+}
+
+.cardItem a{
+    text-align: center;
 }
 
 .cardItem:hover img{

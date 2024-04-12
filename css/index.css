@@ -1,8 +1,10 @@
 @import url(reset.css);
 
 main{
-    /* margin: 0 auto; */
+    /* outline: 1px sold black; */
+    margin: 0 auto;
     max-width: 1440px;
+    width: 100%;
 }
 /* -----------------------------main----------------------------- */
 
@@ -63,15 +65,17 @@ main{
 
 .cardItem{
     position: relative;
-    margin: 0 auto;
     overflow: hidden;
+    margin: 0 auto;
+    margin-right: 5px;
     cursor: pointer;
 }
 
 .cardItem a{
+    display: block;
     text-decoration: none;
     color: #AA8B66;
-    
+    cursor: pointer;
 }
 
 .cardItem img{
@@ -87,10 +91,12 @@ main{
     color: #AA8B66;
     font-size: 20px;
 }
+
 .cardItem p{
     font-size: 16px;
     color: #AA8B66;
 }
+
 /* --------- put shoppingCart --------- */
 .cartButtonText{
     position: absolute;
@@ -106,20 +112,23 @@ main{
 }
 
 .cartButtonText h4{
-    display: block;
     font-size: 18px;
+
 }
 
 .cardItem:hover .cartButtonText{
-    display: block;
+    /* display: block; */
     transform: translateY(113px); 
     z-index: 1;
+    cursor: pointer;
 }
+
 
 .cardItem:hover img {
     opacity: 0.7;
     z-index: 0;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 /* -----------------------------openbless Product ----------------------------- */
@@ -327,4 +336,7 @@ h2::before{
     color: #fff
 }
 
+
+
+/* ---------------------------------------------- */
 

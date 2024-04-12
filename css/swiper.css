@@ -1,5 +1,6 @@
 .swiper{
-    max-width: 1440px;
+    /* outline: 1px sold black; */
+    width: 100vw;
     height: 800px;
     position: relative;
 }
