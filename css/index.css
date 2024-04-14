@@ -71,6 +71,7 @@
     gap: 30px;
 }
 
+
 .cardItem{
     position: relative;
     overflow: hidden;
@@ -142,12 +143,11 @@
     margin-bottom: 60px;
 }
 
-
 .openingBlessingCards{
     padding: 0 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 30px;
 }
 
 /* ----------------------------- dailylife Product ----------------------------- */
@@ -177,7 +177,7 @@
 
 .dailyItem img{
     width: 90%;
-    height: 300px;
+    aspect-ratio: 16/9;
     margin-top: 10px;
     transition: transform 0.3s ease;
 }
@@ -216,29 +216,30 @@ h2::before{
 /* ----------------------------- customer Service ----------------------------- */
 
 .customService{
-    padding: 0 150px;
-    overflow: hidden;
-    margin-bottom: 20px;
+    /* padding: 0 150px; */
+    /* overflow: hidden; */
+    margin-bottom: 5px;
 }
 
 .pictureBackground{
+    box-sizing: border-box;
     padding: 40px;
-    max-width: 85%;
-    height: auto;
+    max-width: 100%;
     background-image: url(../img/index-footer.jpg);
     opacity: 1;
     background-size: cover;
     background-position: center;
     z-index: -1;
     margin: 0 auto;
+    
 }
 
 .consultationForm{
+    box-sizing: border-box;
     background-color: rgba(250, 240, 228, .9);
-    padding: 50px;
+    padding: 60px;
     width: 90%;
-    margin: 0 auto;
-    padding: 50px;
+    margin: 0px auto;
     text-align: left;
     line-height: 1.1;
     border-radius: 10px;
@@ -271,8 +272,7 @@ h2::before{
 .informationContent li p{
     font-size: 16px;
     line-height: 1.6;
-    padding: 5px 15px 5px 15px;
-
+    padding: 5px 15px;
 }
 
 .callout{
@@ -323,47 +323,91 @@ h2::before{
 
 
 
-/* ----------------------------------------------------------- */
+/* ---------------------------- 網頁 ------------------------------- */
 
-@media screen and (max-width: 1100px) {
-    /* ------------------- allTitle ------------------- */
+@media screen and (max-width: 1280px) {
 
-    .productTitle{
-        width: 600px;
-        margin: 30px auto;
-    }
-
-    h2{
-        text-align: left;
-        color: #AA8B66;
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-
-    h2::before{
-        content: "";
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-image: url(../img/flowericon.png);
-        margin-right: 10px;
-    }
 /* ----------- wedding Product  --------------- */
 
     .weddingCards{
-        padding: 0 180px;
-        grid-template-columns: repeat(3, 1fr);
+        padding: 0 100px;
         gap: 25px;
     }
-/* -----------------------------openbless Product ----------------------------- */
-    .openingBlessingProducts{
-        margin-bottom: 60px;
-    }
 
+/* ----------- openbless Product  --------------- */
 
     .openingBlessingCards{
-        padding: 0 180px;
-        grid-template-columns: repeat(3, 1fr);
+        padding: 0 100px;
+        gap: 25px;
+    }
+
+/* ------------- dailylife Product -------------- */
+
+    .dailyLifeList{
+        padding: 0 90px;
+        margin-bottom: 15px;
+    }
+/* ----------- customer Service  --------------- */
+    
+    .consultationForm{
+        padding: 20px;
+    }
+
+    .pictureBackground{
+        padding: 40px;
+    }
+    
+    .infoTitle{
+        padding-top: 30px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+    .informationContent{
+        padding: 15px;
+    }
+    .informationContent li{
+        border-left: 2px solid #AA8B66;
+        padding-left: 15px;
+    }    
+    .informationContent li h3{
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    .informationContent li p{
+        padding-left: 15px;
+    }
+}
+
+
+
+
+/* ----------------------------- 平板 ------------------------------ */
+@media screen and (max-width: 820px) {
+
+/* ----------- wedding Product  --------------- */
+
+    .weddingCards{
+        padding: 0 150px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+/* ----------- openbless Product  --------------- */
+
+    .openingBlessingCards{
+        padding: 0 150px;
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 }
+
+@media screen and (max-width: 768px) {}
+
+
+
+/* ----------------------------- 手機 ------------------------------ */
+
+@media screen and (max-width: 430px) {}
+
+@media screen and (max-width: 390px) {}

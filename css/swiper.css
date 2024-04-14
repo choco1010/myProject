@@ -140,5 +140,52 @@
 }
 
 
-/* ---------------width: 1300px------------------ */
+/* ---------------width: 1280px------------------ */
 
+@media screen and (max-width: 1280px) {
+    /*------- 第一張banner的標題 -------*/
+
+    .storeTitle{
+        top: 220px;
+    }
+
+    .storeTitle1{
+        top: 300px;
+    }
+
+    .storeTitle2{
+        top: 380px;
+    }
+
+    /*------- 第二張banner的標題 -------*/
+
+    .ValentineTitle{
+        top: 230px;
+        left: 80px;
+        font-size: 48px;
+    }
+
+    .ValentineTitle1{
+        top: 320px;
+        left: 80px;
+        font-size: 48px;
+    }
+
+    /*------- 第三張banner的標題 -------*/
+
+    .motherdayTitle{
+        top: 250px;
+        font-size: 38px;
+    }
+
+    .motherdayTitle1{
+        top: 340px;
+        font-size: 38px;
+    }
+
+ /*------- 第二、三張banner的連結 -------*/
+    .swiper-slide a{
+        top: 440px;
+        left: 90px;
+    }
+}
