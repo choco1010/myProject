@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Sunrise</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
@@ -10,9 +11,14 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/shared.css">
+    <link href="./public/toastr/toastr.css" rel="stylesheet"/>
     <script src="./js/jquery-3.7.1.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./public/toastr/toastr.js"></script>
+    <script src="./js/cartslidbar.js"></script>
+    <script src="./js/shareSetting.js"></script>
+    <script src="./js/jquery-ui.js"></script>
 </head>
 <body>
 
@@ -33,7 +39,7 @@
                             <li>花束</li>
                             <li>乾燥花</li>
                             <li>
-                                <a href="#">婚禮系列</a>
+                                <a href="catalog.html">婚禮系列</a>
                             </li>
                             <li >高架花籃</li>
                         </ul>
@@ -46,27 +52,58 @@
             <nav class="iconMenu">
                 <ul>
                     <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="./shopcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                    <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="valnum"><span>0</span></li>   
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="overlay"></div>
+    <!-- cartslidbar -->
+    <section id="cartslidbarBlock">
+        <div class="cartslidbarTitle">
+                <a class="cartcloseBtn cartIcon"><i class="fa-solid fa-xmark"></i></a>
+                <h4>購物車清單</h4>
+        </div>
+
+        <ul class="cartslidbarList">
+            <!-- JS抓的資料範例 -->
+            <!-- <li class="cartslidbarItem">
+                <a href="#"><img src="./img/product8.jpg" alt="新娘捧花-多彩夏季">
+                    <div class="cartslidbarPrice">
+                        <h3>新娘捧花-多彩夏季</h3>
+                        <h4>數量: 1</h4>
+                        <p>NT 2,500</p>
+                    </div>
+                    <i class="fa-regular fa-trash-can slidbarDel"></i>
+                </a>
+            </li> -->
+        </ul>
+        <div style="flex-grow: 1;"></div> 
+
+        <a href="./shopcart.html" class="gotoPayment">前往結帳</a>
+    </section>
+
         <!-- 幻燈片... -->
     <section class="swiper mySwiper">
         <ul class="swiper-wrapper">
             <li class="swiper-slide">
-                <img src="./img/index-banner_1920x1280.jpg" alt="花店宗旨">
-                <h1 class="bannerTitle">每一束花都是一個生活的微笑，<br>每一天都是一個充滿希望和美好的新開始， <br>讓我們一起迎接每一天的花開時刻。</h1>
+                <img src="./img/bannerN0.jpg" alt="花店宗旨">
+                <h1 class="storeTitle">每一束花都是一個生活的微笑，</h1>
+                <h1 class="storeTitle1">每一天都是一個充滿希望和美好的新開始，</h1>
+                <h1 class="storeTitle2">讓我們一起迎接每一天的花開時刻。</h1>
             </li>
             <li class="swiper-slide">
-                <img src="./img/index-banner1.jpg" alt="母親節優惠">
-                <h1 class="bannerTitle">母親節特別優惠：精選康乃馨花束，溫暖您心。</h1>
-                <a href="#">點擊購買</a>
+                <img src="./img/bannerN1.jpg" alt="情人節活動">
+                <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
+                <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
+                <a href="tel:02-27120589" class="callout">點擊購買</a>
             </li>
             <li class="swiper-slide">
-                <img src="./img/index-banner2.jpg" alt="情人節活動">
-                <h1 class="bannerTitle">情人節玫瑰，愛意盛放！點擊選購最浪漫的禮物。</h1>
-                <a href="#">點擊購買</a>
+                <img src="./img/bannerN2.jpg" alt="母親節優惠">
+                <h1 class="motherdayTitle">母親節特別優惠：</h1>
+                <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
+                <a href="tel:02-27120589" class="callout">點擊購買</a>
             </li>
         </ul>
 
@@ -74,14 +111,21 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </section>
+
+    
 <!-------------------------------- main ----------------------------------->
-    <main>
-<!-------------------------------- search ----------------------------------->       
-        <div class="wrapper">
+    <main class="wrapper">
+      
+
+    <!-- 活動頁 -->
+        <div class="activitySection">
+            <img src="./img/activity.png" alt="活動資訊">
+        </div>
+<!-------------------------------- search -----------------------------------> 
         <section class="searchSection">
-            <form action="#">
+            <form id="searchForm">
                 <label for="cusSearch" class="searchLabel">請在這裡尋找您心儀的花朵吧:</label>
-                <input type="search" id="cusSearch" name="cusSearch" placeholder="輸入花名或品種，開始您的花店之旅吧">
+                <input type="search" id="cusSearch" name="cusSearch" placeholder="輸入花名或品種，開始您的花店之旅吧" required>
                 
                 <label for="submitBtn" class="searchBtn">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -89,12 +133,6 @@
                 <input type="submit" id="submitBtn" style="display: none">
             </form>
         </section>
-
-<!-- 活動頁 -->
-        <div class="activitySection">
-            <img src="./img/active.png" alt="活動資訊">
-        </div>
-              
 
 <!------------------------- wedding Product --------------------------->
         <section class="weddingProducts">
@@ -104,10 +142,10 @@
             <ul class="weddingCards">
                 <li class="cardItem">
                     <div class="cartButtonText">
-                        <a href="#"><h4>加入購物車</h4></a>
+                        <a class="putCart" data-id="1" data-name="新娘捧花-多彩夏季" data-money="NT 2,500" data-img-src="./img/product8.jpg"><h4>加入購物車</h4></a>
                     </div>
                     <a href="./product.html">
-                        <img src="./img/product8.jpg" alt="新娘捧花-繽紛花園">
+                        <img src="./img/product8.jpg" alt="新娘捧花-多彩夏季" >
                         <h3>新娘捧花-多彩夏季</h3>
                         <p>NT 2,500</p>
                     </a>
@@ -115,22 +153,22 @@
 
                 <li class="cardItem">
                     <div  class="cartButtonText">
-                        <a href="#"><h4>加入購物車</h4></a>
+                        <a class="putCart" data-id="2" data-name="新娘捧花-粉色花漾" data-money="NT 2,500" data-img-src="./img/product2.jpg"><h4>加入購物車</h4></a>
                     </div>
                         <a href="#">
-                            <img src="./img/product2.jpg" alt="新娘捧花-繽紛花園">
+                            <img src="./img/product2.jpg" alt="新娘捧花-粉色花漾">
                             <h3>新娘捧花-粉色花漾</h3>
                             <p>NT 2,500</p>
                         </a>
                 </li>
 
                 <li class="cardItem">
-                    <div>
-                        <a href="#" class="cartButtonText"><h4>加入購物車</h4></a>
+                    <div class="cartButtonText">
+                        <a class="putCart" data-id="3" data-name="新娘捧花-綠意盎然" data-money="NT 2,500" data-img-src="./img/product3.jpg"><h4>加入購物車</h4></a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="./img/product3.jpg" alt="新娘捧花-繽紛花園">
+                            <img src="./img/product3.jpg" alt="新娘捧花-綠意盎然">
                             <h3>新娘捧花-綠意盎然</h3>
                             <p>NT 2,500</p>
                         </a>
@@ -138,80 +176,80 @@
                 </li>
 
                 <li class="cardItem">
-                    <div>
-                        <a href="#" class="cartButtonText"><h4>加入購物車</h4></a>
+                    <div class="cartButtonText">
+                        <a class="putCart" data-id="4" data-name="新娘捧花-夢幻藍調" data-money="NT 3,500" data-img-src="./img/product4.jpg"><h4>加入購物車</h4></a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="./img/product4.jpg" alt="新娘捧花-繽紛花園">
+                            <img src="./img/product4.jpg" alt="新娘捧花-夢幻藍調">
                             <h3>新娘捧花-夢幻藍調</h3>
-                            <p>NT 2,500</p>
+                            <p>NT 3,500</p>
                         </a>
                     </div>
                 </li>
 
                 <li class="cardItem">
-                    <div>
-                        <a href="#" class="cartButtonText"><h4>加入購物車</h4></a>
+                    <div class="cartButtonText">
+                        <a class="putCart" data-id="5" data-name="新娘捧花-紅雪花籃" data-money="NT 3,500" data-img-src="./img/product5.jpg"><h4>加入購物車</h4></a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="./img/product5.jpg" alt="新娘捧花-繽紛花園">
+                            <img src="./img/product5.jpg" alt="新娘捧花-紅雪花籃">
                             <h3>新娘捧花-紅雪花籃</h3>
-                            <p>NT 2,500</p>
+                            <p>NT 3,500</p>
                         </a>
                     </div>
                 </li>
 
                 <li class="cardItem">
-                    <div>
-                        <a href="#" class="cartButtonText"><h4>加入購物車</h4></a>
+                    <div class="cartButtonText">
+                        <a class="putCart" data-id="6" data-name="新娘捧花-金霞绽放" data-money="NT 3,500"><h4>加入購物車</h4></a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="./img/product6.jpg" alt="新娘捧花-繽紛花園">
+                            <img src="./img/product6.jpg" alt="新娘捧花-金霞绽放">
                             <h3>新娘捧花-金霞绽放</h3>
-                            <p>NT 2,500</p>
+                            <p>NT 3,500</p>
                         </a>
                     </div>
                 </li>
 
                 <li class="cardItem">
-                    <div>
-                        <a href="#" class="cartButtonText"><h4>加入購物車</h4></a>
+                    <div class="cartButtonText">
+                        <a class="putCart" data-id="7" data-name="新娘捧花-紫色幽谷" data-money="NT 4,500"><h4>加入購物車</h4></a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="./img/product7.jpg" alt="新娘捧花-繽紛花園">
+                            <img src="./img/product7.jpg" alt="新娘捧花-紫色幽谷">
                             <h3>新娘捧花-紫色幽谷</h3>
-                            <p>NT 2,500</p>
+                            <p>NT 4,500</p>
                         </a>
                     </div>
                 </li>
 
                 <li class="cardItem">
-                    <div>
-                        <a href="#" class="cartButtonText"><h4>加入購物車</h4></a>
+                    <div class="cartButtonText">
+                        <a class="putCart" data-id="8" data-name="新娘捧花-夕陽柔情" data-money="NT 4,500"><h4>加入購物車</h4></a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="./img/product1.jpg" alt="新娘捧花-繽紛花園">
+                            <img src="./img/product1.jpg" alt="新娘捧花-夕陽柔情">
                             <h3>新娘捧花-夕陽柔情</h3>
-                            <p>NT 2,500</p>
+                            <p>NT 4,500</p>
                         </a>
                     </div>
                 </li>
             </ul>
         </section>
 
-        <!------------------------- openbless Product --------------------------->
+<!------------------------- openbless Product --------------------------->
 
         <section class="openingBlessingProducts">
             <div class="productTitle">
                 <h2>開幕祝福-絕佳心意</h2>
             </div>
             <ul class="openingBlessingCards">
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet1.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -219,7 +257,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet2.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -227,7 +265,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet3.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -235,7 +273,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet4.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -243,7 +281,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet5.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -251,7 +289,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet6.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -259,7 +297,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet7.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -267,7 +305,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="cardItem">
                     <a href="#">
                         <img src="./img/bouquet8.jpg" alt="新娘捧花-繽紛花園">
                         <h3>開幕祝福-繽紛花園</h3>
@@ -277,7 +315,7 @@
             </ul>
         </section>
 
-        <!------------------------- dailylife Product --------------------------->
+<!------------------------- dailylife Product --------------------------->
         
         <section class="dailyLifeProducts">
             <div class="productTitle">
@@ -313,39 +351,38 @@
                 </li>
             </ul> 
         </section>
-            <!------------------------- customer Service --------------------------->
+<!------------------------- customer Service --------------------------->
 
-            <!-- customersevice -->
-            <section class="customService">
-                <div class="productTitle">
-                    <h2>送禮煩惱-快來諮詢吧！</h2>
-                </div>
-                <div class="pictureBackground">
-                    <div class="consultationForm">
-                        <div class="informationSection">
-                            <h1 class="infoTitle">諮詢與客製化服務</h1>
-                            <ul class="informationContent">
-                                <li>
-                                    <h3>送禮諮詢</h3>
-                                    <p>我們提供諮詢服務,<br>依照您的需求提供您花禮的建議哦！</p>
-                                </li>
-                                <li>
-                                    <h3>客製需求</h3>
-                                    <p>所有商品皆可做客製服務,可提供照片或想法,<br>由專人提供您建議與討論,為您做出獨一無二的花禮</p>
-                                </li>
-                            </ul>
+        <!-- customersevice -->
+        <section class="customService">
+            <div class="productTitle">
+                <h2>送禮煩惱-快來諮詢吧！</h2>
+            </div>
+            <div class="pictureBackground">
+                <div class="consultationForm">
+                    <div class="informationSection">
+                        <h1 class="infoTitle">諮詢與客製化服務</h1>
+                        <ul class="informationContent">
+                            <li>
+                                <h3>送禮諮詢</h3>
+                                <p>我們提供諮詢服務,<br>依照您的需求提供您花禮的建議哦！</p>
+                            </li>
+                            <li>
+                                <h3>客製需求</h3>
+                                <p>所有商品皆可做客製服務,可提供照片或想法,<br>由專人提供您建議與討論,為您做出獨一無二的花禮</p>
+                            </li>
+                        </ul>
 
-                            <a href="tel:02-12345678" class="callout">免費電話咨詢 02-12345678</a>
-                            
-                        </div>
+                        <a href="tel:02-27120589" class="callout">免費電話咨詢 02-27120589</a>
+                        
                     </div>
                 </div>
-            </section>
-            <!-- reurnTop -->
-            <button onclick="scrollToTop()" id="btnScrollToTop" title="返回頂部">
-                <i class="fa-solid fa-caret-up"></i>
-            </button>
-        </div>
+            </div>
+        </section>
+        <!-- reurnTop -->
+        <button onclick="scrollToTop()" id="btnScrollToTop" title="返回頂部">
+            <i class="fa-solid fa-caret-up"></i>
+        </button>
     </main>
 <!---------------------------------- footer -------------------------------->
 
@@ -365,6 +402,8 @@
     </footer>
 
     <script>
+        
+        // 返回上鍵
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
@@ -379,6 +418,7 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // 對於Chrome, Firefox, IE和Opera
         }
+
     </script>
 </body>
 </html>

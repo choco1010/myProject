@@ -305,7 +305,8 @@
     /* outline: 1px solid black; */
     width: 10%;
     display: flex;
-    margin-left: 290px;
+    /* margin-left: px; */
+    margin: 0 auto;
 }
 
 .pageBtn{

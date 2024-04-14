@@ -5,6 +5,8 @@
 .pickupWrapper{
     color: #B88571;
     max-width: 1440px;
+    width: 100%;
+    margin: 40px auto;
 }
 
 h3{
@@ -20,14 +22,6 @@ input{
 }
 
 /* -------------------取貨方式--------------- */
-
-.pickupWrapper{
-    /* outline: 1px solid black; */
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 60px;
-    padding: 10px;
-}
 
 .pickupMethod{
     border-bottom: 1px solid #AA8B66;

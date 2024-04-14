@@ -1,13 +1,14 @@
 @import url(reset.css);
 
+
 /* --------------------------- main --------------------------- */
 
 .aboutUs{
-    position: relative;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    /* overflow: hidden; */
+    position: relative;
+    overflow: hidden;
 }
 
 /* ---- swiper --- */
@@ -51,11 +52,11 @@
 
 .circleBg02{
     background-color: rgba(250, 240, 228, .5);
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
     position: absolute;
-    right: 0px;
+    right: -220px;
     top: 660px;
  
 }
@@ -66,8 +67,8 @@
     height: 360px;
     border-radius: 180px;
     position: absolute;
-    bottom: 410px;
-    right: 410px;
+    bottom: -480px;
+    right: 700px;
     z-index: -1;
 }
 /* --------------------------- info --------------------------- */

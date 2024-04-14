@@ -1,25 +1,30 @@
 @import url(reset.css);
-body{
-    max-width: 1440px;
-}
-.backgroundPic1{
-    position: absolute;
-    top: 60px;
-    left: 0px;
-}
-.backgroundPic2{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* 圖片寬度不夠 */
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 /* -----------------------------main----------------------------- */
 
 .loginWrapper{
+    /* outline: 1px solid #AA8B66; */
+    max-width: 1440px;
+    width: 100%;
+    margin: 150px auto;
+    color: #AA8B66;
+}
+
+.background{
     outline: 1px solid #AA8B66;
-    width: 40%;
-    min-height: 600px;
-    margin: 60px auto;
-    padding: 40px 30px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5vw;
+    background-color: rgba(255, 255, 255, .7);
 }
 
 .loginTitle{
@@ -131,3 +136,4 @@ body{
     background-color: #d5a58d;
     font-weight: bold;
 }
+

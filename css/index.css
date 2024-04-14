@@ -1,23 +1,29 @@
 @import url(reset.css);
 
-main{
-    /* outline: 1px sold black; */
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
-}
+
 /* -----------------------------main----------------------------- */
 
 .wrapper{
-    /* outline: 1px solid black; */
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 20px auto;
     text-align: center;
+    max-width: 1440px;
+    width: 100%;
+    height: calc( 100% - 140px);
+}
+
+.activitySection{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.activitySection img{
+    width: 80%;
 }
 
 /* ------------------- Search ------------------- */
 .searchSection{
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .searchLabel{
@@ -54,20 +60,21 @@ main{
 
 
 /* ----------------------------- wedding Product  ----------------------------- */
-
+.weddingProducts{
+    margin-bottom: 60px;
+}
 
 .weddingCards{
     padding: 0 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 30px;
 }
 
 .cardItem{
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-    margin-right: 5px;
     cursor: pointer;
 }
 
@@ -80,8 +87,8 @@ main{
 
 .cardItem img{
     display: inline-block;
-    width: auto;
-    height: 225px;
+    width: 100%;
+    aspect-ratio: 1/1;
     margin-bottom: 10px;
     transition: opacity 0.5s ease;
 }
@@ -99,13 +106,14 @@ main{
 
 /* --------- put shoppingCart --------- */
 .cartButtonText{
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
     transform: translateY(-100%);
     transition: transform 0.5s;
     background-color: #FAF0E4;
-    width: 215px;
+    width: 100%;
     text-align: center;
     padding: 5px; 
     font-size: 10px;
@@ -113,12 +121,10 @@ main{
 
 .cartButtonText h4{
     font-size: 18px;
-
 }
 
 .cardItem:hover .cartButtonText{
-    /* display: block; */
-    transform: translateY(113px); 
+    transform: translateY(450%); 
     z-index: 1;
     cursor: pointer;
 }
@@ -132,39 +138,16 @@ main{
 }
 
 /* -----------------------------openbless Product ----------------------------- */
+.openingBlessingProducts{
+    margin-bottom: 60px;
+}
+
 
 .openingBlessingCards{
     padding: 0 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-}
-
-.openingBlessingCards li a{
-    text-decoration: none;
-    color: #AA8B66;
-    font-size: 20px;
-}
-
-.openingBlessingCards li img{
-    display: inline-block;
-    width: auto;
-    height: 225px;
-    margin-bottom: 10px;
-}
-
-.openingBlessingCards li h3{
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.openingBlessingCards li p{
-    font-size: 16px;
-}
-
-.openingBlessingCards li:hover img {
-    opacity: 0.7;
-    border-radius: 20px;
 }
 
 /* ----------------------------- dailylife Product ----------------------------- */
@@ -183,6 +166,7 @@ main{
 
 .dailyItem h3{
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .dailyItem a{
@@ -201,6 +185,7 @@ main{
 .dailyItem img:hover {
     transform: scale(1.1);
     border-radius: 20px;
+    outline: 1px solid #EECFBB;
 }
 
 /* ------------------- allTitle ------------------- */
@@ -338,5 +323,47 @@ h2::before{
 
 
 
-/* ---------------------------------------------- */
+/* ----------------------------------------------------------- */
 
+@media screen and (max-width: 1100px) {
+    /* ------------------- allTitle ------------------- */
+
+    .productTitle{
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    h2{
+        text-align: left;
+        color: #AA8B66;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    h2::before{
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/flowericon.png);
+        margin-right: 10px;
+    }
+/* ----------- wedding Product  --------------- */
+
+    .weddingCards{
+        padding: 0 180px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+/* -----------------------------openbless Product ----------------------------- */
+    .openingBlessingProducts{
+        margin-bottom: 60px;
+    }
+
+
+    .openingBlessingCards{
+        padding: 0 180px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}

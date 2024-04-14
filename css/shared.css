@@ -1,7 +1,6 @@
 /* --------------- 共同header和footer --------------- */
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* max-height: 100vh; */
 }
 
 header{
@@ -29,7 +28,6 @@ header h1{
 /* ------------------- text nav ------------------- */
 
 .textMenu{
-    /* outline: 1px solid black; */
     width: 50%;
     margin: 0 auto;
     position: relative;
@@ -65,7 +63,7 @@ header h1{
     cursor: pointer;
 }
 
-/* 花藝商品的子單 */
+/*----------------------- 花藝商品的子單 -----------------------*/
 .productTypes{
     display: none;
     background-color: #FAF0E4;
@@ -90,7 +88,114 @@ header h1{
     display: block;
     cursor: pointer;
 }
+/*---------------- 遮罩 ----------------*/ 
+.overlay{
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+/* ---------------------------- slidebar ---------------------------- */
+#cartslidbarBlock{
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    right: -360px;
+    width: 360px;
+    height: 100vh;
+    z-index: 9999;
+    overflow-y: auto;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    transition: transform 0.5s;
+}
+/*---------------- 購物車清單 ----------------*/
 
+.cartslidbarTitle{
+    display: flex;
+    padding: 20px;
+    margin: 20px auto 20px auto;
+    width: 80%;
+    border-bottom: 1px solid #AA8B66;
+}
+
+.cartcloseBtn{
+    padding: 10px;
+    color: #AA8B66;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cartslidbarTitle h4{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 5px 5px 5px 0;
+    font-size: 24px;
+    color: #AA8B66;
+}
+
+/*---------------- 購物車清單商品列 ----------------*/
+.cartslidbarList{
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 80px - 90px);
+}
+
+.cartslidbarItem{
+    padding: 20px;
+}
+
+.cartslidbarItem a{
+    display: flex;
+    text-decoration: none;
+    color: #AA8B66;
+}
+.cartslidbarPrice{
+    margin-right: 60px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.cartslidbarPrice h3{
+    margin-bottom: 5px;
+}
+
+.cartslidbarPrice h4{
+    margin-bottom: 10px;
+}
+
+.cartslidbarPrice p{
+    font-size: 16px;
+}
+.cartslidbarItem img{
+    width: 20%;
+    height: 20%;
+    margin-right: 20px;
+}
+
+.gotoPayment{
+    outline: 1px solid #AA8B66;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #AA8B66;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.fa-regular{
+    font-size: 18px;
+}
 /* ------------------- icon nav ------------------- */
 
 .iconMenu{
@@ -110,6 +215,31 @@ header h1{
 
 .iconMenu li{
     margin-left: 10px;
+    cursor: pointer;
+}
+
+/*----------------------- 購物車上方的數量 -----------------------*/
+.valnum{
+    position: relative;
+    right: 20px;
+    top: 10px;
+    outline: 1px solid #F3A07E;
+    background-color: #fff;
+    width: 5px;
+    height: 5px;
+    border-radius: 99em;
+    text-align: center;
+    padding: 5px;
+    display: none;
+}
+
+.valnum span {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 8px;
+    color: #F3A07E;
 }
 
 .iconMenu li a{

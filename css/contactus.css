@@ -7,42 +7,25 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    overflow-x: hidden;
+   
 }
 
 .contactWrapper{
     outline: 1px solid #AA8B66;
-    max-width: 1440px; 
-    min-height: 600px;
-    margin: 70px auto;
-    padding: 5px 0;
+    max-width: 1440px;
+    width: 60%;
+    margin: 120px auto;
+    padding: 40px 30px;
     color: #AA8B66;
-    display: flex;
-    align-items: center; 
-    justify-items: center; 
-}
-/* ---------- contactBlock ---------- */
-
-.contactImg{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
+    background-color: rgba(255, 255, 255, .8);
 }
 
-.contactImg img{
-    width: 70%;
-    height: auto;
-}
-
-.contactBlock{
-    width: 50%;
-}
+/* 標題 */
 
 .questionTitle{
-    width: 50%;
+    width: 100%;
     border-bottom: 1px solid #AA8B66;
-    margin: 20px 0;
+    margin: 0px auto 40px auto;
 }
 
 h2{
@@ -60,7 +43,25 @@ h2::before{
     background-image: url(../img/flowericon.png);
     margin-right: 10px;
 }
+/* ---------- contactBlock ---------- */
+.contactBlock{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
 
+.contactImg{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.contactImg img{
+    max-width: 100%;
+    height: auto;
+}
 /* ---------- writeBlock ---------- */
 
 /* radio樣式變更 */
@@ -75,6 +76,7 @@ input[type="radio"] + label {
     line-height: 20px; 
     display: inline-block;
     vertical-align: middle;
+    font-size: 20px;
 }
 
 input[type="radio"] + label::before {
@@ -90,7 +92,7 @@ input[type="radio"] + label::before {
 }
 
 input[type="radio"]:checked + label::after {
-    content: "✔";
+    content: "V";
     position: absolute;
     left: 4px;
     top: 1px;
@@ -103,11 +105,11 @@ input[type="radio"]:checked + label::after {
 }
 
 .writeList{
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .writeItem{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* input框樣式變更 */
