@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>Sunrise</title>
+    <!-- <link rel="icon" href="./img/Group 1.svg"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
     <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css"> 
@@ -51,14 +52,36 @@
 
             <nav class="iconMenu">
                 <ul>
-                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="phoneMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </li>
                     <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li class="valnum"><span>0</span></li>   
                 </ul>
             </nav>
+
+            <!-- 遮罩 -->
+            <div class="phoneOverlay"></div>
+            <!-- 漢堡bar -->
+            <div class="phoneblock">
+                <div class="menuCloseBlock">
+                    <a class="menuCloseBtn "><i class="fa-solid fa-arrow-left"></i></a>
+                    <p>CLOSE</p>
+                </div>
+                <ul class="phoneList">
+                    <li class="phoneItem">關於我們</li>
+                    <li class="phoneItem">花藝商品</li>
+                    <li class="phoneItem">常見問題</li>
+                    <li class="phoneItem">花藝諮詢</li>
+                    <li class="phoneItem">會員登入</li>
+                </ul>
+                <div></div>
+            </div>
         </div>
     </header>
-    <div class="overlay"></div>
+    <!-- 遮罩 -->
+    <div class="webOverlay"></div>
     <!-- cartslidbar -->
     <section id="cartslidbarBlock">
         <div class="cartslidbarTitle">
@@ -88,19 +111,19 @@
     <section class="swiper mySwiper">
         <ul class="swiper-wrapper">
             <li class="swiper-slide">
-                <img src="./img/bannerN0.jpg" alt="花店宗旨">
+                <img src="./img/bannerN0-1440px.jpg" alt="花店宗旨">
                 <h1 class="storeTitle">每一束花都是一個生活的微笑，</h1>
                 <h1 class="storeTitle1">每一天都是一個充滿希望和美好的新開始，</h1>
                 <h1 class="storeTitle2">讓我們一起迎接每一天的花開時刻。</h1>
             </li>
             <li class="swiper-slide">
-                <img src="./img/bannerN1.jpg" alt="情人節活動">
+                <img src="./img/bannerN1-1440px.jpg" alt="情人節活動">
                 <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
                 <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
                 <a href="tel:02-27120589" class="callout">點擊購買</a>
             </li>
             <li class="swiper-slide">
-                <img src="./img/bannerN2.jpg" alt="母親節優惠">
+                <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠">
                 <h1 class="motherdayTitle">母親節特別優惠：</h1>
                 <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
                 <a href="tel:02-27120589" class="callout">點擊購買</a>
@@ -368,29 +391,24 @@
         <!-- customersevice -->
         <section class="customService">
             <div class="productTitle">
-                <h2>送禮煩惱-來電諮詢</h2>
+                <h2>諮詢與客製化服務</h2>
             </div>
-            <div class="pictureBackground">
-                <div class="consultationForm">
-                    <div class="informationSection">
-                        <h1 class="infoTitle">諮詢與客製化服務</h1>
-                        <ul class="informationContent">
-                            <li>
-                                <h3>送禮諮詢</h3>
-                                <p>我們提供諮詢服務,<br>依照您的需求提供您花禮的建議哦！</p>
-                            </li>
-                            <li>
-                                <h3>客製需求</h3>
-                                <p>所有商品皆可做客製服務,可提供照片或想法,<br>由專人提供您建議與討論,為您做出獨一無二的花禮</p>
-                            </li>
-                        </ul>
+            <div class="informationSection">
+                <ul class="informationList">
+                    <li>
+                        <h3>送禮諮詢</h3>
+                        <p>我們提供諮詢服務,<br>依照您的需求提供您花禮的建議哦！</p>
+                    </li>
+                    <li>
+                        <h3>客製需求</h3>
+                        <p>所有商品皆可做客製服務,可提供照片或想法,<br>由專人提供您建議與討論,為您做出獨一無二的花禮</p>
+                    </li>
+                </ul>
 
-                        <a href="tel:02-27120589" class="callout">免費電話咨詢 02-27120589</a>
-                        
-                    </div>
-                </div>
-            </div>
+                <a href="tel:02-27120589" class="callout">免費電話咨詢 02-27120589</a>
+            </div>  
         </section>
+
         <!-- reurnTop -->
         <button onclick="scrollToTop()" id="btnScrollToTop" title="返回頂部">
             <i class="fa-solid fa-caret-up"></i>
