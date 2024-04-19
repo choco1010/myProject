@@ -240,7 +240,7 @@ header h1{
     display: none;
 }
 
-/*----------------------- 購物車上方的數量 -----------------------*/
+/*----------------- 購物車上方的數量 --------------*/
 .valnum{
     position: relative;
     right: 20px;
@@ -267,7 +267,7 @@ header h1{
 
 
 
-/* ----------------------------- footer ----------------------------- */
+/* ---------- footer ------------- */
 
 footer{
     display: flex;
@@ -285,13 +285,14 @@ footer{
     text-align: center;
     padding-left: calc(10px + 120px);
 }
-
+.copyRightPhone{
+    display: none;
+}
 .copyRight p{
     font-size: 16px;
 }
 /* ---------------- icon ---------------- */
 .socialLink{
-    /* width: 146px; */
     margin-right: 20px;
     line-height: 70px;
 }
@@ -305,17 +306,12 @@ footer{
     color: white;
 }
 
+/* --------------------------- 斷點 ----------------------------- */
 
 
-/* -------------------  1366px ------------------- */
-
-@media screen and (max-width: 1280px) {
-
-}
-
+/* -------------------  992px ------------------- */
 @media screen and (max-width: 992px) {
-    header{
-    }
+
 
     /* 導覽列關閉 */
     .textMenu{
@@ -371,9 +367,6 @@ footer{
         font-size: 18px;
     }
 
-    .phoneList{
-    }
-
     .phoneItem{
         text-align: left;
         font-size: 20px;
@@ -422,6 +415,55 @@ footer{
     }
 
     .socialLink a{
+        padding: 5px;
+    }
+}
+/* -------------------  768px ------------------- */
+@media screen and (max-width: 768px) {
+    header{
+        height: 60px;
+        line-height: 60px;
+    }
+    header h1{
+        line-height: 60px;
+    }
+   
+    footer{
+        height: auto;
+        flex-direction: column;
+    }
+    .copyRight{
+        line-height: 0px;
+        padding-left: 0;
+        margin-bottom: 5px;
+    }
+    .copyRight p{
+        line-height: 30px;
+
+    }
+    .socialLink{
+        line-height: 30px;
+        margin: 0 auto;
+    }
+    
+}
+
+/* -------------------  576px ------------------- */
+@media screen and (max-width: 576px) {
+    footer{
+        flex-direction: row;
+        align-items: center;
+    }
+    .copyRight{
+        display: none;
+    }
+
+    .copyRightPhone{
+        display: block;
+        padding: 10px;
+        color: #fff;
+    }
+    .copyRightPhone p{
         padding: 5px;
     }
 }

@@ -12,13 +12,17 @@
     text-align: center;
 }
 
-.activitySection{
+.activityWeb{
     width: 100%;
     margin-bottom: 40px;
 }
 
-.activitySection img{
+.activityWeb img{
     width: 70%;
+}
+
+.activityPhone{
+    display: none;
 }
 
 /* ------------------- Search ------------------- */
@@ -28,7 +32,7 @@
 
 .searchLabel{
     color: #AA8B66;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .searchLabel::before{
@@ -47,7 +51,7 @@
     width: 400px;
     border: none;
     border-bottom: 1px solid #AA8B66;
-    font-size: 19px;
+    font-size: 22px;
 }
 
 .searchBtn:hover{
@@ -56,7 +60,7 @@
 
 .searchBtn .fa-magnifying-glass{
     color: #AA8B66;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 
@@ -66,7 +70,7 @@
 }
 
 .weddingCards{
-    padding: 0 200px;
+    padding: 0 250px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
@@ -97,11 +101,11 @@
 .cardItem h3{
     margin-bottom: 5px;
     color: #AA8B66;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .cardItem p{
-    font-size: 16px;
+    font-size: 18px;
     color: #AA8B66;
 }
 
@@ -144,7 +148,7 @@
 }
 
 .openingBlessingCards{
-    padding: 0 200px;
+    padding: 0 250px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
@@ -200,7 +204,7 @@
 h2{
     text-align: left;
     color: #AA8B66;
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -215,7 +219,7 @@ h2::before{
     margin-right: 10px;
 }
 
-/* ------------------------ customer Service -------------------- */
+/* -------------- customer Service ----------- */
 
 .customService{
     box-sizing: border-box;
@@ -224,7 +228,7 @@ h2::before{
 }
 .informationSection{
     background-color: rgba(250, 240, 228, .9);
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -247,6 +251,7 @@ h2::before{
     padding-left: 10px;
     color: #AA8B66;
     margin-left: 20px;
+    border-left: 1px solid #AA8B66;
 }
 .informationList li h3{
     text-decoration: underline;
@@ -314,15 +319,13 @@ h2::before{
 
 
 /* ---------------------------- 網頁 ------------------------------- */
-/* ---------------------- 1710px -------------------- */
-@media screen and (min-width: 1441px) {
+/* ---------------------- 1280px -------------------- */
+@media screen and (max-width: 1280px) {
 
     .wrapper {
-        max-width: 1710px;
         margin: 4% auto 1% auto;
     }
 
-/* ------------------- Search ------------------- */
     .searchSection{
         margin-bottom: 80px;
     }
@@ -330,6 +333,7 @@ h2::before{
     .searchLabel{
         font-size: 28px;
     }
+
     .searchLabel::before{
         width: 35px;
         height: 35px;
@@ -344,30 +348,29 @@ h2::before{
         color: #AA8B66;
         font-size: 28px;
     }
-/* ---------------- wedding Product  ---------------- */
 
     .weddingCards, .openingBlessingCards{
-        padding: 0 250px;
+        padding: 0 200px;
         gap: 45px;
     }
 
-    .cardItem:hover .cartButtonText{
-        transform: translateY(380%); 
+    .cardItem h3{
+        font-size: 18px;
     }
 
-/* -------------- dailylife Product ----------------- */
+    .cardItem:hover .cartButtonText{
+        transform: translateY(300%); 
+    }
 
     .dailyLifeList{
-    padding: 0 250px;
+    padding: 0 200px;
     gap: 20px; 
     }
 
     .dailyItem h3{
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 5px;
     }
-
- /* ------------------- allTitle ------------------- */
 
     .productTitle{
         margin: 40px auto;
@@ -385,36 +388,117 @@ h2::before{
         margin-right: 15px;
     }
 
-/* ---------------- customer Service ------------ */
     .informationSection{
         background-color: rgba(250, 240, 228, .9);
         width: 70%;
         margin: 0 auto;
     }
 
+    .informationList{
+        padding: 40px 30px 0 20px;
+    }
     .informationList li h3{
-        font-size: 24px;
+        font-size: 22px;
         padding: 15px;
     }
 
     .informationList li p{
-        font-size: 19px;
+        font-size: 18px;
     }
   
 }
+/* ---------------------- 1144px -------------------- */
 
-@media screen and (min-width: 993px) {
-    .wrapper{
-        max-width: 1440px;
-        width: 100vw;
+@media screen and (max-width: 1144px) {
+    .searchLabel{
+        font-size: 24px;
+    }
+    #cusSearch{
+        font-size: 20px;
+    }
+    .searchBtn .fa-magnifying-glass{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .searchLabel::before, h2::before{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    .productTitle{
+        margin: 30px auto;
+    }
+    .weddingCards, .openingBlessingCards{
+        padding: 0px 150px;
+        gap: 35px;
+    }
+    .cardItem p{
+        font-size: 17px;
+    }
+    .dailyLifeList{
+        padding: 0 130px;
+    }
+    .dailyItem h3{
+        font-size: 20px;
+    }
+    .informationSection{
+        width: 80%;
     }
 }
+
 /* ---------------------- 992px -------------------- */
 
 @media screen and (max-width: 992px) {
+
+    .activityWeb{
+        display: none;
+    }
+    .activityPhone{
+        display: block;
+        padding: 0 90px 40px 90px;
+    }
+    .activityPhone li{
+        display: flex;
+        justify-content: left;
+        padding: 30px;
+        margin-bottom: 10px;
+    }
     
+    .activityCash{
+        background-color: #FFD700;
+    }
+
+    .activitySend{
+        background-color: #FFB6C1;
+    }
+
+    .activityPay{
+        background-color: #87CEEB;
+    }
+    .activityInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        color: #fff;
+    }
+
+    .activityInfo h3{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .activityInfo h4, .activityInfo p{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .searchSection{
+        margin-bottom: 50px;
+    }
     .searchLabel{
-        font-size: 20px;
+        font-size: 24px;
     }
     .searchLabel::before{
         width: 28px;
@@ -425,22 +509,25 @@ h2::before{
     }
 
     #cusSearch{
-        width: 260px;
-        font-size: 14px;
+        width: 330px;
+        font-size: 18px;
     }
     .productTitle{
         width: 50%;
     }
 
     h2{
-        font-size: 22px;
+        font-size: 24px;
     }
 
     h2::before{
         width: 28px;
         height: 28px;
+        margin-right: 10px;
     }
-
+    .cardItem:hover .cartButtonText{
+        transform: translateY(320%);
+    }
     .weddingCards,.openingBlessingCards{
         padding: 0 180px;
         grid-template-columns: repeat(3, 1fr);
@@ -482,47 +569,67 @@ h2::before{
         font-size: 15px;
     }
 
-    
-
 }
 
 
 /* ----------------------------- 平板 ------------------------------ */
 
 
-@media screen and (min-width: 768px) {
-   
-    .cardItem h3, .dailyItem h3 {
-        font-size: 17px;
+@media screen and (max-width: 768px) {
+    .productTitle{
+        margin: 20px auto;
     }
-    .cardItem p {
-        font-size: 15px;
+    .weddingCards, .openingBlessingCards{
+        padding: 0 100px;
+        gap: 20px;
     }
-
+    .cardItem:hover .cartButtonText {
+        transform: translateY(300%);
+    }
     .searchLabel{
-        font-size: 24px;
-    }
-
-    
-    .searchLabel {
         font-size: 20px;
     }
-
-    .searchLabel::before {
-        width: 20px;
-        height: 20px;
+    h2{
+        font-size: 22px;
     }
-
+    .searchLabel::before{
+        width: 24px;
+        height: 24px;
+    }
+    .dailyLifeList{
+        padding: 0 80px;
+        gap: 20px;
+    }
+    .dailyItem img{
+        width: 100%;
+    }
+    .dailyItem h3{
+        font-size: 17px;
+    }
+    .informationSection{
+        width: 75%;
+    }
+    .informationList li{
+        border-left: none;
+    }
+    .informationList li h3{
+        font-size: 20px;
+    }
+    .informationList li p{
+        font-size: 14px;
+    }
+    .informationList{
+        margin-top: 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
-
-
 
 /* ----------------------------- 手機 ------------------------------ */
 
 @media screen and (max-width: 576px) {
     
     .productTitle{
-        width: 40%;
+        width: 50%;
     }
 
     .weddingCards,.openingBlessingCards{
@@ -530,13 +637,16 @@ h2::before{
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .dailyLifeList{
         padding: 0 70px;
     }
+
     .dailyItem h3{
         margin-bottom: 0;
         font-size: 16px;
     }
+
     .informationList{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -544,7 +654,17 @@ h2::before{
     .informationList li{
         margin-bottom: 10px;
     }
+
+    #searchForm{
+        padding: 0 20px 20px 20px;
+    }
+    
+    #cusSearch{
+        margin-top: 20px;
+    }
 }
+
+
 
 
 

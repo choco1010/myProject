@@ -138,53 +138,161 @@
 }
 
 /* ------------------------------ RWD ------------------------------ */
-@media screen and (min-width: 1441px) {
-   
-}
-
-
-@media screen and (max-width: 1280px){}
-
-
-@media screen and (max-width: 992px) {
+/* -------------------  1144px ------------------- */
+@media screen and (max-width: 1144px) {
     .storeTitle{
-        top: 150px;
-        font-size: 25px;
+        top: 170px;
+        font-size: 30px;
     }
 
     .storeTitle1{
-        top: 200px;
-        font-size: 25px;
+        top: 230px;
+        font-size: 30px;
     }
 
     .storeTitle2{
-        top: 250px;
-        font-size: 25px;
+        top: 290px;
+        font-size: 30px;
     }
 
     .ValentineTitle{
+        top: 180px;
+        font-size: 40px;
+    }
+    .ValentineTitle1{
+        top: 260px;
+        font-size: 40px;
+    }
+
+    .motherdayTitle{
         top: 160px;
         font-size: 32px;
     }
 
-    .ValentineTitle1{
-        top: 220px;
+    .motherdayTitle1{
+        top: 230px;
         font-size: 32px;
     }
 
     .swiper-slide a{
-        top: 300px;
+        top: 350px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+.storeTitle{
+    top: 140px;
+    font-size: 28px;
+}
+
+.storeTitle1{
+    top: 200px;
+    font-size: 28px;
+}
+.storeTitle2{
+    top: 260px;
+    font-size: 28px;
+}
+.ValentineTitle{
+    top: 160px;
+    font-size: 30px;
+}
+.ValentineTitle1{
+    top: 220px;
+    font-size: 30px;
+}
+.motherdayTitle{
+    top: 140px;
+    font-size: 28px;
+}
+
+.motherdayTitle1{
+    top: 200px;
+    font-size: 28px;
+}
+
+.swiper-slide a{
+    top: 290px;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+.storeTitle{
+    top: 120px;
+    font-size: 20px;
+}
+.storeTitle1{
+    top: 160px;
+    font-size: 20px;
+}
+.storeTitle2{
+    top: 200px;
+    font-size: 20px;
+}
+
+.ValentineTitle{
+    top: 120px;
+    left: 60px;
+    font-size: 24px;
+}
+.ValentineTitle1{
+    top: 170px;
+    left: 60px;
+    font-size: 24px;
+}
+
+.motherdayTitle{
+    top: 110px;
+    left: 60px;
+}
+.motherdayTitle1{
+    top: 160px;
+    left: 60px;
+}
+.swiper-slide a{
+    top: 230px;
+    left: 70px;
+}
+}
+
+@media screen and (max-width: 576px) {
+    .storeTitle{
+        top: 90px;
+        font-size: 14px;
     }
 
-    .motherdayTitle{
+    .storeTitle1{
+        top: 120px;
+        font-size: 14px;
+    }
+    .storeTitle2{
         top: 150px;
-        font-size: 32px;
+        font-size: 14px;
     }
 
+    .ValentineTitle{
+        top: 90px;
+        font-size: 18px;
+    }
+    .ValentineTitle1{
+        top: 130px;
+        font-size: 18px;
+    }
+    .motherdayTitle{
+        top: 80px;
+        font-size: 18px;
+    }
     .motherdayTitle1{
-        top: 200px;
-        font-size: 32px;
+        top: 120px;
+        font-size: 18px;
     }
 
-    
+    .swiper-slide a{
+        top: 180px;
+        font-size: 14px;
+        padding: 5px;
+    }
 }
