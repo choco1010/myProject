@@ -11,41 +11,64 @@
     </head>
     <body>
 
-        <header>  
-    <!-------------------------------- topMenu ----------------------------------->
-            <div class="topNav">
-                <a href="./index.html">
-                    <h1>Sunrise</h1>
-                </a>
-    
-                <nav class="textMenu">
-                    <ul class="navList">
-                        <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
-                        <li class="navItem">
-                            <a href="#">花藝商品</a>
-                            <ul class="productTypes">
-                                <li>盆花</li>
-                                <li>花束</li>
-                                <li>乾燥花</li>
-                                <li>
-                                    <a href="#">婚禮系列</a>
-                                </li>
-                                <li>高架花籃</li>
-                            </ul>
-                        </li>
-                        <li class="navItem"><a href="faq.html">常見問題</a></li>
-                        <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
-                    </ul>
-                </nav>
-    
-                <nav class="iconMenu">
-                    <ul>
-                        <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-                        <li><a href="./shopcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
-                    </ul>
-                </nav>
+<!-------------------------------- topMenu Start ----------------------------------->
+    <header>  
+        <div class="topNav">
+            <a href="./index.html">
+                <h1>Sunrise</h1>
+            </a>
+
+            <nav class="textMenu">
+                <ul class="navList">
+                    <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                    <li class="navItem">
+                        <a href="#">花藝商品</a>
+                        <ul class="productTypes">
+                            <li>盆花</li>
+                            <li>花束</li>
+                            <li>乾燥花</li>
+                            <li>
+                                <a href="catalog.html">婚禮系列</a>
+                            </li>
+                            <li >高架花籃</li>
+                        </ul>
+                    </li>
+                    <li class="navItem"><a href="faq.html">常見問題</a></li>
+                    <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
+                </ul>
+            </nav>
+
+            <nav class="iconMenu">
+                <ul>
+                    <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="phoneMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </li>
+                    <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="valnum"><span>0</span></li>   
+                </ul>
+            </nav>
+
+            <!-- 遮罩 -->
+            <div class="phoneOverlay"></div>
+            <!-- 漢堡bar -->
+            <div class="phoneblock">
+                <div class="menuCloseBlock">
+                    <a class="menuCloseBtn "><i class="fa-solid fa-arrow-left"></i></a>
+                    <p>CLOSE</p>
+                </div>
+                <ul class="phoneList">
+                    <li class="phoneItem">關於我們</li>
+                    <li class="phoneItem">花藝商品</li>
+                    <li class="phoneItem">常見問題</li>
+                    <li class="phoneItem">花藝諮詢</li>
+                    <li class="phoneItem">會員登入</li>
+                </ul>
+                <div></div>
             </div>
-        </header>
+        </div>
+    </header>
+<!-------------------------------- topMenu end ----------------------------------->
             
 <!-------------------------------- main ----------------------------------->  
         <main class="questionWrapper">

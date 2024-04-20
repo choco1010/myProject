@@ -11,8 +11,8 @@
     <script src="./js/jquery-3.7.1.min.js"></script> 
 </head>
 <body>
+<!-------------------------------- topMenu Start ----------------------------------->
     <header>  
-<!-------------------------------- topMenu ----------------------------------->
         <div class="topNav">
             <a href="./index.html">
                 <h1>Sunrise</h1>
@@ -28,9 +28,9 @@
                             <li>花束</li>
                             <li>乾燥花</li>
                             <li>
-                                <a href="#">婚禮系列</a>
+                                <a href="catalog.html">婚禮系列</a>
                             </li>
-                            <li>高架花籃</li>
+                            <li >高架花籃</li>
                         </ul>
                     </li>
                     <li class="navItem"><a href="faq.html">常見問題</a></li>
@@ -40,12 +40,35 @@
 
             <nav class="iconMenu">
                 <ul>
-                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="./shopcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                    <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="phoneMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </li>
+                    <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="valnum"><span>0</span></li>   
                 </ul>
             </nav>
+
+            <!-- 遮罩 -->
+            <div class="phoneOverlay"></div>
+            <!-- 漢堡bar -->
+            <div class="phoneblock">
+                <div class="menuCloseBlock">
+                    <a class="menuCloseBtn "><i class="fa-solid fa-arrow-left"></i></a>
+                    <p>CLOSE</p>
+                </div>
+                <ul class="phoneList">
+                    <li class="phoneItem">關於我們</li>
+                    <li class="phoneItem">花藝商品</li>
+                    <li class="phoneItem">常見問題</li>
+                    <li class="phoneItem">花藝諮詢</li>
+                    <li class="phoneItem">會員登入</li>
+                </ul>
+                <div></div>
+            </div>
         </div>
     </header>
+<!-------------------------------- topMenu end ----------------------------------->
 
 <!-------------------------------- main ----------------------------------->    
     <main>
@@ -88,19 +111,19 @@
                     <div class="productThumbnails">
                         <ul class="thumbnailList">
                             <li class="thumbnailItem">
-                                <img src="./img/product8.jpg" alt="">
+                                <img src="./img/product_1_1.jpg" alt="">
                             </li>
                             <li class="thumbnailItem">
-                                <img src="./img/product8-1.jpg" alt="">
+                                <img src="./img/product_1_2.jpg" alt="">
                             </li>
                             <li class="thumbnailItem">
-                                <img src="./img/product8-2.jpg" alt="">
+                                <img src="./img/product_1_3.jpg" alt="">
                             </li>
                         </ul>
                     </div>
                     <!-- 商品大圖 -->
                     <figure class="flowerCard">
-                        <img src="./img/product8.jpg" alt="新娘捧花-多彩夏季">
+                        <img src="./img/product_1_1.jpg" alt="新娘捧花-多彩夏季">
                     </figure>
 
                     <div class="flowerInfo">
@@ -165,27 +188,27 @@
                         <ul class="scrollImg">
                             <li>
                                 <a href="#">
-                                    <img src="./img/product1.jpg" alt="新娘捧花-夕陽柔情">
+                                    <img src="./img/product_2.jpg" alt="新娘捧花-夕陽柔情">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product2.jpg" alt="新娘捧花-粉色花漾">
+                                    <img src="./img/product_3.jpg" alt="新娘捧花-粉色花漾">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product3.jpg" alt="新娘捧花-綠意盎然">
+                                    <img src="./img/product_4.jpg" alt="新娘捧花-綠意盎然">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product4.jpg" alt="新娘捧花-夢幻藍調">
+                                    <img src="./img/product_5.jpg" alt="新娘捧花-夢幻藍調">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product5.jpg" alt="新娘捧花-紅雪花籃">
+                                    <img src="./img/product_6.jpg" alt="新娘捧花-紅雪花籃">
                                 </a>
                             </li>
                         </ul>
@@ -209,12 +232,12 @@
             <ul class="historyList">
                 <li class="historyItem">
                     <a href="product.html">
-                        <img src="./img/product8.jpg" alt="新娘捧花-繽紛花園">
+                        <img src="./img/product_2.jpg" alt="新娘捧花-繽紛花園">
                     </a>
                 </li>
                 <li class="historyItem">
                     <a href="#">
-                        <img src="./img/product7.jpg" alt="新娘捧花-繽紛花園">
+                        <img src="./img/product_1_1.jpg" alt="新娘捧花-繽紛花園">
                     </a>
                 </li>
             </ul>

@@ -274,7 +274,7 @@ h2::before{
     width: 100%;
     text-align: center;
     text-decoration: none;
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 10px 0px;
     border: 1px solid #AA8B66;
     background-color: #AA8B66;
@@ -285,7 +285,7 @@ h2::before{
 }
 
 .callout:hover{
-    background-color: #d5c8b3;
+    transform: scale(1.1);
 }
 
 /* -------------- reurnTop -------------- */
@@ -658,7 +658,7 @@ h2::before{
     #searchForm{
         padding: 0 20px 20px 20px;
     }
-    
+
     #cusSearch{
         margin-top: 20px;
     }

@@ -15,8 +15,8 @@
 </head>
 <body>
   
+<!-------------------------------- topMenu Start ----------------------------------->
     <header>  
-<!-------------------------------- topMenu ----------------------------------->
         <div class="topNav">
             <a href="./index.html">
                 <h1>Sunrise</h1>
@@ -32,9 +32,9 @@
                             <li>花束</li>
                             <li>乾燥花</li>
                             <li>
-                                <a href="#">婚禮系列</a>
+                                <a href="catalog.html">婚禮系列</a>
                             </li>
-                            <li>高架花籃</li>
+                            <li >高架花籃</li>
                         </ul>
                     </li>
                     <li class="navItem"><a href="faq.html">常見問題</a></li>
@@ -44,20 +44,45 @@
 
             <nav class="iconMenu">
                 <ul>
-                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="./shopcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                    <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="phoneMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </li>
+                    <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="valnum"><span>0</span></li>   
                 </ul>
             </nav>
+
+            <!-- 遮罩 -->
+            <div class="phoneOverlay"></div>
+            <!-- 漢堡bar -->
+            <div class="phoneblock">
+                <div class="menuCloseBlock">
+                    <a class="menuCloseBtn "><i class="fa-solid fa-arrow-left"></i></a>
+                    <p>CLOSE</p>
+                </div>
+                <ul class="phoneList">
+                    <li class="phoneItem">關於我們</li>
+                    <li class="phoneItem">花藝商品</li>
+                    <li class="phoneItem">常見問題</li>
+                    <li class="phoneItem">花藝諮詢</li>
+                    <li class="phoneItem">會員登入</li>
+                </ul>
+                <div></div>
+            </div>
         </div>
     </header>
+<!-------------------------------- topMenu end ----------------------------------->
     
-    <div class="circleBg01"></div>
-    <div class="circleBg02"></div>
-    <div class="circleBg03"></div>
 <!-------------------------------- main ----------------------------------->
     
      <main class="aboutUs">
 
+        <div class="circleBackground">
+            <div class="circleBg01"></div>
+            <div class="circleBg02"></div>
+            <div class="circleBg03"></div>
+        </div>
         
 <!-- swiper -->
         <section class="swiper mySwiper">
@@ -128,14 +153,20 @@
         </section>
 
     </main>
-<!-------------------------------- footer ----------------------------------->
+<!---------------------------------- footer -------------------------------->
+
     <footer>
         <div class="copyRight">
             <p>
                 Copyright© 本網站為緯育TibaMe【第91期】前端工程師
-                專業技術養成班學員作品,僅供學習、展示
-                之用途。
+                專業技術養成班學員作品,僅供學習、展示之用途。
             </p>
+        </div>
+        <div class="copyRightPhone">
+            <p>
+                Copyright© 本網站為緯育TibaMe【第91期】前端工程師
+            </p>
+            <p>專業技術養成班學員作品,僅供學習、展示之用途。</p>
         </div>
         <div class="socialLink">
             <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
