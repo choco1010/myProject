@@ -129,7 +129,7 @@
 }
 
 .cardItem:hover .cartButtonText{
-    transform: translateY(300%); 
+    transform: translateY(350%); 
     z-index: 1;
     cursor: pointer;
 }
@@ -576,6 +576,9 @@ h2::before{
 
 
 @media screen and (max-width: 768px) {
+    .searchLabel{
+        display: none;
+    }
     .productTitle{
         margin: 20px auto;
     }
@@ -654,7 +657,7 @@ h2::before{
     .informationList li{
         margin-bottom: 10px;
     }
-
+   
     #searchForm{
         padding: 0 20px 20px 20px;
     }

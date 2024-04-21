@@ -91,7 +91,6 @@
 
 .mainSidebar{
     height: 520px;
-    /* flex-grow: 1; */
     width: 90%;
     margin-right: 40px;
     text-align: left;
@@ -181,6 +180,7 @@
 }
 
 .cardItem{
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
     position: relative;
@@ -202,13 +202,16 @@
 
 .ItemIcon{
     position: absolute;
-    width: 100px;
-    height: 35px;
-    top: 105px;
-    left: 80px;
-    padding: 5px;
-    display: none;
+    width: 100%;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    display: none; 
 }
+
 .ItemList{
     display: flex;
 }
@@ -259,7 +262,7 @@
 }
 
 .cardItem:hover .ItemIcon{
-    display: block;
+    display: flex;
     z-index: 1;
 }
 
@@ -328,3 +331,33 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 992px){
+    .searchLabel{
+        font-size: 28px;
+    }
+    #cusSearch{
+        width: 350px;
+        font-size: 19px;
+    }
+    .wedCard{ 
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wedCard{ 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mainSidebar{
+        display: none;
+    }
+    .productTitle h2 {
+        font-size: 24px;
+    }
+    .rightSelect h4{
+        font-size: 16px;
+    }
+    .searchLabel{
+        display: none;
+    }
+}

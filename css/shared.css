@@ -6,7 +6,7 @@ body{
 }
 
 header{
-    width: 100%;
+    width: 100vw;
     background-color: #FAF0E4;
     height: 70px;
     line-height: 70px;
@@ -272,7 +272,7 @@ header h1{
 footer{
     display: flex;
     background-color: #EECFBB;
-    width: 100%;
+    width: 100vw;
     height: 70px;
     justify-content: center;
 }

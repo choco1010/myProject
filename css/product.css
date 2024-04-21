@@ -2,8 +2,8 @@
 /* -----------------------------main----------------------------- */
 .main{
     max-width: 1440px;
+    width: 100vw;
     margin: 0 auto;
-    width: 100%;
     position: relative;
 }
 /* ----------- blockInner ----------- */
@@ -26,7 +26,7 @@
 
 /* ----------- start ----------- */
 .wrapper{
-    width: 80%;
+    padding: 0 150px;
     margin: 60px auto;
     display: grid; 
     grid-template-columns: 1fr 4fr; 
@@ -102,14 +102,16 @@
     flex-direction: row;
     margin-right: 10px;
 }
-
+.thumbnailList{
+    margin-right: 10px;
+}
 .thumbnailItem{
     margin-bottom: 5px;
 }
 
 .thumbnailItem img{
-    max-width: 100px;
-    max-height: auto;
+    width: 100px;
+    aspect-ratio: 1/1;
 }
 
 .thumbnailItem:hover{
@@ -118,7 +120,8 @@
 /* ----------- flowerCard ----------- */
 
 .flowerCard img{
-    max-width: 400px;
+    width: 400px;
+    aspect-ratio: 1/1;
     margin-right: 20px;
 }
 
@@ -184,6 +187,7 @@
 .cartActions{
     display: flex;
     margin-right: 80px;
+    width: 100%;
 }
 
 .addToCartButton{
@@ -194,7 +198,7 @@
     color: #AA8B66;
     text-align: center;
     font-size: 16px;
-    padding: 5px 10px;
+    padding: 5px 20px;
     margin-right: 10px;
     text-decoration: none;
 }
@@ -354,4 +358,214 @@
 
 .recentlyView:hover .historyList{
     display: block;
+}
+
+@media screen and (max-width: 1280px){
+    .wrapper{
+        padding: 0px 140px;
+    }
+    
+    .breadcrumbNav{
+        left: 350px;
+    }
+
+    .mainSidebar{
+        margin-right: 20px;
+    }
+    .flowerCard img{
+        margin-right: 10px;
+    }
+    .flowerTitle{
+        font-size: 28px;
+    }
+
+    .flowerPrice{
+        font-size: 26px;
+    }
+    .itemSpecs p{
+        margin-bottom: 5px;
+    }
+    .addToCartButton{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .buyNowButton{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1144px){
+    .wrapper{
+        padding: 0px 60px;
+    }
+    .breadcrumbNav{
+        left: 310px;
+    }
+
+    .flowerTitle{
+        font-size: 24px;
+    }
+    .flowerPrice{
+        font-size: 22px;
+    }
+
+    .flowerCard img{
+        width: 370px;
+    }
+    .thumbnailItem img{
+        width: 80px;
+    }
+
+    .itemSpecs{
+        font-size: 15px;
+    }
+    .addToCartButton{
+        width: 90%;
+        padding: 5px 15px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .wrapper{
+        padding: 0px 40px;
+    }
+    .mainSidebar{
+        margin-right: 10px;
+        width: 90%;
+    }
+    .breadcrumbNav{
+        left: 250px;
+    }
+    .flowerCard img{
+        width: 280px;
+        margin-right: 15px;
+    }
+    .thumbnailItem img{
+        width: 70px;
+    }
+    .addToCartButton{
+        width: 80%;
+        padding: 5px 10px;
+    }
+    .menuTitle{
+        padding: 15px;
+        font-size: 18px;
+    }
+    .menuItem, #weddingCategory{
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .recentlyView button{
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wrapper{
+        display: flex;
+        gap: 0px;
+    }
+    .mainSidebar{
+        display: none;
+    }
+    .breadcrumbNav{
+        left: 120px;
+        font-size: 14px;
+    }
+
+    .flowerCard img{
+        width: 250px;
+    }
+    .thumbnailItem img{
+        width: 60px;
+    }
+    .flowerInfo{
+        width: 100%; 
+    }
+
+    .flowerTitle, .flowerPrice, .itemSpecs p{
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    .flowerPrice{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .itemSpecs{
+        width: 100%; 
+    }
+    .itemSpecs p{
+        font-size: 14px;
+    }
+    .addToCartButton{
+        font-size: 16px;
+    }
+    
+    .quantityControl{
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 576px){
+    .wrapper{
+        padding: 0 50px;
+    }
+    .breadcrumbNav{
+        left: 80px;
+        font-size: 16px;
+    }
+    .mainImageContainer{
+        flex-direction: column;
+    }
+    .productThumbnails{
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    
+    .flowerCard img{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .thumbnailItem img{
+        width: 90px;
+    }
+    
+    .flowerTitle{
+        font-size: 26px;
+    }
+    .flowerPrice{
+        font-size: 22px;
+    }
+    .itemSpecs p{
+        font-size: 16px;
+    }
+
+    .addToCartButton{
+        font-size: 18px;
+    }
+    .buyNowButton{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .flowerCard img{
+        width: 240px;
+        margin-right: 0;
+    }
+    .thumbnailItem img{
+        width: 70px;
+    }
+    .breadcrumbNav{
+        left: 60px;
+        font-size: 14px;
+    }
+    .attentionInfo li{
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
 }
