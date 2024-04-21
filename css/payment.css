@@ -5,8 +5,9 @@
 .pickupWrapper{
     color: #B88571;
     max-width: 1440px;
-    width: 100%;
+    width: 100vw;
     margin: 40px auto;
+    
 }
 
 h3{
@@ -24,6 +25,8 @@ input{
 /* -------------------取貨方式--------------- */
 
 .pickupMethod{
+    width: 80%;
+    margin: 0 auto;
     border-bottom: 1px solid #AA8B66;
     padding-bottom: 5px;
 }
@@ -34,7 +37,8 @@ input{
 /* -------------------到貨日期--------------- */
 
 .arrivalDate{
-    margin-top: 20px;
+    width: 80%;
+    margin: 20px auto 0 auto;
     border-bottom: 1px solid #AA8B66;
 }
 
@@ -116,7 +120,8 @@ input{
 .customerInfo{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    width: 80%;
+    margin: 20px auto 0 auto;
     border-bottom: 1px solid #AA8B66;
 }
 
@@ -161,20 +166,23 @@ select{
 .recipientInfo{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    width: 80%;
+    margin: 20px auto 0 auto;
     border-bottom: 1px solid #AA8B66;
 }
 
 /* -------------------付款方式--------------- */
 .paymentMethod{
-    margin-top: 20px;
+    width: 80%;
+    margin: 20px auto 0 auto;
     border-bottom: 3px solid #AA8B66;
 }
 
 /* -------------------發票資料--------------- */
 
 .invoiceData{
-    margin-top: 20px;
+    width: 80%;
+    margin: 20px auto 0 auto;
 }
 
 .notes{
@@ -231,4 +239,14 @@ select{
 .submitBtn:hover{
     background-color: #B88571;
     color: #fff;
+}
+
+
+@media screen and (max-width: 576px){
+    .notes{
+        padding: 10px;
+    }
+    .finalBtn{
+        width: 70%;
+    }
 }

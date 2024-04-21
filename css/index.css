@@ -110,6 +110,7 @@
 }
 
 /* --------- put shoppingCart --------- */
+
 .cartButtonText{
     box-sizing: border-box;
     position: absolute;
@@ -141,7 +142,10 @@
     border-radius: 20px;
     cursor: pointer;
 }
-
+/* ------關掉手機版 */
+.cartbtnPhone{
+    display: none;
+}
 /* -----------------------------openbless Product ----------------------------- */
 .openingBlessingProducts{
     margin-bottom: 50px;
@@ -576,6 +580,22 @@ h2::before{
 
 
 @media screen and (max-width: 768px) {
+    .cartButtonText{
+        display: none;
+    }
+    .cartbtnPhone{
+        display: block;
+    }
+
+    .cartbtnPhone a{
+        background-color: #AA8B66;
+        color: #fff;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
     .searchLabel{
         display: none;
     }

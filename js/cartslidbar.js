@@ -7,22 +7,22 @@ $(document).ready(function(){
             $('#cartslidbarBlock').animate({
                 right: '0px',
             }, 500,'easeInQuad');
-            $('.overlay').fadeIn();
+            $('.webOverlay').fadeIn();
         }else{
             $('#cartslidbarBlock').animate({
                 right: '-360px',
             },500,'easeInQuad');
-            $('.overlay').fadeOut();
+            $('.webOverlay').fadeOut();
             }
     })
 
-    $('.overlay').click(function() {
+    $('.webOverlay').click(function() {
         // 點擊遮罩層時隱藏 cartslidbarBlock 和 overlay
         $('#cartslidbarBlock').animate({
             right: '-360px',
             // 引導UI特效
         },500,'easeInQuad');
-        $('.overlay').fadeOut();
+        $('.webOverlay').fadeOut();
     });
 
 // --------------------- 點擊垃圾桶事件 -------------------------
