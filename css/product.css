@@ -4,6 +4,7 @@
     max-width: 1440px;
     width: 100vw;
     margin: 0 auto;
+    margin-top: 110px;
     position: relative;
 }
 /* ----------- blockInner ----------- */
@@ -27,7 +28,8 @@
 /* ----------- start ----------- */
 .wrapper{
     padding: 0 150px;
-    margin: 60px auto;
+    margin: 120px auto;
+
     display: grid; 
     grid-template-columns: 1fr 4fr; 
     gap: 20px;

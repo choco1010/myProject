@@ -13,19 +13,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
       delay: 3000,
       disableOnInteraction: false, 
     },
-    loop: true,
-    mousewheel: true,
-    keyboard: true,
+    // loop: true,
+    // mousewheel: true,
+    // keyboard: true,
   });
   
   function resetAutoplay() {
     swiper.autoplay.stop(); 
-    swiper.autoplay.start(); 
+    // swiper.autoplay.start(); 
   }
   
   swiper.on('slideChange', function () {
     resetAutoplay(); 
   });
+  
+  resetAutoplay();  //要刪除這格
   
 
 });

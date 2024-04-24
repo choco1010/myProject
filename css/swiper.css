@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-
+    margin-top: 70px;
 }
 .swiper-slide img{
     width: 100%;
@@ -112,8 +112,9 @@
 
 .swiper-button-prev, .swiper-button-next{
     color: #AA8B66;
-    padding: 20px
+    padding: 20px;
 }
+
 
 .swiper-button-prev:hover{
     cursor: pointer;
@@ -219,6 +220,9 @@
 
 
 @media screen and (max-width: 768px) {
+.swiper{
+    margin-top: 60px;
+}
 
 .storeTitle{
     top: 120px;
@@ -252,6 +256,15 @@
     top: 160px;
     left: 60px;
 }
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    font-size: 40px;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    font-size: 40px;
+}
+
 .swiper-slide a{
     top: 230px;
     left: 70px;
@@ -259,27 +272,31 @@
 }
 
 @media screen and (max-width: 576px) {
+    
     .storeTitle{
-        top: 90px;
-        font-size: 14px;
+        top: 80px;
+        left: 35px;
+        font-size: 16px;
     }
 
     .storeTitle1{
-        top: 120px;
-        font-size: 14px;
+        top: 110px;
+        left: 35px;
+        font-size: 16px;
     }
     .storeTitle2{
-        top: 150px;
-        font-size: 14px;
+        top: 140px;
+        left: 35px;
+        font-size: 16px;
     }
 
     .ValentineTitle{
         top: 90px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .ValentineTitle1{
         top: 130px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .motherdayTitle{
         top: 80px;
@@ -290,9 +307,78 @@
         font-size: 18px;
     }
 
+    .swiper-button-prev, .swiper-button-next{
+        padding: 0;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+        font-size: 30px;
+    }
+
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+        font-size: 30px;
+    }
+
     .swiper-slide a{
-        top: 180px;
+        top: 170px;
         font-size: 14px;
         padding: 5px;
     }
 }
+
+@media screen and (max-width: 430px) {
+
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+        font-size: 20px;
+    }
+
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+        font-size: 20px;
+    }
+
+    .storeTitle{
+        top: 40px;
+        left: 30px;
+    }
+
+    .storeTitle1{
+        top: 70px;
+        left: 30px;
+    }
+
+    .storeTitle2{
+        top: 100px;
+        left: 30px;
+    }
+
+    .ValentineTitle{
+        top: 60px;
+        left: 30px;
+        font-size: 14px;
+    }
+
+    .ValentineTitle1{
+        top: 90px;
+        left: 30px;
+        font-size: 14px;
+    }
+
+    .swiper-slide a{
+        top: 127px;
+        left: 40px;
+        font-size: 10px;
+        width: 60px;
+    }
+
+    .motherdayTitle{
+        top: 60px;
+        left: 30px;
+        font-size: 14px;
+    }
+
+    .motherdayTitle1{
+        top: 90px;
+        left: 30px;
+        font-size: 14px;
+    }
+}
+

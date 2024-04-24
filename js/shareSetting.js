@@ -17,15 +17,6 @@ toastr.options = {
     "hideMethod": "fadeOut"
     }
 
-        // 將數據存儲到 sessionStorage 中
-sessionStorage.setItem('username', 'John');
 
-// 從 sessionStorage 中獲取數據
-const username = sessionStorage.getItem('username');
-console.log(username); // 輸出：John
 
-// 刪除 sessionStorage 中的數據
-sessionStorage.removeItem('username');
 
-// 清空 sessionStorage 中的所有數據
-sessionStorage.clear();

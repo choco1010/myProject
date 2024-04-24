@@ -1,15 +1,18 @@
 /* --------------- 共同header和footer --------------- */
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin: 0;
 }
 
 header{
-    width: 100vw;
+    width: 100%;
     background-color: #FAF0E4;
     height: 70px;
     line-height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 8000;
 }
 
 .topNav{
@@ -22,6 +25,7 @@ header h1{
     line-height: 70px;
     background-image: url(../img/LOGO.png);
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
     width: 126px;
     text-indent: -9999px;
@@ -100,15 +104,15 @@ header h1{
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 999; 
+    z-index: 9990; 
 }
 /* ---------------------------- slidebar ---------------------------- */
 #cartslidbarBlock{
     background-color: #fff;
     position: fixed;
     top:0;
-    right: -360px;
-    width: 360px;
+    right: -370px;
+    width: 370px;
     height: 100vh;
     z-index: 9999;
     overflow-y: auto;
@@ -146,10 +150,10 @@ header h1{
 /*---------------- 購物車清單商品列 ----------------*/
 .cartslidbarList{
     width: 100%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     display: flex;
     flex-direction: column;
-    height: calc(100% - 80px - 90px);
+    /* height: calc(100% - 70px - 70px); */
 }
 
 .cartslidbarItem{
@@ -213,11 +217,11 @@ header h1{
 
 .iconMenu ul{
     display: flex;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 .iconMenu li{
-    margin-left: 10px;
+    /* margin-left: 10px; */
     cursor: pointer;
     font-size: 18px;
 }
@@ -243,7 +247,7 @@ header h1{
 /*----------------- 購物車上方的數量 --------------*/
 .valnum{
     position: relative;
-    right: 20px;
+    right: 10px;
     top: 10px;
     outline: 1px solid #F3A07E;
     background-color: #fff;
@@ -272,7 +276,7 @@ header h1{
 footer{
     display: flex;
     background-color: #EECFBB;
-    width: 100vw;
+    width: 100%;
     height: 70px;
     justify-content: center;
 }
@@ -337,13 +341,12 @@ footer{
     }
 
     .phoneblock{
-        display: block;
         position: fixed;
         top: 0 ;
         right: 0;
         z-index: 99;
         background-color: #fff;
-        width: 50%;
+        width: 100%;
         height: 100%;
         background-color: #e9e4d8;
         display: none;
@@ -381,9 +384,8 @@ footer{
         margin-top: 80px;
         border-bottom: 2px solid black;
     }
-
-
-    .phoneMenu:hover .phoneblock{
+/*  */
+    .phoneMenu:hover + .phoneblock {
         display: block;
     }
     /*---------------- 遮罩 ----------------*/ 
@@ -450,6 +452,21 @@ footer{
 
 /* -------------------  576px ------------------- */
 @media screen and (max-width: 576px) {
+    .iconMenu{
+        margin-right: 10px;
+    }
+    .topNav a{
+        line-height: 60px;
+    }
+    header h1{
+        line-height: 60px;
+        background-position: center center;
+        background-size: 100px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+
     footer{
         flex-direction: row;
         align-items: center;
@@ -465,5 +482,13 @@ footer{
     }
     .copyRightPhone p{
         padding: 5px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    
+
+    .copyRightPhone p{
+        font-size: 11px;
     }
 }

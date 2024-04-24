@@ -6,7 +6,7 @@
 .wrapper{
     max-width: 1440px;
     width: 100%;
-    min-height: calc(100% - 70px);
+    height: calc(100% - 70px);
     margin: 4.5% auto 1% auto;
     padding: 20px auto;
     text-align: center;
@@ -145,6 +145,19 @@
 /* ------關掉手機版 */
 .cartbtnPhone{
     display: none;
+}
+
+.putCartBtn{
+    box-sizing: border-box;
+    border: none;
+    margin-top: 5px;
+    background-color: #AA8B66;
+    color: #fff;
+    width: 100%;
+    padding: 5px; 
+    font-size: 14px;
+    
+   
 }
 /* -----------------------------openbless Product ----------------------------- */
 .openingBlessingProducts{
@@ -455,6 +468,13 @@ h2::before{
 /* ---------------------- 992px -------------------- */
 
 @media screen and (max-width: 992px) {
+    
+
+    .activityInfo .payType{
+        width: 150px;
+        height: 30px;
+        margin: 10px auto 0 auto;
+    }
 
     .activityWeb{
         display: none;
@@ -576,10 +596,12 @@ h2::before{
 }
 
 
+
 /* ----------------------------- 平板 ------------------------------ */
 
 
 @media screen and (max-width: 768px) {
+
     .cartButtonText{
         display: none;
     }
@@ -650,7 +672,11 @@ h2::before{
 /* ----------------------------- 手機 ------------------------------ */
 
 @media screen and (max-width: 576px) {
-    
+    .activityInfo .payType{
+        width: 130px;
+        height: 30px;
+        margin: 0 auto;
+    }
     .productTitle{
         width: 50%;
     }
@@ -687,7 +713,129 @@ h2::before{
     }
 }
 
+@media screen and (min-width: 431px) and (max-width: 526px){
+    #btnScrollToTop{
+        position: fixed;
+        bottom: 105px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-caret-up::before{
+        position: absolute;
+        top: 7px;
+        right: 9px;
+    }
+
+    .activityPhone{
+        padding: 0 80px 20px 80px;
+    }
+
+    .activityInfo{
+        margin-left: 30px;
+    }
+
+    .activityInfo .payType{
+        width: 100px;
+        height: 20px;
+        margin: 0 auto;
+    }
+    .activityPhone li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .activityPhone img{
+        width: 20%;
+        aspect-ratio: 1/1;
+    }
+
+    .activityInfo h3{
+        font-size: 18px;
+    }
+    .activityInfo h4, .activityInfo p{
+        font-size: 14px;
+    }
+    .weddingCards, .openingBlessingCards{
+        padding: 0 40px;
+    }
+    .productTitle{
+        width: 80%;
+        padding-right: 0;
+    }
+
+    .dailyLifeList{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 40px;
+    }
+
+    .informationSection{
+        width: 85%;
+    }
+}
 
 
+@media screen and (max-width: 430px){
+    #btnScrollToTop{
+        position: fixed;
+        bottom: 105px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+    }
 
+    .fa-caret-up::before{
+        position: absolute;
+        top: 7px;
+        right: 9px;
+    }
 
+    .activityPhone{
+        padding: 0 80px 20px 80px;
+    }
+
+    .activityInfo{
+        margin-left: 30px;
+    }
+
+    .activityInfo .payType{
+        width: 100px;
+        height: 20px;
+        margin: 0 auto;
+    }
+    .activityPhone li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .activityPhone img{
+        width: 20%;
+        aspect-ratio: 1/1;
+    }
+
+    .activityInfo h3{
+        font-size: 18px;
+    }
+    .activityInfo h4, .activityInfo p{
+        font-size: 14px;
+    }
+    .weddingCards, .openingBlessingCards{
+        padding: 0 40px;
+    }
+    .productTitle{
+        width: 80%;
+        padding-right: 0;
+    }
+
+    .dailyLifeList{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 40px;
+    }
+
+    .informationSection{
+        width: 85%;
+    }
+}
