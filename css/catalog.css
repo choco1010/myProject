@@ -3,6 +3,7 @@
 
 /* -----------------------------main----------------------------- */
 
+
 .blockNav{
     max-width: 1440px;
     width: 100%;
@@ -360,4 +361,18 @@
     .searchLabel{
         display: none;
     }
+}
+
+@media screen and (max-width: 576px) {
+    .pagination{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .rightSelect{
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
 }

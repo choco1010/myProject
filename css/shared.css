@@ -12,7 +12,7 @@ header{
     line-height: 70px;
     position: fixed;
     top: 0;
-    z-index: 8000;
+    z-index: 5;
 }
 
 .topNav{
@@ -104,7 +104,7 @@ header h1{
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 9990; 
+    z-index: 10; 
 }
 /* ---------------------------- slidebar ---------------------------- */
 #cartslidbarBlock{
@@ -114,7 +114,7 @@ header h1{
     right: -370px;
     width: 370px;
     height: 100vh;
-    z-index: 9999;
+    z-index: 11;
     overflow-y: auto;
     display: flex; 
     flex-direction: column; 
@@ -243,7 +243,6 @@ header h1{
 .phoneblock{
     display: none;
 }
-
 /*----------------- 購物車上方的數量 --------------*/
 .valnum{
     position: relative;
@@ -341,20 +340,23 @@ footer{
     }
 
     .phoneblock{
+        display: block;
         position: fixed;
         top: 0 ;
-        right: 0;
-        z-index: 99;
+        right: -1000px;
+        z-index: 11;
         background-color: #fff;
-        width: 100%;
+        color: #AA8B66;
+        width: 50%;
         height: 100%;
-        background-color: #e9e4d8;
-        display: none;
+        transition: right 0.3s ease;
     } 
+    /* .phoneblock.show {
+        right: 0;
+    } */
 
     .menuCloseBlock{
-        display: flex;
-        
+        display: flex; 
     }
 
     .menuCloseBtn{
@@ -384,10 +386,7 @@ footer{
         margin-top: 80px;
         border-bottom: 2px solid black;
     }
-/*  */
-    .phoneMenu:hover + .phoneblock {
-        display: block;
-    }
+
     /*---------------- 遮罩 ----------------*/ 
     .phoneOverlay{
     display: none; 
@@ -397,7 +396,7 @@ footer{
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 999; 
+    z-index: 10; 
     }
 
   
@@ -486,7 +485,9 @@ footer{
 }
 
 @media screen and (max-width: 430px) {
-    
+    footer{
+        flex-direction: column;
+    }
 
     .copyRightPhone p{
         font-size: 11px;

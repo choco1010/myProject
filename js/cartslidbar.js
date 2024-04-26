@@ -1,5 +1,29 @@
 
 $(document).ready(function(){
+// --------------------- 手機點擊漢堡選單 -------------------------
+    $('.phoneMenu').click(function(){
+        if($('.phoneblock').css('right') === '-1000px'){
+            $('.phoneblock').animate({
+                right: '0px',
+            },300,'easeInQuad');
+            $('.phoneOverlay').fadeIn();
+        }else{
+            $('.phoneblock').animate({
+                right: '-1000px',
+            },400,'easeInQuad');
+            $('.phoneOverlay').fadeOut();
+            }
+    })
+
+    $('.phoneOverlay').click(function() {
+        // 點擊遮罩層時隱藏 cartslidbarBlock 和 overlay
+        $('.phoneblock').animate({
+            right: '-1000px',
+            // 引導UI特效
+        },400,'easeInQuad');
+        $('.phoneOverlay').fadeOut();
+    });
+
 // --------------------- 購物車ICON -------------------------
 
     $('.cartIcon').click(function(){
