@@ -2,12 +2,10 @@
 
 
 /* -----------------------------main----------------------------- */
-
-
-.blockNav{
+.wrapper{
     max-width: 1440px;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -81,7 +79,7 @@
     line-height: 1.6;
 }
 
-.wrapper{
+.productPage{
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -332,47 +330,63 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 992px){
-    .searchLabel{
-        font-size: 28px;
+/* --------------------------- 斷點 ----------------------------- */
+@media screen and (max-width: 1024px){
+    .wrapper{
+        min-width: 100%;
     }
-    #cusSearch{
-        width: 350px;
-        font-size: 19px;
-    }
+    
     .wedCard{ 
         grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
-}
 
-@media screen and (max-width: 768px) {
-    .wedCard{ 
-        grid-template-columns: repeat(2, 1fr);
-    }
     .mainSidebar{
-        display: none;
+        width: 100%;
+        margin-right: 30px;
     }
-    .productTitle h2 {
+
+    .cardItem h3{
+        font-size: 18px;
+    }
+    .rightSelect{
+        margin-bottom: 10px;
+    }
+    .pagination{
+        width: 30%;
+    }
+
+    .searchLabel{
         font-size: 24px;
+    }
+    #cusSearch{
+        width: 300px;
+        font-size: 16px;
     }
     .rightSelect h4{
         font-size: 16px;
     }
-    .searchLabel{
-        display: none;
-    }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
+    .wrapper{
+        min-width: 100%;
+    }
+    .mainSidebar{
+        display: none;
+    }
+    .wedCard{ 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .rightSelect{
+        flex-direction: column;
+    }
+    .rightSelect h4{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
     .pagination{
         width: 30%;
     }
-}
-
-@media screen and (max-width: 430px){
-    .rightSelect{
-        flex-direction: column;
-        /* align-items: center; */
-    }
-
 }

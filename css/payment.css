@@ -5,9 +5,8 @@
 .pickupWrapper{
     color: #B88571;
     max-width: 1440px;
-    width: 100vw;
-    margin: 40px auto;
-    
+    width: 100%;
+    margin: 130px auto;
 }
 
 h3{
@@ -188,7 +187,7 @@ select{
 .notes{
     border: 1px solid #B88571;
     background-color: #FAF0E4;
-    padding: 10px 10px 10px 150px;
+    padding: 10px 350px;
     margin-bottom: 20px;
 }
 
@@ -227,7 +226,7 @@ select{
     color: #fff;
 }
 
-.submitBtn{
+#submitBtn{
     border: 1px solid #B88571;
     padding: 5px 20px;
     flex: 1;
@@ -236,17 +235,84 @@ select{
     font-weight: bold;
 }
 
-.submitBtn:hover{
+#submitBtn:hover{
     background-color: #B88571;
     color: #fff;
 }
 
 
-@media screen and (max-width: 576px){
-    .notes{
-        padding: 10px;
+
+/* --------------------- RWD ------------------------ */
+
+
+ @media screen and (max-width: 1280px){
+
+    .pickupWrapper{
+        min-width: 100%;
     }
-    .finalBtn{
-        width: 70%;
+    .notes{
+        padding: 10px 190px;
     }
 }
+/* 平板 */
+@media screen and (max-width: 1024px){
+    .pickupWrapper{
+        min-width: 100%;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .arrivalNotes h4{
+        font-size: 14px;
+    }
+    .notes{
+        padding: 10px 90px;
+    }
+}
+/* 手機 */
+@media screen and (max-width: 768px){
+    .pickupMethod{
+        width: 90%;
+    }
+    .arrivalNotes{
+        flex-direction: column;
+    }
+    .arrivalNotes h4{
+        padding-left: 0;
+    }
+    .arrivalDate{
+        width: 90%;
+    }
+    .weekdays{
+        padding: 0;
+    }
+    .days{
+        gap: 6px;
+    }
+    .day{
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    .customerInfo{
+        width: 90%;
+    }
+    .recipientInfo{
+        width: 90%;
+    }
+    .paymentMethod{
+        width: 90%;
+    }
+    .invoiceData{
+        width: 90%;
+    }
+    .notes{
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+    .finalBtn{
+        width: 90%;
+        font-size: 15px;
+    }
+}
+

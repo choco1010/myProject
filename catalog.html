@@ -13,68 +13,98 @@
     <script src="./js/jquery-3.7.1.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./js/cartslidbar.js"></script>
+    <script src="./js/jquery-ui.js"></script>
 </head>
 <body>
 <!-------------------------------- topMenu Start ----------------------------------->
-    <header>  
-        <div class="topNav">
-            <a href="./index.html">
-                <h1>Sunrise</h1>
-            </a>
+<header>  
+    <div class="topNav">
+        <a href="./index.html">
+            <h1>Sunrise</h1>
+        </a>
 
-            <nav class="textMenu">
-                <ul class="navList">
-                    <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
-                    <li class="navItem">
-                        <a href="#">花藝商品</a>
-                        <ul class="productTypes">
-                            <li>盆花</li>
-                            <li>花束</li>
-                            <li>乾燥花</li>
-                            <li>
-                                <a href="catalog.html">婚禮系列</a>
-                            </li>
-                            <li >高架花籃</li>
-                        </ul>
-                    </li>
-                    <li class="navItem"><a href="faq.html">常見問題</a></li>
-                    <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
-                </ul>
-            </nav>
+        <nav class="textMenu">
+            <ul class="navList">
+                <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                <li class="navItem">
+                    <a href="#">花藝商品</a>
+                    <ul class="productTypes">
+                        <li>盆花</li>
+                        <li>花束</li>
+                        <li>乾燥花</li>
+                        <li>
+                            <a href="catalog.html">婚禮系列</a>
+                        </li>
+                        <li >高架花籃</li>
+                    </ul>
+                </li>
+                <li class="navItem"><a href="faq.html">常見問題</a></li>
+                <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
+            </ul>
+        </nav>
 
-            <nav class="iconMenu">
-                <ul>
-                    <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li class="phoneMenu">
-                        <i class="fa-solid fa-bars"></i>
-                    </li>
-                    <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li class="valnum"><span>0</span></li>   
-                </ul>
-            </nav>
+    <!-- ------------ 網頁: 點選cartIcon -> 購物車清單 ------------ -->
+        <nav class="iconMenu">
+            <ul>
+                <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                <li class="phoneMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </li>
+                <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="valnum"><span>0</span></li>   
+            </ul>
+        </nav>
 
-            <!-- 遮罩 -->
-            <div class="phoneOverlay"></div>
-            <!-- 漢堡bar -->
-            <div class="phoneblock">
-                <div class="menuCloseBlock">
-                    <a class="menuCloseBtn "><i class="fa-solid fa-arrow-left"></i></a>
-                    <p>CLOSE</p>
-                </div>
-                <ul class="phoneList">
-                    <li class="phoneItem">關於我們</li>
-                    <li class="phoneItem">花藝商品</li>
-                    <li class="phoneItem">常見問題</li>
-                    <li class="phoneItem">花藝諮詢</li>
-                    <li class="phoneItem">會員登入</li>
-                </ul>
-                <div></div>
+        <!-- 購物車清單 start -->
+
+        <!-- 遮罩 -->
+        <div class="webOverlay"></div>
+        <!-- cartslidbar -->
+        <section id="cartslidbarBlock">
+            <div class="cartslidbarTitle">
+                    <a class="cartcloseBtn cartIcon"><i class="fa-solid fa-xmark"></i></a>
+                    <h4>購物車清單</h4>
             </div>
+
+            <ul class="cartslidbarList">
+                <!-- JS抓的資料範例 -->
+                <!-- <li class="cartslidbarItem">
+                    <a href="#"><img src="./img/product_1.jpg" alt="新娘捧花-多彩夏季">
+                        <div class="cartslidbarPrice">
+                            <h3>新娘捧花-多彩夏季</h3>
+                            <h4>數量: 1</h4>
+                            <p>NT 2,500</p>
+                        </div>
+                        <i class="fa-regular fa-trash-can slidbarDel"></i>
+                    </a>
+                </li> -->
+            </ul>
+            <div style="flex-grow: 1;"></div> 
+
+            <a href="./shopcart.html" class="gotoPayment">前往結帳</a>
+        </section>
+        <!-- 購物車清單 end -->
+
+        <!-- ------------ 手機: 點選iconMenu-> phoneMenu ------------ -->
+
+        <!-- 遮罩 -->
+        <div class="phoneOverlay"></div>
+        
+        <div class="phoneblock">
+            <div class="menuCloseBlock">
+                <a class="menuCloseBtn phoneMenu"><i class="fa-solid fa-arrow-left"></i></a>
+                <p>CLOSE</p>
+            </div>
+            <ul class="phoneList">
+                <li class="phoneItem"><a href="./aboutus.html">關於我們</a></li>
+                <li class="phoneItem"><a href="./catalog.html">花藝商品</a></li>
+                <li class="phoneItem"><a href="./faq.html">常見問題</a></li>
+                <li class="phoneItem"><a href="./contactus.html">花藝諮詢</a></li>
+                <li class="phoneItem login"><a href="./login.html">會員登入</a></li>
+            </ul>
         </div>
-    </header>
-<!-------------------------------- topMenu end ----------------------------------->
-          
- <!-------------------------------- main ----------------------------------->
+    </div>
     <!-- 幻燈片... -->
     <section class="swiper mySwiper">
         <ul class="swiper-wrapper">
@@ -102,7 +132,8 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </section>
-    <!-- breadcrumbNav -->
+
+    <!-- 只有幾個分頁有的：breadcrumbNav -->
     <nav class="breadcrumbNav">
         <a href="index.html" class="breadcrumbLink">首頁</a>
         <i class="fa-solid fa-angle-right"></i>
@@ -112,31 +143,33 @@
         <i class="fa-solid fa-angle-right"></i>
         <span class="currentBreadcrumb">捧花</span>
     </nav>
+
+</header>
+<!-------------------------------- topMenu end ----------------------------------->
+       
+ <!--- main --->
     
-    <section>
-        <!-- 下方指引 -->
-        <div class="blockNav">
-            
-            <!-- searchSection -->
-            <section class="searchSection">
-                <form action="#">
-                    <label for="cusSearch" class="searchLabel">請在這裡尋找您心儀的花朵吧:</label>
-                    <input type="search" id="cusSearch" name="cusSearch" placeholder="輸入花名或品種，開始您的花店之旅吧">
-                    
-                    <label for="submitBtn" class="searchBtn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </label>
-                    <input type="submit" id="submitBtn" style="display: none">
-                </form>
-            </section>
-        </div>       
+    <main class="wrapper">
+        <!-- searchSection -->
+        <section class="searchSection">
+            <form action="#">
+                <label for="cusSearch" class="searchLabel">請在這裡尋找您心儀的花朵吧:</label>
+                <input type="search" id="cusSearch" name="cusSearch" placeholder="輸入花名或品種，開始您的花店之旅吧">
+                
+                <label for="submitBtn" class="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+                <input type="submit" id="submitBtn" style="display: none">
+            </form>
+        </section>
+             
             
 <!----------------------- costumer page ------------------------->
         <div class="productTitle">
             <h2>婚禮系列-捧花</h2>
         </div>
 
-        <div class="wrapper">
+        <div class="productPage">
             <aside class="mainSidebar">
                 <ul class="sidebarMenu">
                     <li class="menuTitle">花藝商品</li>
@@ -334,30 +367,19 @@
                 </section>
             </div>
         </div>
-        
-
-    </section>
+    </main>
 
 
 <!---------------------------------- footer -------------------------------->
 
 <footer>
     <div class="copyRight">
-        <p>
-            Copyright© 本網站為緯育TibaMe【第91期】前端工程師
-            專業技術養成班學員作品,僅供學習、展示之用途。
-        </p>
-    </div>
-    <div class="copyRightPhone">
-        <p>
-            Copyright© 本網站為緯育TibaMe【第91期】前端工程師
-        </p>
-        <p>專業技術養成班學員作品,僅供學習、展示之用途。</p>
-    </div>
-    <div class="socialLink">
-        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-line"></i></a>
+        <span class="footerInfo">Copyright© 本網站為緯育TibaMe【第91期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</span>
+        <span class="socialLink">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </span>
     </div>
 </footer>
 

@@ -1,9 +1,9 @@
 @import url(reset.css);
 /* -----------------------------main----------------------------- */
-main{
+.wrapper{
     max-width: 1440px;
     width: 100%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .spacer{
@@ -13,7 +13,7 @@ main{
 .loginBox{
     width: 30%;
     height: auto;
-    margin: 0 auto;
+    margin: 170px auto 0 auto;
     text-align: center;
     background-color: #FAF0E4;
     padding: 20px 40px;
@@ -36,8 +36,12 @@ main{
    text-decoration: underline;
 }
 
+.loginBoxPhone{
+    display: none;
+}
 /* --------------- cartWrapper --------------- */
-.cartWrapper{
+.cartBlock{
+    box-sizing: border-box;
     width: 80%;
     padding: 20px;
     margin: 0 auto;
@@ -50,6 +54,7 @@ main{
 .cartItemHeaders{
     background-color: #FAF0E4;
     display: flex;
+    justify-content: space-between;
     padding: 20px;
     padding-bottom: 20px;
     font-size: 24px;
@@ -65,12 +70,16 @@ main{
 }
 
 .cartItemHeaders li:nth-child(3){
-    margin-left: 180px;
+    margin-left: 170px;
 }
 
 .cartItemHeaders li:nth-child(4){
-    margin-left: 170px;
+    margin-left: 150px;
 }
+.cartItemHeaders li:nth-child(5){
+    margin-left: auto;
+}
+
 /* --------------- productList --------------- */
 .productPhone{
     display: none;
@@ -286,165 +295,208 @@ main{
     display: block;
 }
 
+/* --------------------------- 斷點 ----------------------------- */
 @media screen and (max-width: 1280px){
+    .wrapper{
+        min-width: 100%;
+    }
+    .loginBox{
+        width: 40%;
+    }
+    .cartBlock{
+        width: 90%;
+    }
+    .productListWeb{
+        padding: 5px 10px;
+    }
+   
+}
+@media screen and (max-width: 1140px){
+    .wrapper{
+        min-width: 100%;
+        margin-bottom: 170px;
+    }
+
     .cartItemHeaders li:nth-child(1){
-        margin-left: 30px;
+        margin-left: 20px;
     }
     
     .cartItemHeaders li:nth-child(2){
-        margin-left: 210px;
+        margin-left: 200px;
     }
     
     .cartItemHeaders li:nth-child(3){
         margin-left: 160px;
     }
-    
-    .cartItemHeaders li:nth-child(4){
-        margin-left: 150px;
+    .priceList{
+        width: 30%;
+    }
+    .cartBtn{
+        width: 40%;
     }
 }
 
-@media screen and (max-width: 1144px){
+@media screen and (max-width: 1024px){
+    .wrapper{
+        min-width: 100%;
+        
+    }
+
     .cartItemHeaders li:nth-child(1){
         margin-left: 10px;
     }
     
     .cartItemHeaders li:nth-child(2){
-        margin-left: 185px;
+        margin-left: 200px;
     }
     
     .cartItemHeaders li:nth-child(3){
-        margin-left: 135px;
+        margin-left: 120px;
     }
-    
     .cartItemHeaders li:nth-child(4){
-        margin-left: 140px;
+        margin-left: 120px;
     }
 }
 
 @media screen and (max-width: 992px){
-    .loginBox{
-        width: 40%;
+    .wrapper{
+        min-width: 100%;
     }
-    .cartWrapper{
+    .loginPrompt{
+        font-size: 18px;
+    }
+    .cartBlock{
         width: 70%;
-        margin-top: 50px
     }
-    .cartItemHeaders{
-        display: none;
-    }
-
-    .productListWeb{
+    .cartItemHeaders, .productListWeb{
         display: none;
     }
 
     .productPhone{
         display: block;
-        padding: 20px;
     }
+    
     .productListPhone{
-        display: flex;
-        justify-content: space-between;
         background-color: #fff;
-        padding: 20px;
+        display: flex;
     }
 
     .productItemPhone{
         display: flex;
-        flex: 1;
-        flex-direction: row;
-        width: 40%
-    }
-    .productLinkPhone{
-        width: 30%;
-        margin-right: 30px;
-    }
-    .productLinkPhone img{
-        width: 100%;
+        align-items: center;
     }
 
-    .productTitle{
-        font-size: 20px;
-    }
-    .productTitle h3{
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-    .productTitle p{
-        margin-bottom: 10px;
-        color: #F3A07E;
+    .productLinkPhone{
+        width: 40%;
     }
     .quantityBtn, .quantityInput{
         border: none;
     }
-   .removeProduct{
-        flex: 0;
-   }
-   .removeProduct a{
+    
+    .productLinkPhone img{
+        width: 60%;
+        padding: 40px;
+    }
+   
+    .productTitle > * {
+        margin-bottom: 10px;
+    }
+
+    .removeProduct{
+        margin-top: 40px;
+        padding-right: 10px;
+    }
+    .removeProduct .fa-trash-can{
         color: #AA8B66;
-        font-size: 24px;
-   }
-
-   .priceList{
-        width: 30%;
-   }
-
-   .cartBtn{
-        width: 40%;
-   }
+    }
+    .tip{
+        margin-top: 10px;
+    }
+    .cartBtn a{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 768px){
-    .loginBox {
-        width: 50%;
-    }
-    .cartBtn{
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .cartWrapper{
+    .cartBlock{
         width: 90%;
     }
-    .productListPhone{
+    .productLinkPhone img{
+        width: 80%;
         padding: 10px;
     }
-    .productPhone{
-        padding: 0;
-    }
-    .priceList{
-        width: 40%;
-    }
-    .loginPrompt{
-        font-size: 16px;
-    }
-    .cartBtn{
-        width: 60%;
-    }
-    .tip{
-        justify-content: center;
-    }
-}
-
-@media (min-width: 430px) and (max-width: 563px) {
-    .loginPrompt{
-        font-size: 15px;
-    }
-    .loginBox{
-        width: 60%;
-    }
-
-    .cartWrapper{
-        padding: 10px
-    }
-    .productLinkPhone{
-        margin-right: 10px;
+    .removeProduct{
+        margin-top: 10px;
     }
     .priceList{
         width: 50%;
     }
     .cartBtn{
-        width:  80%;
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 430px){
+
+    .wrapper{
+        min-width: 100%;
+    }
+    .loginBox{
+        display: none;
+    }
+    .loginBoxPhone{
+        /* outline: 1px solid black; */
+        width: 80%;
+        margin: 160px auto 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .loginBoxPhone p{
+        color: #AA8B66;
+        padding: 5px;
+    }
+
+    .loginBoxPhone a{
+        text-decoration: none;
+        background-color: #F3A07E;
+        color: #fff;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .cartBlock{
+        margin-top: 10px;
+        width: 90%;
+    }
+
+    .productItemPhone{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .productLinkPhone{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .productLinkPhone img{
+        width: 100%;
+        padding: 0;
+    }
+  
+    .removeProduct{
+        margin-top: 0;
+        padding: 0 10px;
+    }
+
+    .tip{
+        font-size: 17px;
+    }
+
+    .priceList{
+        width: 60%;
+    }
+    .cartBtn{
+        width: 90%;
     }
 }

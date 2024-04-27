@@ -70,14 +70,42 @@
                     <p>CLOSE</p>
                 </div>
                 <ul class="phoneList">
-                    <li class="phoneItem">關於我們</li>
-                    <li class="phoneItem">花藝商品</li>
-                    <li class="phoneItem">常見問題</li>
-                    <li class="phoneItem">花藝諮詢</li>
-                    <li class="phoneItem">會員登入</li>
+                    <li class="phoneItem"><a href="./aboutus.html">關於我們</a></li>
+                    <li class="phoneItem"><a href="./catalog.html">花藝商品</a></li>
+                    <li class="phoneItem"><a href="./faq.html">常見問題</a></li>
+                    <li class="phoneItem"><a href="./contactus.html">花藝諮詢</a></li>
+                    <li class="phoneItem login"><a href="./login.html">會員登入</a></li>
                 </ul>
             </div>
         </div>
+
+                <!-- 幻燈片... -->
+                <section class="swiper mySwiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="./img/bannerN0-1440px.jpg" alt="花店宗旨">
+                            <h1 class="storeTitle">每一束花都是一個生活的微笑，</h1>
+                            <h1 class="storeTitle1">每一天都是一個充滿希望和美好的新開始，</h1>
+                            <h1 class="storeTitle2">讓我們一起迎接每一天的花開時刻。</h1>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/bannerN1-1440px.jpg" alt="情人節活動">
+                            <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
+                            <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
+                            <a href="tel:02-27120589" class="callout">點擊購買</a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠">
+                            <h1 class="motherdayTitle">母親節特別優惠：</h1>
+                            <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
+                            <a href="tel:02-27120589" class="callout">點擊購買</a>
+                        </li>
+                    </ul>
+            
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </section>
     </header>
  <!-------------------------------- topMenu end ----------------------------------->
     <!-- 遮罩 -->
@@ -106,39 +134,12 @@
 
         <a href="./shopcart.html" class="gotoPayment">前往結帳</a>
     </section>
+<!-- ------------------購物車清單 end------------------ -->
 
-        <!-- 幻燈片... -->
-    <section class="swiper mySwiper">
-        <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-                <img src="./img/bannerN0-1440px.jpg" alt="花店宗旨">
-                <h1 class="storeTitle">每一束花都是一個生活的微笑，</h1>
-                <h1 class="storeTitle1">每一天都是一個充滿希望和美好的新開始，</h1>
-                <h1 class="storeTitle2">讓我們一起迎接每一天的花開時刻。</h1>
-            </li>
-            <li class="swiper-slide">
-                <img src="./img/bannerN1-1440px.jpg" alt="情人節活動">
-                <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
-                <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
-                <a href="tel:02-27120589" class="callout">點擊購買</a>
-            </li>
-            <li class="swiper-slide">
-                <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠">
-                <h1 class="motherdayTitle">母親節特別優惠：</h1>
-                <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
-                <a href="tel:02-27120589" class="callout">點擊購買</a>
-            </li>
-        </ul>
 
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </section>
-
-    
 <!-------------------------------- main ----------------------------------->
     <main class="wrapper">
-      
+
 
     <!-- 活動頁 -->
         <div class="activityWeb">
@@ -270,25 +271,16 @@
     </main>
 <!---------------------------------- footer -------------------------------->
 
-    <footer>
-        <div class="copyRight">
-            <p>
-                Copyright© 本網站為緯育TibaMe【第91期】前端工程師
-                專業技術養成班學員作品,僅供學習、展示之用途。
-            </p>
-        </div>
-        <div class="copyRightPhone">
-            <p>
-                Copyright© 本網站為緯育TibaMe【第91期】前端工程師
-            </p>
-            <p>專業技術養成班學員作品,僅供學習、展示之用途。</p>
-        </div>
-        <div class="socialLink">
+<footer>
+    <div class="copyRight">
+        <span class="footerInfo">Copyright© 本網站為緯育TibaMe【第91期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</span>
+        <span class="socialLink">
             <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-line"></i></a>
-        </div>
-    </footer>
+        </span>
+    </div>
+</footer>
 
     <script>
         

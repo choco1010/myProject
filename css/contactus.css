@@ -164,3 +164,57 @@ input[type="text"]:focus {
     background-color: #EECFBB;
     color: #AA8B66;
 }
+
+
+
+/* --------------------------- 斷點 ----------------------------- */
+@media screen and (max-width: 1024px){
+    .contactWrapper{
+        min-width: 90%;
+        padding: 40px 0px;
+    }
+    .contactImg{
+        width: 50%;
+        margin-right: 0;
+    }
+    .contactImg img{
+        width: 100%;
+        height: 300px;
+        
+    }
+    .writeBlock{
+        margin-left: 10px;
+    }
+
+    .questionTitle{
+        width: 80%;
+    }
+    h2{
+        width: 80%;
+    }
+    .contactBlock{
+        width: 80%;
+    }
+    .writeList{
+        font-size: 17px;
+    }
+    input[type="radio"] + label{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .contactImg{
+        display: none;
+    }
+    .writeItem{
+        font-size: 14px;
+    }
+    input[type="radio"] + label{
+        font-size: 14px;
+    }
+    .writeItem textarea{
+        width: 270px; 
+        height: 230px; 
+    }
+}

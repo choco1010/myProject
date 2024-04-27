@@ -7,6 +7,18 @@ body{
 
 header{
     width: 100%;
+    /* background-color: #FAF0E4;
+    height: 70px;
+    line-height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 5; */
+}
+
+.topNav{
+    display: flex;
+
+    width: 100%;
     background-color: #FAF0E4;
     height: 70px;
     line-height: 70px;
@@ -14,12 +26,8 @@ header{
     top: 0;
     z-index: 5;
 }
-
-.topNav{
-    display: flex;
-}
 /* ------------------- LOGO ------------------- */
-header h1{
+.topNav h1{
     margin-left: 20px;
     top: 0;
     line-height: 70px;
@@ -243,6 +251,8 @@ header h1{
 .phoneblock{
     display: none;
 }
+
+
 /*----------------- 購物車上方的數量 --------------*/
 .valnum{
     position: relative;
@@ -273,48 +283,55 @@ header h1{
 /* ---------- footer ------------- */
 
 footer{
-    display: flex;
     background-color: #EECFBB;
-    width: 100%;
-    height: 70px;
-    justify-content: center;
+    width: 100%; 
 }
 
 .copyRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
     font-size: 18px;
     color: white;
-    line-height: 70px;
     text-align: center;
-    padding-left: calc(10px + 120px);
+    padding-left: calc(10px + 92px);
+    height: 70px;
 }
-.copyRightPhone{
-    display: none;
+
+.footerInfo{
+    margin: 0 auto;
 }
-.copyRight p{
-    font-size: 16px;
-}
+
+
 /* ---------------- icon ---------------- */
 .socialLink{
-    margin-right: 20px;
+    margin-right: 10px;
     line-height: 70px;
+    flex-shrink: 0;
 }
 
-.socialLink a{
-    padding: 10px;
-}
-
-.fa-brands{
-    font-size: 18px;
-    color: white;
+.socialLink .fa-brands{
+    color: #fff;
+    margin: 0 5px;
 }
 
 /* --------------------------- 斷點 ----------------------------- */
+@media screen and (max-width: 1280px) {
+    .copyRight{
+        font-size: 17px;
+    }
+}
 
+@media screen and (max-width: 1024px) {
 
-/* -------------------  992px ------------------- */
-@media screen and (max-width: 992px) {
-
+    .topNav{
+        height: 60px;
+        line-height: 60px;
+    }
+    header h1{
+        line-height: 60px;
+    }
 
     /* 導覽列關閉 */
     .textMenu{
@@ -333,8 +350,7 @@ footer{
         display: flex;
         justify-content: flex-end;
     }
-
-    /* ------------------ 漢堡Bar ------------------ */
+    /* --------- Max:992px-漢堡Bar --------- */
     .phoneMenu{
         display: block;
     }
@@ -351,10 +367,12 @@ footer{
         height: 100%;
         transition: right 0.3s ease;
     } 
-    /* .phoneblock.show {
-        right: 0;
-    } */
-
+   
+    .phoneList{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     .menuCloseBlock{
         display: flex; 
     }
@@ -375,16 +393,24 @@ footer{
     .phoneItem{
         text-align: left;
         font-size: 20px;
-        color: black;
+        color: #AA8B66;
         padding-left: 20px;
         letter-spacing: 5px;
-        border-bottom: 1px solid rgba(0,0,0,.5);
+        border-bottom: 1px solid #AA8B66;
+    }
+
+    .phoneItem .login{
+        border-bottom: 2px solid #AA8B66;
 
     }
 
-    .phoneItem:last-child{
-        margin-top: 80px;
-        border-bottom: 2px solid black;
+    .phoneItem a{
+        text-decoration: none;
+        color: #AA8B66;
+    }
+    .phoneItem:hover{
+        background-color: #FAF0E4;
+        cursor: pointer;
     }
 
     /*---------------- 遮罩 ----------------*/ 
@@ -399,97 +425,72 @@ footer{
     z-index: 10; 
     }
 
+    /* ------------------ footer ------------------ */
   
 
-    /* ------------------ footer ------------------ */
     .copyRight{
-        padding-left: calc(5px + 120px);
+        padding: 10px;
+        flex-direction: row;
+        height: 70px;
     }
 
-    .copyRight p{
-        font-size: 14px;
+    .footerInfo{
+        display: inline-block;
+        text-align: left;
+        font-size: 18px;
+        line-height: 18px;
     }
 
     .socialLink{
-        font-size: 14px;
-        margin-right: 10px;
-    }
-
-    .socialLink a{
-        padding: 5px;
-    }
-}
-/* -------------------  768px ------------------- */
-@media screen and (max-width: 768px) {
-    header{
-        height: 60px;
-        line-height: 60px;
-    }
-    header h1{
-        line-height: 60px;
-    }
-   
-    footer{
-        height: auto;
-        flex-direction: column;
-    }
-    .copyRight{
-        line-height: 0px;
-        padding-left: 0;
-        margin-bottom: 5px;
-    }
-    .copyRight p{
-        line-height: 30px;
-
-    }
-    .socialLink{
-        line-height: 30px;
-        margin: 0 auto;
+        display: inline-block;
+        margin-left: 10px;
+        line-height: 0;
+        flex-shrink: 0;
     }
     
+    .socialLink .fa-brands{
+        color: #fff;
+        margin: 0 5px;
+    }
+
 }
 
-/* -------------------  576px ------------------- */
-@media screen and (max-width: 576px) {
-    .iconMenu{
-        margin-right: 10px;
-    }
-    .topNav a{
-        line-height: 60px;
-    }
-    header h1{
-        line-height: 60px;
-        background-position: center center;
-        background-size: 100px;
-        height: 60px;
-        margin: 0 auto;
+/* -------------------  手機 ------------------- */
+@media screen and (max-width: 768px) {
+
+    header{
+        min-width: 100%;
     }
 
-
-    footer{
-        flex-direction: row;
-        align-items: center;
+    .breadcrumbNav{
+        font-size: 14px;
+        text-align: center;
     }
-    .copyRight{
+    .searchLabel{
         display: none;
     }
-
-    .copyRightPhone{
-        display: block;
-        padding: 10px;
-        color: #fff;
+    .orderBy{
+        width: 100%;
     }
-    .copyRightPhone p{
-        padding: 5px;
+    .topNav{
+        height: 50px;
+        line-height: 50px;
     }
-}
-
-@media screen and (max-width: 430px) {
-    footer{
+    .topNav h1{
+        line-height: 50px;
+    }
+    .productTitle h2{
+        font-size: 24px;
+    }
+    .iconMenu .fa-solid{
+        font-size: 14px;
+        line-height: 50px;
+    }
+    .copyRight{
         flex-direction: column;
     }
-
-    .copyRightPhone p{
-        font-size: 11px;
+    
+    .footerInfo{
+        font-size: 14px;
     }
 }

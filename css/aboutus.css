@@ -205,118 +205,187 @@ h2::before{
 }
 
 .address p{
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1.5;
     color: #AA8B66;
     margin: 0 auto;
 }
 
-
+/* --------------------------- 斷點 ----------------------------- */
 
 @media screen and (max-width: 1280px){
-    .circleBg03{
-        right: 470px;
-        bottom: -1000px;
+    .aboutUs{
+        min-width: 100%;
+    }
+    .shortInfo{
+        margin: 20px auto 20px 130px;
     }
 
+    .floristTitle{
+        margin: 40px auto 40px 130px;
+    }
+
+    .florist{
+        padding-left: 130px;
+    }
+
+    .search{
+        padding: 0 130px;
+    }
+
+    .search h3{
+        padding-left: 0px;
+    }
+
+    .location{
+        padding: 0 130px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .aboutUs{
+        min-width: 100%;
+    }
+
+    .shortInfo{
+        margin: 20px auto;
+        padding: 0 40px;
+    }
+
+    .florist{
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    .floristExp{
+        margin: 20px 20px 0 -60px;
+    }
+    .floristTitle{
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .search h3{
+        padding-left: 0;
+        margin: 20px auto;
+        padding: 0 40px;
+    }
+
+    .location{
+        padding: 0 40px;
+    }
+    .address p{
+        font-size: 20px;
+    }
     iframe[src^="https://www.google.com/maps/embed"] {
-        width: 50%; 
+        width: 40%; 
         height: 300px; 
     }
 
-
-}
-
-@media screen and (max-width: 1144px){
-    .circleBg02{
-        top: 620px;
-        right: -60px;
-    }
-    .floristExp p {
-        font-size: 15px;
-    }
-    .search h3{
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 992px) {
     .circleBg02{
         width: 300px;
         height: 300px;
         border-radius: 150px;
+        right: -150px;
+        top: 510px;
     }
     .circleBg03{
         top: 1060px;
         left: 260px;
     }
-    .photo img{
-        height: 376px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .aboutUs{
+        min-width: 100%;
+    }
+
+    .swiper{
+        max-width: 80%;
+        margin-top: 80px;
+        padding: 10px;
+    }
+
+    .swiper-slide h4{
+        right: 10px;
+        bottom: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
     }
     
+    .storeInfo{
+        margin: 0 auto;
+    }
+
     .shortInfo{
-        margin-left: 120px;
+        margin-left: 0;
+        margin: 20px auto;
+        padding: 0 40px;
+        font-size: 14px;
     }
-    .floristExp{
-        margin: 30px 20px 0 -80px;
-        padding: 50px 40px 50px 120px;
-    }
-    .floristTitle{
-        margin: 40px auto 40px 120px;
-    }
-    .florist{
-        padding-left: 120px;
-    }
-    .search h3{
-        padding-left: 120px;
-        font-size: 17px;
-    }
-    .location{
-        padding: 0 110px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .circleBg02{
-        top: 420px;
-        right: -160px;
-    }
-    .shortInfo{
-        margin-left: 90px;
-        font-size: 16px;
-    }
-    .floristTitle{
-        margin: 40px auto 40px 90px;
-    }
+
     .florist{
         flex-direction: column;
         align-items: center;
-        padding-left: 100px;
+        padding-left: 0px;
+        margin: 0 auto;
     }
+
     .photo img{
+        width: 200px;
         height: auto;
-        width: 300px;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1/1
     }
+
+    .floristTitle{
+        margin: 40px auto;
+    }
+
     .floristExp{
         margin: -70px auto;
-        padding: 70px 30px 40px 30px;
+        padding: 60px 0px 10px 10px;
     }
+    h2{
+        font-size: 24px;
+    }
+
     .search{
         margin-top: 90px;
+        padding: 0;
     }
+
     .search h3{
-        padding: 0 130px;
+        padding: 0 50px;
         margin: 20px auto;
         word-wrap: break-word;
+    }
+
+    .exploreFlowersButton{
+        width: 80%;
     }
 
     .exploreFlowersButton a{
         font-size: 14px;
         padding: 5px 20px;
     }
+
+    .location{
+        padding: 0 30px;
+        text-align: left;
+    }
+
     .address{
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .address p{
+        font-size: 15px;
+        margin: 0;
+        margin-bottom: 10px;
     }
 
     iframe[src^="https://www.google.com/maps/embed"] {
@@ -324,52 +393,32 @@ h2::before{
         height: 300px; 
     }
 
-    .address p{
-        margin: 5px 0;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .storeInfo{
-        margin: 0 auto;
-    }
-    .shortInfo{
-        margin-left: 60px;
-        font-size: 14px;
-    }
-    .florist{
-        padding-left: 80px;
-    }
-    .floristTitle{
-        margin: 40px auto 40px 80px;
-    }
-
-    .search h3{
-        padding: 0 50px 0 80px;
-    }
-}
+    /* ------------ background ----------- */
 
 
-@media screen and (max-width: 430px) {
-    .shortInfo{
-        margin-left: 0px;
-        padding: 0 40px;
+    .circleBg01{
+        background-color: rgba(250, 240, 228, .5);
+        width: 250px;
+        height: 250px;
+        border-radius: 125px;
+        position: absolute;
+        left: -70px;
+        top: 650px;
     }
-    .floristTitle{
-        margin: 40px auto 40px 40px;
-    }
-    .florist{
-        padding: 0;
-        margin: 0 auto;
-    }
-    .photo img{
-        width: 240px;
-    }
-    .search h3{
-        padding: 0 50px;
-    }
-    .location{
-        padding: 0 30px;
 
+    .circleBg02{
+        width: 250px;
+        height: 250px;
+        /* position: absolute; */
+        right: -100px;
+        top: 310px;
+    }
+
+    .circleBg03{
+        width: 160px;
+        height: 160px;
+        /* position: absolute; */
+        top: 1100px;
+        left: 130px;
     }
 }
