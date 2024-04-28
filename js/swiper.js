@@ -28,5 +28,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   swiper.on('slideChange', function () {
     resetAutoplay();
   });
+ 
 });
 

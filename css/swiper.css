@@ -249,19 +249,19 @@
     .storeTitle{
         top: 30px;
         left: 35px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .storeTitle1{
         top: 60px;
         left: 35px;
-        font-size: 16px;
+        font-size: 14px;
     }
     /* 商品頁沒有此段 */
     .storeTitle2{
-        top: 140px;
+        top: 90px;
         left: 35px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .ValentineTitle{
