@@ -137,3 +137,33 @@ body {
     font-weight: bold;
 }
 
+/* 斷點 */
+
+@media screen and (max-width: 1024px){
+    .signWrapper{
+        min-width: 100%;
+    }
+    
+    .background{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .signWrapper{
+        min-width: 100%;
+    }
+    
+    .background{
+        width: 80%;
+    }
+
+    .loginForm label{
+        margin-right: 0;
+        font-size: 17px;
+    }
+
+    .userLogin input{
+        width: 210px;
+    }
+}

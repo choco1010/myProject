@@ -106,3 +106,35 @@ body{
     background-color:#d5a58d;
     font-weight: bold;
 }
+
+/* 斷點 */
+
+@media screen and (max-width: 1024px){
+    .signWrapper{
+        min-width: 60%;
+    }
+    
+    .background{
+        width: 70%;
+    }
+    .signForm{
+        padding: 10px;
+    }
+    .signItem input{
+        width: 220px;
+    }
+
+    .signForm label{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .signWrapper{
+        min-width: 80%;
+    }
+    
+    .signItem input{
+        width: 160px;
+    }
+}
