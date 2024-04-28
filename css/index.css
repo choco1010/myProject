@@ -156,9 +156,8 @@
     width: 100%;
     padding: 5px; 
     font-size: 14px;
-    
-   
 }
+
 /* -----------------------------openbless Product ----------------------------- */
 .openingBlessingProducts{
     margin-bottom: 50px;
@@ -335,143 +334,40 @@ h2::before{
 
 
 
-/* ---------------------------- 網頁 ------------------------------- */
+/* ---------------------------- 斷點 ------------------------------- */
 
-/* ---------------------- 1280px -------------------- */
 @media screen and (max-width: 1280px) {
 
-    /* .wrapper {
-        margin: 4% auto 1% auto;
-        min-height: calc(100vh - 618px - 70px);
-    }
-
-    .searchSection{
-        margin-bottom: 80px;
-    }
-
-    .searchLabel{
-        font-size: 28px;
-    }
-
-    .searchLabel::before{
-        width: 35px;
-        height: 35px;
-    }
-
-    #cusSearch{
-        width: 400px;
-        font-size: 22px;
-    }
-
-    .searchBtn .fa-magnifying-glass{
-        color: #AA8B66;
-        font-size: 28px;
+    .wrapper {
+        min-width: 100%;
     }
 
     .weddingCards, .openingBlessingCards{
-        padding: 0 200px;
-        gap: 45px;
+        padding: 0px 130px;
+        gap: 35px;
+    }
+
+    .cardItem:hover .cartButtonText{
+        transform: translateY(370%); 
     }
 
     .cardItem h3{
         font-size: 18px;
     }
 
-    .cardItem:hover .cartButtonText{
-        transform: translateY(300%); 
-    }
-
-    .dailyLifeList{
-    padding: 0 200px;
-    gap: 20px; 
-    }
-
-    .dailyItem h3{
-    font-size: 22px;
-    margin-bottom: 5px;
-    }
-
-    .productTitle{
-        margin: 40px auto;
-    }
-
-    h2{
-        text-align: left;
-        font-size: 30px;
-        margin-bottom: 15px;
-    }
-
-    h2::before{
-        width: 40px;
-        height: 40px;
-        margin-right: 15px;
-    }
-
-    .informationSection{
-        background-color: rgba(250, 240, 228, .9);
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    .informationList{
-        padding: 40px 30px 0 20px;
-    }
-    .informationList li h3{
-        font-size: 22px;
-        padding: 15px;
-    }
-
-    .informationList li p{
-        font-size: 18px;
-    } */
-}
-
-/* ---------------------- 1144px -------------------- */
-
-@media screen and (max-width: 1144px) {
-    
-/* 
-    .searchLabel{
-        font-size: 24px;
-    }
-    #cusSearch{
-        font-size: 20px;
-    }
-    .searchBtn .fa-magnifying-glass{
-        font-size: 24px;
-    }
-    h2{
-        font-size: 28px;
-    }
-    .searchLabel::before, h2::before{
-        width: 30px;
-        height: 30px;
-        margin-right: 5px;
-    }
-    .productTitle{
-        margin: 30px auto;
-    }
-    .weddingCards, .openingBlessingCards{
-        padding: 0px 150px;
-        gap: 35px;
-    }
-    .cardItem p{
-        font-size: 17px;
-    }
     .dailyLifeList{
         padding: 0 130px;
     }
-    .dailyItem h3{
-        font-size: 20px;
-    }
     .informationSection{
         width: 80%;
-    } */
+    }
 }
+
 
 /* 平板 */
 
 @media screen and (max-width: 1024px) {
+
     .wrapper{
         min-width: 100%;
     }
@@ -485,6 +381,10 @@ h2::before{
         padding: 0 80px;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+    }
+
+    .cardItem:hover .cartButtonText{
+        transform: translateY(500%); 
     }
 
     .dailyLifeList{
@@ -508,6 +408,9 @@ h2::before{
         min-width: 100%;
     }
 
+    .cartbtnPhone{
+        display: block;
+    }
     .activityWeb{
         display: none;
     }

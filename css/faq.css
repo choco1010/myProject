@@ -1,24 +1,32 @@
 @import url(reset.css);
 
-body {
+
+.questionWrapper{
     display: flex;
     flex-direction: column;
-    /* 圖片寬度不夠 */
+    align-items: center;
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden; 
 }
-
 /* -----------------------------main----------------------------- */
-.questionWrapper{
+
+
+.container{
     outline: 1px solid #AA8B66;
     max-width: 1440px;
     width: 60%;
-    margin: 80px auto;
+    height: 100%;
+    margin: 250px auto 130px;
     padding: 40px 30px;
     color: #AA8B66;
     background-color: rgba(255, 255, 255, .7);
+    overflow: hidden;
 }
 
 .questionTitle{
@@ -40,7 +48,8 @@ body {
     display: flex;
     flex-grow: 1;
     font-size: 24px;
-    margin-bottom: 5px;
+    margin: 10px 0;
+    padding: 5px 0;
 }
 .question .fa-q{
     margin-right: 10px;
@@ -53,9 +62,11 @@ body {
 
 /* -------------------- ansBlock -------------------- */
 
-.ansBlock{
+.ansList{
     background-color: #FAF0E4;
     margin-bottom: 20px;
+    display: none;
+    border-top: 1px dashed #AA8B66;
 }
 
 .ans{

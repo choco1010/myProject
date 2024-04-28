@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunrise</title>
+    <link rel="icon" href="./public/iconimage/flowerlogo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
     <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css"> 
     <link rel="stylesheet" href="css/swiper.css">  
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/shared.css">
+    <link href="./public/toastr/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="./js/jquery-3.7.1.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./public/toastr/toastr.js"></script>
     <script src="./js/cartslidbar.js"></script>
+    <script src="./js/shareSetting.js"></script>
     <script src="./js/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   
 </head>
 <body>
 <!-------------------------------- topMenu Start ----------------------------------->
@@ -74,16 +81,16 @@
     </div>
 
     <!-- 幻燈片... -->
-    <section class="swiper mySwiper">
+    <section id="bannerSwiper" class="swiper">
         <ul class="swiper-wrapper">
             <li class="swiper-slide">
-                <img src="./img/bannerN1-1440px.jpg" alt="情人節活動">
+                <img src="./img/bannerN1-1440px.jpg" alt="情人節活動" class="bannerImg">
                 <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
                 <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
                 <a href="tel:02-27120589" class="callout">點擊購買</a>
             </li>
             <li class="swiper-slide">
-                <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠">
+                <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠" class="bannerImg">
                 <h1 class="motherdayTitle">母親節特別優惠：</h1>
                 <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
                 <a href="tel:02-27120589" class="callout">點擊購買</a>
@@ -212,7 +219,6 @@
                         
 
  <!-- ------------------------ shoppingCart & buy ---------------------- -->                       
-                        
                         <div class="cartActions">
                                 <a href="#" class="addToCartButton">
                                     <i class="fa-solid fa-cart-shopping"></i>
@@ -239,46 +245,38 @@
                         <li>若遇花材缺貨，將會以其他等值的花材或顏色設計調整。</li>
                         <li>商品實際顏色可能因電腦、手機螢幕顯示略有落差。</li>
                     </ul>
+                    
 <!-- ----------- similarProduct ----------- -->
-                    <div class="similarProduct">
-                        <h4>相關商品</h4>
+                    <section class="similarProduct">
+                        <h4 class="similarTitle">相關商品</h4>   
                         <ul class="scrollImg">
                             <li>
                                 <a href="#">
-                                    <img src="./img/product_2.jpg" alt="新娘捧花-夕陽柔情">
+                                    <img src="./img/product_2.jpg" alt="新娘捧花-夕陽柔情" class="productImg">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product_3.jpg" alt="新娘捧花-粉色花漾">
+                                    <img src="./img/product_3.jpg" alt="新娘捧花-粉色花漾" class="productImg">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product_4.jpg" alt="新娘捧花-綠意盎然">
+                                    <img src="./img/product_4.jpg" alt="新娘捧花-綠意盎然" class="productImg">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product_5.jpg" alt="新娘捧花-夢幻藍調">
+                                    <img src="./img/product_5.jpg" alt="新娘捧花-夢幻藍調" class="productImg">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./img/product_6.jpg" alt="新娘捧花-紅雪花籃">
+                                    <img src="./img/product_6.jpg" alt="新娘捧花-金霞绽放" class="productImg">
                                 </a>
                             </li>
                         </ul>
-    <!-- ----------- circleBtn ----------- -->
-                        <ul class="circleBtn">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
+                    </section>
                 </div>
             </section>
         </div>
@@ -337,5 +335,7 @@
             });
         });
     </script>
+
+
 </body>
 </html>

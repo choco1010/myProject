@@ -80,22 +80,22 @@
         </div>
 
                 <!-- 幻燈片... -->
-                <section class="swiper mySwiper">
+                <section id="bannerSwiper" class="swiper">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
-                            <img src="./img/bannerN0-1440px.jpg" alt="花店宗旨">
+                            <img src="./img/bannerN0-1440px.jpg" alt="花店宗旨" class="bannerImg">
                             <h1 class="storeTitle">每一束花都是一個生活的微笑，</h1>
                             <h1 class="storeTitle1">每一天都是一個充滿希望和美好的新開始，</h1>
                             <h1 class="storeTitle2">讓我們一起迎接每一天的花開時刻。</h1>
                         </li>
                         <li class="swiper-slide">
-                            <img src="./img/bannerN1-1440px.jpg" alt="情人節活動">
+                            <img src="./img/bannerN1-1440px.jpg" alt="情人節活動" class="bannerImg">
                             <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
                             <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
                             <a href="tel:02-27120589" class="callout">點擊購買</a>
                         </li>
                         <li class="swiper-slide">
-                            <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠">
+                            <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠" class="bannerImg">
                             <h1 class="motherdayTitle">母親節特別優惠：</h1>
                             <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
                             <a href="tel:02-27120589" class="callout">點擊購買</a>
@@ -108,6 +108,7 @@
                 </section>
     </header>
  <!-------------------------------- topMenu end ----------------------------------->
+ <!-- 購物車清單 start -->
     <!-- 遮罩 -->
     <div class="webOverlay"></div>
     <!-- cartslidbar -->
@@ -134,8 +135,7 @@
 
         <a href="./shopcart.html" class="gotoPayment">前往結帳</a>
     </section>
-<!-- ------------------購物車清單 end------------------ -->
-
+<!-- 購物車清單 end -->
 
 <!-------------------------------- main ----------------------------------->
     <main class="wrapper">
@@ -317,8 +317,8 @@
 
                     // 創建內容
                     let content = `
-                        <div class="cartButtonText">
-                            <a class="putCart" data-id="${product.id}" data-name="${product.name}" data-money="${product.money}" data-imgsrc="./img/${product.img}">
+                        <div class="cartButtonText cartButtonModel">
+                            <a class="putCart putCartIcon" data-id="${product.id}" data-name="${product.name}" data-money="${product.money}" data-imgsrc="./img/${product.img}">
                                 <h4>加入購物車</h4>
                             </a>
                         </div>
@@ -327,8 +327,8 @@
                             <h3>${product.name}</h3>
                             <p>NT $${product.money.toLocaleString()}</p>
                         </a>
-                        <div class="cartbtnPhone">
-                            <button class="putCartBtn" data-id="${product.id}" data-name="${product.name}" data-money="${product.money}" data-imgsrc="./img/${product.img}">
+                        <div class="cartbtnPhone cartButtonModel">
+                            <button class="putCartBtn putCartIcon" data-id="${product.id}" data-name="${product.name}" data-money="${product.money}" data-imgsrc="./img/${product.img}">
                                 <h4>加入購物車</h4>
                             </button>
                         </div>

@@ -299,9 +299,16 @@
 
 .similarProduct h4{
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 18px;
 }
+
+.similarProduct {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
 
 .scrollImg{
     display: flex;
@@ -313,7 +320,10 @@
 
 .scrollImg img{
     max-width: 100%; 
+    margin-left: 2px;
 }
+
+
 
 /*----------- circleBtn -----------*/
 
@@ -372,6 +382,8 @@
 .recentlyView:hover .historyList{
     display: block;
 }
+
+
 
 
 /* --------------------------- 斷點 ----------------------------- */

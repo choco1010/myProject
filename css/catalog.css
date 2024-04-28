@@ -172,7 +172,7 @@
 
 /* -------------------------------- */
 
-.wedCard{ 
+.weddingCards{ 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
@@ -197,6 +197,21 @@
     outline: 2px solid #EECFBB;
 }
 
+/* ------關掉手機版 */
+.cartbtnPhone{
+    display: none;
+}
+
+.addCartBtn{
+    box-sizing: border-box;
+    border: none;
+    margin-top: 5px;
+    background-color: #AA8B66;
+    color: #fff;
+    width: 100%;
+    padding: 5px; 
+    font-size: 14px;
+}
 /* ----------------  滑下來是按鈕 ---------------- */
 
 .ItemIcon{
@@ -336,7 +351,7 @@
         min-width: 100%;
     }
     
-    .wedCard{ 
+    .weddingCards{ 
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
@@ -372,10 +387,15 @@
     .wrapper{
         min-width: 100%;
     }
+
+    .cartbtnPhone{
+        display: block;
+    }
+
     .mainSidebar{
         display: none;
     }
-    .wedCard{ 
+    .weddingCards{ 
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }

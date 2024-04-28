@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunrise</title>
+    <link rel="icon" href="./public/iconimage/flowerlogo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
     <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css">
     <link rel="stylesheet" href="css/swiper.css">  
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="css/shared.css">
+    <link href="./public/toastr/toastr.css" rel="stylesheet"/>
     <script src="./js/jquery-3.7.1.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./public/toastr/toastr.js"></script>
     <script src="./js/cartslidbar.js"></script>
+    <script src="./js/shareSetting.js"></script>
     <script src="./js/jquery-ui.js"></script>
 </head>
 <body>
@@ -56,7 +60,68 @@
             </ul>
         </nav>
 
-        <!-- 購物車清單 start -->
+    <!-- ------------ 手機: 點選iconMenu-> phoneMenu ------------ -->
+
+        <!-- 遮罩 -->
+        <div class="phoneOverlay"></div>
+        
+        <div class="phoneblock">
+            <div class="menuCloseBlock">
+                <a class="menuCloseBtn phoneMenu"><i class="fa-solid fa-arrow-left"></i></a>
+                <p>CLOSE</p>
+            </div>
+            <ul class="phoneList">
+                <li class="phoneItem"><a href="./aboutus.html">關於我們</a></li>
+                <li class="phoneItem"><a href="./catalog.html">花藝商品</a></li>
+                <li class="phoneItem"><a href="./faq.html">常見問題</a></li>
+                <li class="phoneItem"><a href="./contactus.html">花藝諮詢</a></li>
+                <li class="phoneItem login"><a href="./login.html">會員登入</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 幻燈片... -->
+    <section id="bannerSwiper" class="swiper">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <img src="./img/catalog-banner.jpg" alt="新娘捧花" class="bannerImg">
+                <h1 class="storeTitle">獨特而精緻的新娘捧花，</h1>
+                <h1 class="storeTitle1">為您的浪漫時刻增添幸福色彩！</h1>
+            </li>
+            <li class="swiper-slide">
+                <img src="./img/bannerN1-1440px.jpg" alt="情人節活動" class="bannerImg">
+                <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
+                <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
+                <a href="tel:02-27120589" class="callout">點擊購買</a>
+            </li>
+            <li class="swiper-slide">
+                <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠" class="bannerImg">
+                <h1 class="motherdayTitle">母親節特別優惠：</h1>
+                <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
+                <a href="tel:02-27120589" class="callout">點擊購買</a>
+            </li>
+        </ul>
+
+        <div class="swiper-pagination"></div>
+    
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+
+    <!-- 只有幾個分頁有的：breadcrumbNav -->
+    <nav class="breadcrumbNav">
+        <a href="index.html" class="breadcrumbLink">首頁</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="#" class="breadcrumbLink">花藝商品</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="#" class="breadcrumbLink">婚禮系列</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <span class="currentBreadcrumb">捧花</span>
+    </nav>
+
+</header>
+<!-------------------------------- topMenu end ----------------------------------->
+
+    <!-- 購物車清單 start -->
 
         <!-- 遮罩 -->
         <div class="webOverlay"></div>
@@ -86,67 +151,6 @@
         </section>
         <!-- 購物車清單 end -->
 
-        <!-- ------------ 手機: 點選iconMenu-> phoneMenu ------------ -->
-
-        <!-- 遮罩 -->
-        <div class="phoneOverlay"></div>
-        
-        <div class="phoneblock">
-            <div class="menuCloseBlock">
-                <a class="menuCloseBtn phoneMenu"><i class="fa-solid fa-arrow-left"></i></a>
-                <p>CLOSE</p>
-            </div>
-            <ul class="phoneList">
-                <li class="phoneItem"><a href="./aboutus.html">關於我們</a></li>
-                <li class="phoneItem"><a href="./catalog.html">花藝商品</a></li>
-                <li class="phoneItem"><a href="./faq.html">常見問題</a></li>
-                <li class="phoneItem"><a href="./contactus.html">花藝諮詢</a></li>
-                <li class="phoneItem login"><a href="./login.html">會員登入</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- 幻燈片... -->
-    <section class="swiper mySwiper">
-        <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-                <img src="./img/catalog-banner.jpg" alt="新娘捧花">
-                <h1 class="storeTitle">獨特而精緻的新娘捧花，</h1>
-                <h1 class="storeTitle1">為您的浪漫時刻增添幸福色彩！</h1>
-            </li>
-            <li class="swiper-slide">
-                <img src="./img/bannerN1-1440px.jpg" alt="情人節活動">
-                <h1 class="ValentineTitle">情人節玫瑰，愛意盛放！</h1>
-                <h1 class="ValentineTitle1">點擊選購最浪漫的禮物。</h1>
-                <a href="tel:02-27120589" class="callout">點擊購買</a>
-            </li>
-            <li class="swiper-slide">
-                <img src="./img/bannerN2-1440px.jpg" alt="母親節優惠">
-                <h1 class="motherdayTitle">母親節特別優惠：</h1>
-                <h1 class="motherdayTitle1">精選康乃馨花束，溫暖您心。</h1>
-                <a href="tel:02-27120589" class="callout">點擊購買</a>
-            </li>
-        </ul>
-
-        <div class="swiper-pagination"></div>
-    
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </section>
-
-    <!-- 只有幾個分頁有的：breadcrumbNav -->
-    <nav class="breadcrumbNav">
-        <a href="index.html" class="breadcrumbLink">首頁</a>
-        <i class="fa-solid fa-angle-right"></i>
-        <a href="#" class="breadcrumbLink">花藝商品</a>
-        <i class="fa-solid fa-angle-right"></i>
-        <a href="#" class="breadcrumbLink">婚禮系列</a>
-        <i class="fa-solid fa-angle-right"></i>
-        <span class="currentBreadcrumb">捧花</span>
-    </nav>
-
-</header>
-<!-------------------------------- topMenu end ----------------------------------->
-       
  <!--- main --->
     
     <main class="wrapper">
@@ -205,9 +209,8 @@
             
             <!-- 商品頁 -->
                 <section class="weddingrProduct">
-                    <ul class="wedCard">
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
+                    <ul class="weddingCards">
+                        <!-- <li class="cardItem">
                             <div class="ItemIcon">
                                 <ul class="ItemList">
                                     <li class="searchbg">
@@ -223,140 +226,7 @@
                                 <h3>新娘捧花-多彩夏季</h3>
                                 <p>NT 2,500</p>    
                             </a>
-                        </li>
-    
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
-                            <div class="ItemIcon">
-                                <ul class="ItemList">
-                                    <li class="searchbg">
-                                        <button class="ion--search"></button>
-                                    </li>
-                                    <li class="cartbg">
-                                        <button class="ion--cart"></button>
-                                    </li>
-                                </ul>
-                             </div>
-                            <a href="#">
-                                <img src="./img/product_2.jpg" alt="新娘捧花-粉色花漾">
-                                <h3>新娘捧花-粉色花漾</h3>
-                                <p>NT 2,500</p>
-                            </a>
-                        </li>
-    
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
-                            <div class="ItemIcon">
-                                <ul class="ItemList">
-                                    <li class="searchbg">
-                                        <button class="ion--search"></button>
-                                    </li>
-                                    <li class="cartbg">
-                                        <button class="ion--cart"></button>
-                                    </li>
-                                </ul>
-                             </div>
-                            <a href="#">
-                                <img src="./img/product_3.jpg" alt="新娘捧花-綠意盎然">
-                                <h3>新娘捧花-綠意盎然</h3>
-                                <p>NT 2,500</p>
-                            </a>
-                        </li>
-    
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
-                            <div class="ItemIcon">
-                                <ul class="ItemList">
-                                    <li class="searchbg">
-                                        <button class="ion--search"></button>
-                                    </li>
-                                    <li class="cartbg">
-                                        <button class="ion--cart"></button>
-                                    </li>
-                                </ul>
-                             </div>
-                            <a href="#">
-                                <img src="./img/product_4.jpg" alt="新娘捧花-夢幻藍調">
-                                <h3>新娘捧花-夢幻藍調</h3>
-                                <p>NT 3,500</p>
-                            </a>
-                        </li>
-    
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
-                            <div class="ItemIcon">
-                                <ul class="ItemList">
-                                    <li class="searchbg">
-                                        <button class="ion--search"></button>
-                                    </li>
-                                    <li class="cartbg">
-                                        <button class="ion--cart"></button>
-                                    </li>
-                                </ul>
-                             </div>
-                            <a href="#">
-                                <img src="./img/product_5.jpg" alt="新娘捧花-紅雪花籃">
-                                <h3>新娘捧花-紅雪花籃</h3>
-                                <p>NT 3,500</p>
-                            </a>
-                        </li>
-    
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
-                            <div class="ItemIcon">
-                                <ul class="ItemList">
-                                    <li class="searchbg">
-                                        <button class="ion--search"></button>
-                                    </li>
-                                    <li class="cartbg">
-                                        <button class="ion--cart"></button>
-                                    </li>
-                                </ul>
-                             </div>
-                            <a href="#">
-                                <img src="./img/product_6.jpg" alt="新娘捧花-金霞绽放">
-                                <h3>新娘捧花-金霞绽放</h3>
-                                <p>NT 3,500</p>
-                            </a>
-                        </li>
-    
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
-                            <div class="ItemIcon">
-                                <ul class="ItemList">
-                                    <li class="searchbg">
-                                        <button class="ion--search"></button>
-                                    </li>
-                                    <li class="cartbg">
-                                        <button class="ion--cart"></button>
-                                    </li>
-                                </ul>
-                             </div>
-                            <a href="#">
-                                <img src="./img/product_7.jpg" alt="新娘捧花-紫色幽谷">
-                                <h3>新娘捧花-紫色幽谷</h3>
-                                <p>NT 4,500</p>
-                            </a>
-                        </li>
-    
-                        <li class="cardItem">
-                            <!-- 滑下來是按鈕 -->
-                            <div class="ItemIcon">
-                                <ul class="ItemList">
-                                    <li class="searchbg">
-                                        <button class="ion--search"></button>
-                                    </li>
-                                    <li class="cartbg">
-                                        <button class="ion--cart"></button>
-                                    </li>
-                                </ul>
-                             </div>
-                            <a href="#">
-                                <img src="./img/product_8.jpg" alt="新娘捧花-夕陽柔情">
-                                <h3>新娘捧花-夕陽柔情</h3>
-                                <p>NT 4,500</p>
-                            </a>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="pagination">
                         <button class="pageBtn">1</button>
@@ -403,6 +273,52 @@
                     event.preventDefault();
                 });
             });
+        });
+
+        displayCartItems();
+    </script>
+
+    <script src="data/product.js"></script>
+    <script>
+        // 填充首頁商品內容
+
+        productsData.forEach(function(product) {
+                // 根據產品的 type 屬性來判斷要插入到哪個 ul 中
+                let ul = document.querySelector('.' + product.type);
+                // console.log(ul);
+                if (ul) {
+                    // 創建 li 元素
+                    let li = document.createElement('li');
+                    li.classList.add('cardItem');
+
+                    // 創建內容
+                    let content = `
+                        <div class="ItemIcon">
+                            <ul class="ItemList">
+                                <li class="searchbg">
+                                    <button class="ion--search" onclick="window.location.href='./product.html'"></button>
+                                </li>
+                                <li class="cartbg cartButtonModel">
+                                    <button class="ion--cart putCartIcon" data-id="${product.id}" data-name="${product.name}" data-money="${product.money}" data-imgsrc="./img/${product.img}"></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="./product.html">
+                            <img src="./img/${product.img}" alt="${product.name}" >
+                            <h3>${product.name}</h3>
+                            <p>NT $${product.money.toLocaleString()}</p>    
+                        </a>
+                        <div class="cartbtnPhone cartButtonModel">
+                        <button class="addCartBtn putCartIcon" data-id="${product.id}" data-name="${product.name}" data-money="${product.money}" data-imgsrc="./img/${product.img}">
+                            <h4>加入購物車</h4>
+                        </button>
+                        </div>
+                    `;
+                    // 將內容設置到 li 元素中
+                    li.innerHTML = content;
+                    // 插入到 ul 元素中
+                    ul.appendChild(li);
+                }
         });
     </script>
 </body>

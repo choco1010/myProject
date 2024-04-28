@@ -1,16 +1,18 @@
 @import url(reset.css);
 
-body{
+.contactWrapper{
     display: flex;
     flex-direction: column;
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-   
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden; 
 }
 
-.contactWrapper{
+.background{
     outline: 1px solid #AA8B66;
     max-width: 1440px;
     width: 60%;
@@ -204,6 +206,10 @@ input[type="text"]:focus {
 }
 
 @media screen and (max-width: 768px){
+    .background{
+        width: 90%;
+        padding: 40px 30px 40px 0;
+    }
     .contactImg{
         display: none;
     }

@@ -82,16 +82,16 @@ $(document).ready(function(){
 
 // --------------------- 點擊加入購物車 -------------------------
     
-    $('.cartButtonText, .cartbtnPhone').click(function(){
+    $('.cartButtonModel').click(function(){
         let count = parseInt($('.valnum span').text())
         $('.valnum span').text(count + 1);
         toastr.success('已將商品加入購物車');
         $('.valnum').show();
-    })
+    });
 
 // --------------------- 放商品到購物清單 -------------------------
 
-    $('.cartButtonText .putCart').click(function(){
+    $('.cartButtonModel .putCartIcon').click(function(){
         let productCard = {
             "id" : $(this).data('id'),
             "name": $(this).data('name'),
