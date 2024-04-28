@@ -351,6 +351,7 @@
     position: fixed;
     right: 0;
     top: 154px;
+    z-index: 14;
     /* position: relative; */
 }
 

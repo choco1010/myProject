@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/shared.css">
     <link href="./public/toastr/toastr.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="./js/jquery-3.7.1.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
@@ -20,7 +19,7 @@
     <script src="./js/cartslidbar.js"></script>
     <script src="./js/shareSetting.js"></script>
     <script src="./js/jquery-ui.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
    
 </head>
 <body>
@@ -200,31 +199,30 @@
 <!-- ------------------------- quantity & sub --------------------------- -->
                         <div class="quantityControl">
 
-                            <button class="quantityBtn" aria-label="減少數量">
+                            <button class="quantityBtn" onclick="quantityChange('sub')" aria-label="減少數量">
                                 <i class="fa-solid fa-minus"></i>
                             </button>
 
-                            <input type="text" class="quantityInput" value="2">
+                            <input type="text" class="quantityInput" value="1" readonly>
 
-                            <button class="quantityBtn" aria-label="增加數量">
+                            <button class="quantityBtn" onclick="quantityChange('add')" aria-label="增加數量">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
 
-                            
                         </div>
                         <!-- /*----------- price -----------*/ -->
                         <div class="price">
-                            <p class="priceValue"> 小計：NT$ 5000</p>
+                            <p class="priceValue" id="subtotal"> 小計：NT$ 2,500</p>
                         </div>
                         
 
  <!-- ------------------------ shoppingCart & buy ---------------------- -->                       
-                        <div class="cartActions">
-                                <a href="#" class="addToCartButton">
+                        <div class="cartActions cartButtonModel">
+                                <a class="addToCartButton putCartIcon" data-id="1" data-name="新娘捧花-多彩夏季" data-money="2500" data-imgsrc="./img/product_1_1.jpg">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     加入購物車
                                 </a>
-                                <a href="shopcart.html" class="buyNowButton">
+                                <a class="buyNowButton" data-id="1" data-name="新娘捧花-多彩夏季" data-money="2500" data-imgsrc="./img/product_1_1.jpg" onclick="buyNow(this)">
                                     <i class="fa-solid fa-bag-shopping"></i>
                                     直接購買
                                 </a>
@@ -334,6 +332,8 @@
                 });
             });
         });
+
+        displayCartItems();
     </script>
 
 

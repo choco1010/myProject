@@ -79,25 +79,19 @@ $(document).ready(function(){
         };
     });
 
-
-// --------------------- 點擊加入購物車 -------------------------
-    
-    $('.cartButtonModel').click(function(){
-        let count = parseInt($('.valnum span').text())
-        $('.valnum span').text(count + 1);
-        toastr.success('已將商品加入購物車');
-        $('.valnum').show();
-    });
-
-// --------------------- 放商品到購物清單 -------------------------
+// --------------------- 點擊加入購物車,放商品到購物清單 -------------------------
 
     $('.cartButtonModel .putCartIcon').click(function(){
+
+        let quantityInput = document.querySelector('.quantityInput');
+        let count = quantityInput ? parseInt(quantityInput.value) : 1;
+
         let productCard = {
             "id" : $(this).data('id'),
             "name": $(this).data('name'),
             "imgUrl" : $(this).data('imgsrc'),
             "price": $(this).data('money'),
-            "count" : 1,
+            "count" : count,
         }
        
         let existCart = localStorage.getItem('productCards');
@@ -109,7 +103,9 @@ $(document).ready(function(){
             let existingProductIndex = storedCartItemsJson.findIndex(item => item.id === productCard.id);
             if(existingProductIndex !== -1){
                 // 如果購物車中已有相同的商品，增加其数量
-                storedCartItemsJson[existingProductIndex].count += 1;
+                storedCartItemsJson[existingProductIndex].count += count;
+
+                console.log(storedCartItemsJson[existingProductIndex].count);
                 // storedCartItemsJson.push(productCard);
                 localStorage.setItem('productCards', JSON.stringify(storedCartItemsJson));
                 // 抓數量和價錢
@@ -126,6 +122,7 @@ $(document).ready(function(){
                     // console.log(itemId);
                 })
 
+                toastr.success('已將商品加入購物車');
                 // console.log(localStorage.getItem('productCards'));
                 return;
             } else {
@@ -155,13 +152,21 @@ $(document).ready(function(){
         `;
 
         $('.cartslidbarList').last().append(cartItem);
-        
+
+        cartCountAdd();
     })
 
 })
 
 // --------------------- 顯示購物車內容或沒有商品的訊息的函式 ---------------------
-    
+
+function cartCountAdd() {
+    let cartCount = parseInt($('.valnum span').text());
+    $('.valnum span').text(cartCount + 1);
+    toastr.success('已將商品加入購物車');
+    $('.valnum').show();
+}
+
 function displayCartItems() {
 
     // 找到ul的列表
@@ -177,7 +182,7 @@ function displayCartItems() {
         cartItems.forEach(function(productCard) {
              cartItem += `
                 <li class="cartslidbarItem" data-id="${productCard.id}">
-                    <a href="#"><img src="${productCard.imgUrl}" alt="${productCard.name}">
+                    <a><img src="${productCard.imgUrl}" alt="${productCard.name}">
                         <div class="cartslidbarPrice">
                             <h3>${productCard.name}</h3>
                             <h4>數量: ${productCard.count}</h4>
@@ -196,4 +201,90 @@ function displayCartItems() {
     } else {
         $('.valnum').hide();
     }
+}
+
+function quantityChange(mathematics) {
+    
+    let quantityInput = document.querySelector('.quantityInput');
+    let priceValue = document.querySelector('.priceValue');
+
+    let flowerPrice = 2500;
+    let currentSubtotal = parseInt(priceValue.innerText.replace('小計：NT$ ', '').replace(/,/g, ''));
+    
+    // 抓quantityInput的值
+    let currentValue = parseInt(quantityInput.value);
+
+    // 根據HTML傳回來的參數帶進 mathematics 進行增加或减少
+    if (mathematics === 'add') {
+        currentValue += 1;
+    } else if (mathematics === 'sub') {
+        currentValue -= 1;
+        
+        if (currentValue < 1) {
+            currentValue = 1;
+        }
+    }
+
+    let newSubtotal = currentValue * flowerPrice;
+    // 更新 quantityInput 的值
+    quantityInput.value = currentValue;
+
+    priceValue.innerText = '小計：NT$ ' + newSubtotal.toLocaleString();
+}
+
+function buyNow(element){
+
+    let quantityInput = document.querySelector('.quantityInput');
+    let count = quantityInput ? parseInt(quantityInput.value) : 1;
+
+    let productCard = {
+        "id" : $(element).data('id'),
+        "name": $(element).data('name'),
+        "imgUrl" : $(element).data('imgsrc'),
+        "price": $(element).data('money'),
+        "count" : count,
+    }
+    
+    let existCart = localStorage.getItem('productCards');
+
+    if(existCart){
+        // 將購物車資料轉換為JavaScript物件陣列
+        let storedCartItemsJson = JSON.parse(existCart);
+
+        let existingProductIndex = storedCartItemsJson.findIndex(item => item.id === productCard.id);
+        if(existingProductIndex !== -1){
+            // 如果購物車中已有相同的商品，增加其数量
+            storedCartItemsJson[existingProductIndex].count += count;
+
+            console.log(storedCartItemsJson[existingProductIndex].count);
+            // storedCartItemsJson.push(productCard);
+            localStorage.setItem('productCards', JSON.stringify(storedCartItemsJson));
+            // 抓數量和價錢
+            $('.cartslidbarList').find('.cartslidbarItem').each(function(){
+                let itemId = $(this).data('id');
+                if (itemId === storedCartItemsJson[existingProductIndex].id) {
+                   let updateCount =  storedCartItemsJson[existingProductIndex].count;
+                   let updatePrice =  storedCartItemsJson[existingProductIndex].price;
+                   total = updateCount * updatePrice;
+                   let formattedTotal = total.toLocaleString();
+                    $(this).find('.cartslidbarPrice p').text('NT:' + formattedTotal);
+                    $(this).find('.cartslidbarPrice h4').text('數量：' + updateCount)
+                }
+                // console.log(itemId);
+            })
+        } else {
+            // 如果購物車沒有東西就新增一個蓋過去
+            storedCartItemsJson.push(productCard);
+            localStorage.setItem('productCards', JSON.stringify(storedCartItemsJson));
+        }
+
+    }else{
+        // 將購物車資料轉換為JSON格式的字串
+        let cartItemsString = JSON.stringify([productCard]);
+        // console.log('cartItemsJson:'+cartItemsJson);
+        localStorage.setItem('productCards', cartItemsString);
+        // => var productCards = cartItemsString;
+    }
+    window.location.href = 'shopcart.html';
+   
 }
