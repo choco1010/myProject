@@ -3,100 +3,110 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
         <title>Sunrise</title>
+        <!-- <link rel="icon" href="./img/Group 1.svg"> -->
+        <link rel="icon" href="./public/iconimage/flowerlogo.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="public/font-awesome/6.4.2/css/all.css">
-        <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css">  
+        <link rel="stylesheet" href="public/font-awesome/6.4.2/css/v4-shims.css"> 
+        <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/faq.css">
         <link rel="stylesheet" href="css/shared.css">
+        <link href="./public/toastr/toastr.css" rel="stylesheet"/>
         <script src="./js/jquery-3.7.1.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/swiper.js"></script>
+        <script src="./public/toastr/toastr.js"></script>
         <script src="./js/cartslidbar.js"></script>
+        <script src="./js/shareSetting.js"></script>
         <script src="./js/jquery-ui.js"></script>
     </head>
     <body>
 
 <!-------------------------------- topMenu Start ----------------------------------->
-<header>  
-    <div class="topNav">
-        <a href="./index.html">
-            <h1>Sunrise</h1>
-        </a>
+        <header>  
+            <div class="topNav">
+                <a href="./index.html">
+                    <h1>Sunrise</h1>
+                </a>
 
-        <nav class="textMenu">
-            <ul class="navList">
-                <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
-                <li class="navItem">
-                    <a href="#">花藝商品</a>
-                    <ul class="productTypes">
-                        <li>盆花</li>
-                        <li>花束</li>
-                        <li>乾燥花</li>
-                        <li>
-                            <a href="catalog.html">婚禮系列</a>
+                <nav class="textMenu">
+                    <ul class="navList">
+                        <li class="navItem"><a href="./aboutus.html">關於我們</a></li>
+                        <li class="navItem">
+                            <a href="#">花藝商品</a>
+                            <ul class="productTypes">
+                                <li>盆花</li>
+                                <li>花束</li>
+                                <li>乾燥花</li>
+                                <li>
+                                    <a href="catalog.html">婚禮系列</a>
+                                </li>
+                                <li >高架花籃</li>
+                            </ul>
                         </li>
-                        <li >高架花籃</li>
+                        <li class="navItem"><a href="faq.html">常見問題</a></li>
+                        <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
                     </ul>
-                </li>
-                <li class="navItem"><a href="faq.html">常見問題</a></li>
-                <li class="navItem"><a href="contactus.html">花藝諮詢</a></li>
-            </ul>
-        </nav>
+                </nav>
 
-        <nav class="iconMenu">
-            <ul>
-                <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
-                <li class="phoneMenu">
-                    <i class="fa-solid fa-bars"></i>
-                </li>
-                <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li class="valnum"><span>0</span></li>   
-            </ul>
-        </nav>
+                <nav class="iconMenu">
+                    <ul>
+                        <li class="loginIcon"><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                        <li class="phoneMenu">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
+                        <li><a class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li class="valnum"><span>0</span></li>   
+                    </ul>
+                </nav>
 
-        <!-- 遮罩 -->
-        <div class="phoneOverlay"></div>
-        <!-- 漢堡bar -->
-        <div class="phoneblock">
-            <div class="menuCloseBlock">
-                <a class="menuCloseBtn phoneMenu"><i class="fa-solid fa-arrow-left"></i></a>
-                <p>CLOSE</p>
-            </div>
-            <ul class="phoneList">
-                <li class="phoneItem">關於我們</li>
-                <li class="phoneItem">花藝商品</li>
-                <li class="phoneItem">常見問題</li>
-                <li class="phoneItem">花藝諮詢</li>
-                <li class="phoneItem">會員登入</li>
-            </ul>
-        </div>
-    </div>
-</header>
-<!-------------------------------- topMenu end ----------------------------------->
-<!-- 遮罩 -->
-<div class="webOverlay"></div>
-<!-- cartslidbar -->
-<section id="cartslidbarBlock">
-    <div class="cartslidbarTitle">
-            <a class="cartcloseBtn cartIcon"><i class="fa-solid fa-xmark"></i></a>
-            <h4>購物車清單</h4>
-    </div>
-
-    <ul class="cartslidbarList">
-        <!-- JS抓的資料範例 -->
-        <!-- <li class="cartslidbarItem">
-            <a href="#"><img src="./img/product_1.jpg" alt="新娘捧花-多彩夏季">
-                <div class="cartslidbarPrice">
-                    <h3>新娘捧花-多彩夏季</h3>
-                    <h4>數量: 1</h4>
-                    <p>NT 2,500</p>
+                <!-- 遮罩 -->
+                <div class="phoneOverlay"></div>
+                <!-- 漢堡bar -->
+                <div class="phoneblock">
+                    <div class="menuCloseBlock">
+                        <a class="menuCloseBtn phoneMenu"><i class="fa-solid fa-arrow-left"></i></a>
+                        <p>CLOSE</p>
+                    </div>
+                    <ul class="phoneList">
+                        <li class="phoneItem"><a href="./aboutus.html">關於我們</a></li>
+                        <li class="phoneItem"><a href="./catalog.html">花藝商品</a></li>
+                        <li class="phoneItem"><a href="./faq.html">常見問題</a></li>
+                        <li class="phoneItem"><a href="./contactus.html">花藝諮詢</a></li>
+                        <li class="phoneItem login"><a href="./login.html">會員登入</a></li>
+                    </ul>
                 </div>
-                <i class="fa-regular fa-trash-can slidbarDel"></i>
-            </a>
-        </li> -->
-    </ul>
-    <div style="flex-grow: 1;"></div> 
+            </div>
+        </header>
+        <!-------------------------------- topMenu end ----------------------------------->
+        <!-- 遮罩 -->
+        <div class="webOverlay"></div>
+        <!-- cartslidbar -->
+        <section id="cartslidbarBlock">
+            <div class="cartslidbarTitle">
+                    <a class="cartcloseBtn cartIcon"><i class="fa-solid fa-xmark"></i></a>
+                    <h4>購物車清單</h4>
+            </div>
 
-    <a href="./shopcart.html" class="gotoPayment">前往結帳</a>
-</section>
+            <ul class="cartslidbarList">
+                <!-- JS抓的資料範例 -->
+                <!-- <li class="cartslidbarItem">
+                    <a href="#"><img src="./img/product_1.jpg" alt="新娘捧花-多彩夏季">
+                        <div class="cartslidbarPrice">
+                            <h3>新娘捧花-多彩夏季</h3>
+                            <h4>數量: 1</h4>
+                            <p>NT 2,500</p>
+                        </div>
+                        <i class="fa-regular fa-trash-can slidbarDel"></i>
+                    </a>
+                </li> -->
+            </ul>
+            <div style="flex-grow: 1;"></div> 
+
+            <a href="./shopcart.html" class="gotoPayment">前往結帳</a>
+        </section>
 <!-- ------------------購物車清單 end------------------ -->
             
 <!-------------------------------- main ----------------------------------->  
@@ -183,6 +193,9 @@
                 });
             });
             
+            
+            displayCartItems()
+    
            
         </script>
     </body>
