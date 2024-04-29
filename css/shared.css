@@ -399,12 +399,14 @@ footer{
         border-bottom: 1px solid #AA8B66;
     }
 
+
     .phoneItem .login{
         border-bottom: 2px solid #AA8B66;
 
     }
 
     .phoneItem a{
+        display: block;
         text-decoration: none;
         color: #AA8B66;
     }
