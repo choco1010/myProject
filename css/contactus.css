@@ -43,6 +43,8 @@ h2::before{
     width: 30px;
     height: 30px;
     background-image: url(../img/flowericon.png);
+    background-position: cover;
+    background-repeat: no-repeat;
     margin-right: 10px;
 }
 /* ---------- contactBlock ---------- */
@@ -208,8 +210,17 @@ input[type="text"]:focus {
 @media screen and (max-width: 768px){
     .background{
         width: 90%;
-        padding: 40px 30px 40px 0;
+        padding: 40px 0px;
     }
+
+    .questionTitle{
+        width: 100%;
+    }
+
+    .contactBlock{
+        margin-left: 10px;
+    }
+
     .contactImg{
         display: none;
     }
@@ -222,5 +233,9 @@ input[type="text"]:focus {
     .writeItem textarea{
         width: 270px; 
         height: 230px; 
+    }
+
+    h2::before{
+       margin-left: 5px;
     }
 }
