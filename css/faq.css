@@ -29,6 +29,10 @@
     overflow: hidden;
 }
 
+.questionBlock{
+    cursor: pointer;
+}
+
 .questionTitle{
     margin-bottom: 60px;
     text-align: center;
@@ -67,6 +71,7 @@
     margin-bottom: 20px;
     display: none;
     border-top: 1px dashed #AA8B66;
+    line-height: 1.6;
 }
 
 .ans{
